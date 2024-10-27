@@ -1,0 +1,5 @@
+.icons-skills {
+    width: auto; /* Ajusta el ancho del ícono */
+    height: 80px; /* Mantiene la proporción de la imagen */
+    margin-right: 8px; /* Espacio entre íconos, opcional */
+}

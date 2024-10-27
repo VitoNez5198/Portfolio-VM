@@ -2,7 +2,7 @@
 @import url(buttons.css);
 @import url(proyects.css);
 @import url(footer.css);
-
+@import url(skills.css);
 /* Estilos Globales */
 * {
     box-sizing: border-box;
@@ -21,19 +21,21 @@ body {
 
 
 /* Secciones */
-.section {
-    
-    list-style: none;
-    /* Elimina la viñeta o numeración */
+.section {  
+    list-style: none; /* Elimina la viñeta o numeración */
     padding: 20px;
     margin: 20px;
     background: #fff;
-    border-radius: 8px;
+    border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    /* Alinea el texto horizontalmente */
-    vertical-align: middle;
-    /* Para texto en línea o en tablas */
+    text-align: center; /* Alinea el texto horizontalmente */
+    width: 100%; /* Ocupa todo el ancho de la página */
+    height: 100vh; /* Ocupa toda la altura de la ventana del navegador */
+    box-sizing: border-box; /* Incluye padding y border en el ancho y alto total */
+    display: flex; /* Habilita el modelo de caja flexible */
+    flex-direction: column; /* Cambia la dirección de flex a columna */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
 
 }
 
