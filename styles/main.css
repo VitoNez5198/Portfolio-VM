@@ -1,0 +1,51 @@
+@import url(navbar.css);
+@import url(buttons.css);
+@import url(proyects.css);
+@import url(footer.css);
+
+/* Estilos Globales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    line-height: 1.6;
+    background: #f4f4f4;
+    font-size: 25px;
+}
+
+
+/* Secciones */
+.section {
+    
+    list-style: none;
+    /* Elimina la viñeta o numeración */
+    padding: 20px;
+    margin: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* Alinea el texto horizontalmente */
+    vertical-align: middle;
+    /* Para texto en línea o en tablas */
+
+}
+
+
+
+
+
+/* Títulos */
+h2 {
+    font-family: "Fira Code", monospace;
+    font-weight: 700;
+    /* Corregido */
+    font-size: 50px;
+    color: #333;
+}

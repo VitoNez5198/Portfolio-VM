@@ -1,0 +1,8 @@
+.project {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Mantiene los elementos en una columna */
+    justify-content: center; /* Alineación vertical, debido a la columna */
+    align-items: center; /* Alineación horizontal */
+    height: 200px;
+}
