@@ -1,0 +1,44 @@
+.contact-email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre los elementos */
+    margin-top: 20px;
+}
+
+#email {
+    border: 1px solid #ccc;
+    padding: 10px; /* Aumentar el padding para que el campo sea más grande */
+    border-radius: 4px; /* Puedes ajustar este valor si deseas esquinas más redondeadas */
+    width: auto; /* Cambiado de 100% a auto */
+    max-width: 250px; /* Aumentar el ancho máximo para que se vea más grande */
+    box-sizing: border-box;
+    text-align: center; /* Centra el texto en el campo */
+    font-size: 16px; /* Aumentar el tamaño de la fuente */
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 600px) {
+    .contact-email {
+        flex-direction: column; /* Los elementos se apilan verticalmente en pantallas pequeñas */
+        align-items: stretch; /* Los elementos ocupan todo el ancho disponible */
+        gap: 5px;
+    }
+    
+    #email {
+        width: 100%; /* Mantener el ancho completo en pantallas pequeñas */
+        max-width: none; /* Sin ancho máximo */
+        font-size: 16px; /* Aumentar el tamaño de la fuente también en pantallas pequeñas */
+    }
+
+    button {
+        width: 100%; /* Los botones ocupan todo el ancho en pantallas pequeñas */
+    }
+}
+
+.copy-message {
+    display: none; /* Ocultar por defecto */
+    color: #007bff; /* Color del mensaje */
+    font-weight: bold; /* Hacer el texto en negrita */
+    margin-top: 10px; /* Espaciado superior para separar del formulario */
+}

@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .nav-links {
@@ -22,17 +22,31 @@
 .logo a {
     color: #fff;
     text-decoration: none;
+    
 }
 
+.logo{
+    font-family: "Fira Code", monospace;
+    font-weight: 700;
+    /* Corregido */
+    font-size: 20px;
+    color: #333;
+}
 .logo a {
     font-size: 1.5em;
     font-weight: bold;
+    
 }
 
 .hamburger {
-    display: none;
+    display: none; /* Ocultar por defecto */
     flex-direction: column;
     cursor: pointer;
+    transition: transform 0.3s ease; /* Transición para la rotación */
+}
+
+.hamburger.show {
+    transform: rotate(90deg); /* Rotar el icono cuando se abre */
 }
 
 .hamburger span {
@@ -40,25 +54,26 @@
     width: 25px;
     background: #fff;
     margin: 3px 0;
-    transition: 0.3s;
+    transition: background 0.3s ease; /* Transición para el color */
 }
 
+/* Media Query para pantallas pequeñas */
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
-        flex-direction: column;
+        display: none; /* Ocultar por defecto */
+        flex-direction: column; /* Mostrar en columna al desplegar */
         position: absolute;
         background: #333;
         width: 100%;
-        top: 60px;
+        top: 60px; /* Ajusta según el tamaño de tu navbar */
         left: 0;
     }
 
     .nav-links.show {
-        display: flex;
+        display: flex; /* Mostrar flex al estar activo */
     }
 
     .hamburger {
-        display: flex;
+        display: flex; /* Mostrar hamburguesa en pantallas pequeñas */
     }
 }

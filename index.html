@@ -41,8 +41,11 @@
     <section id="inicio" class="intro section">
         <h2>Desarrollador Web Fullstack</h2>
         <p>Especializado en el stack PERN (PostgreSQL, Express, React, Node.js).</p>
-        <p><a href="#contacto">Contáctame</a></p>
+        <p>
+            <a href="#contacto" class="btn">¡Contáctame!</a> <!-- Cambiado a botón -->
+        </p>
     </section>
+    
     <!-- Fin Sección de Inicio -->
 
     <!-- Sección de Habilidades -->
@@ -118,23 +121,20 @@
     <!-- Sección de Contacto -->
     <section id="contacto" class="contact section">
         <h2>Contacto</h2>
-        <p>¿Tienes alguna pregunta o quieres colaborar en un proyecto? ¡Hablemos!</p>
-        <form action="mailto:tucorreo@ejemplo.com" method="post" enctype="text/plain">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" required></textarea><br>
-            <div><br>
-
-                <button type="submit" class="btn">Enviar</button>
-            </div>
-        </form>
+        <p>¿Tienes alguna pregunta o quieres colaborar en un proyecto? </p>
+        <div class="contact-email">
+            <label for="email">Contáctame: </label>
+            <input type="text" id="email" value="victor.ams84@gmail.com" readonly>
+            <button id="copyEmailButton" class="btn"><span class="material-symbols-outlined">
+                content_copy
+                </span></button>
+            
+            
+        </div>
+        <span id="copyMessage" class="copy-message">¡Correo copiado!</span> <!-- Mover el mensaje aquí -->
     </section>
-    <!-- Fin Sección de Contacto -->
+<!-- Fin Sección de Contacto -->
+
 
     <!-- Botón para volver al inicio -->
     <button id="scrollToTopBtn" class="material-symbols-outlined">arrow_circle_up</button>
@@ -155,8 +155,7 @@
     <script src="scripts/formValidation.js" type="module"></script>
     <script src="scripts/projectSlider.js" type="module"></script>
     <script src="scripts/main.js" type="module"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
+    <script src="scripts/contact.js" type="module"></script>
+    
 
 </html>

@@ -1,23 +1,22 @@
 /* Botones */
 .btn {
     display: inline-block;
-    background: #007bff;
-    color: #fff;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    border: none;
-    font-family: "Quicksand", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    line-height: 1.6;
-    transition: background 0.3s ease; /* Agregar transición */
+    background: #007bff; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 10px 15px; /* Espaciado */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    border: none; /* Sin borde */
+    font-family: "Quicksand", sans-serif; /* Fuente */
+    font-weight: 300; /* Peso de la fuente */
+    line-height: 1.6; /* Altura de línea */
+    transition: background 0.3s ease; /* Transición para el color de fondo */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
 }
 
 .btn:hover {
-    background: #0056b3;
+    background: #0056b3; /* Color al pasar el ratón */
 }
-
 
 /* Botón Scroll To Top */
 #scrollToTopBtn {

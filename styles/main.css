@@ -3,6 +3,7 @@
 @import url(proyects.css);
 @import url(footer.css);
 @import url(skills.css);
+@import url(contact.css);
 /* Estilos Globales */
 * {
     box-sizing: border-box;
@@ -20,23 +21,32 @@ body {
 }
 
 
-/* Secciones */
-.section {  
-    list-style: none; /* Elimina la viñeta o numeración */
+.section {
+    list-style: none;
     padding: 20px;
-    margin: 20px;
+    margin: 20px auto; /* Centra la sección horizontalmente */
+    max-width: 800px; /* Limita el ancho para una mejor lectura en pantallas grandes */
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Alinea el texto horizontalmente */
-    width: 100%; /* Ocupa todo el ancho de la página */
-    height: 100vh; /* Ocupa toda la altura de la ventana del navegador */
-    box-sizing: border-box; /* Incluye padding y border en el ancho y alto total */
-    display: flex; /* Habilita el modelo de caja flexible */
-    flex-direction: column; /* Cambia la dirección de flex a columna */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    text-align: center;
+    width: 90%; /* Se ajusta al 90% del ancho de la página */
+    min-height: 70vh; /* Ocupa al menos el 70% de la altura de la ventana */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+    .section {
+        padding: 15px;
+        margin: 15px auto;
+        min-height: 60vh;
+        max-width: 95%; /* Se ajusta aún más en pantallas pequeñas */
+    }
 }
 
 

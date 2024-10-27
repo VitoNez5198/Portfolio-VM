@@ -4,6 +4,8 @@ export function initNavbar() {
 
     hamburger.addEventListener("click", () => {
         navLinks.classList.toggle("show");
+        hamburger.classList.toggle("show"); // Agregar clase para efecto en el botón
+
     });
 }
 
