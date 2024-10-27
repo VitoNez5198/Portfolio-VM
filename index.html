@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portafolio de desarrollador web fullstack JavaScript especializado en el stack PERN.">
+    <title>Víctor Martínez</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Gowun+Dodum&family=Quicksand:wght@300&display=swap');
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">Víctor Martínez</a>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#sobre-mi">Sobre Mí</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#curriculum">Currículum</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <!-- Fin Navbar -->
+
+    <!-- Sección de Inicio -->
+    <section id="inicio" class="intro section">
+        <h2>Desarrollador Web Fullstack</h2>
+        <p>Especializado en el stack PERN (PostgreSQL, Express, React, Node.js).</p>
+        <p><a href="#contacto">Contáctame</a></p>
+    </section>
+    <!-- Fin Sección de Inicio -->
+
+    <!-- Sección de Habilidades -->
+    <section id="habilidades" class="skills section">
+        <h2>Habilidades Técnicas</h2>
+        <ul>
+            <li>JavaScript (ES6+)</li>
+            <li>React</li>
+            <li>Node.js, Express</li>
+            <li>PostgreSQL</li>
+            <li>Git y GitHub</li>
+            <li>HTML5, CSS3, Responsive Design</li>
+        </ul>
+    </section>
+    <!-- Fin Sección de Habilidades -->
+
+    <!-- Sección de Proyectos -->
+    <section id="proyectos" class="projects section">
+        <h2>Proyectos Destacados</h2>
+        <div class="project">
+            <h3>Proyecto 1 - [Nombre del Proyecto]</h3>
+            <p>Descripción del proyecto: [Breve descripción de la app, su objetivo y tu rol].</p>
+            <p>Tecnologías usadas: React, Node.js, Express, PostgreSQL.</p>
+            <p>
+                <a href="[enlace demo]" target="_blank">Ver Demo</a> |
+                <a href="[enlace github]" target="_blank">Ver Código</a>
+            </p>
+        </div>
+        <div class="project">
+            <h3>Proyecto 2 - [Nombre del Proyecto]</h3>
+            <p>Descripción del proyecto: [Breve descripción de la app, su objetivo y tu rol].</p>
+            <p>Tecnologías usadas: React, Node.js, Express, PostgreSQL.</p>
+            <p>
+                <a href="[enlace demo]" target="_blank">Ver Demo</a> |
+                <a href="[enlace github]" target="_blank">Ver Código</a>
+            </p>
+        </div>
+    </section>
+    <!-- Fin Sección de Proyectos -->
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="about section">
+        <h2>Sobre Mí</h2>
+        <p>Hola, soy Víctor, un desarrollador fullstack con experiencia en el stack PERN. Me apasiona construir
+            aplicaciones funcionales y bien estructuradas.</p>
+        <p>Soy entusiasta de la tecnología y me gusta aprender continuamente sobre nuevas herramientas y métodos para
+            mejorar mi trabajo.</p>
+    </section>
+    <!-- Fin Sección Sobre Mí -->
+
+    <!-- Sección de Currículum -->
+    <section id="curriculum" class="resume section">
+        <h2>Mi Currículum</h2>
+        <p>Puedes descargar mi currículum en PDF para conocer más sobre mi experiencia y habilidades.</p><br>
+        <a href="[ruta_del_curriculum.pdf]" download class="btn">Descargar Currículum</a>
+    </section>
+    <!-- Fin Sección de Currículum -->
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="contact section">
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna pregunta o quieres colaborar en un proyecto? ¡Hablemos!</p>
+        <form action="mailto:tucorreo@ejemplo.com" method="post" enctype="text/plain">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea><br>
+            <div><br>
+
+                <button type="submit" class="btn">Enviar</button>
+            </div>
+        </form>
+    </section>
+    <!-- Fin Sección de Contacto -->
+
+    <!-- Botón para volver al inicio -->
+    <button id="scrollToTopBtn" class="material-symbols-outlined">arrow_circle_up</button>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Víctor Martínez. Todos los derechos reservados.</p>
+        <p><a href="https://www.linkedin.com/in/victor-martinez-santibanez/" target="_blank" rel="noopener">LinkedIn</a>
+            |
+            <a href="https://github.com/VitoNez5198" target="_blank" rel="noopener">GitHub</a>
+        </p>
+    </footer>
+    <!-- Fin Footer -->
+
+    <!-- Scripts -->
+    <script src="scripts/navbar.js" type="module"></script>
+    <script src="scripts/scrollToTop.js" type="module"></script>
+    <script src="scripts/formValidation.js" type="module"></script>
+    <script src="scripts/projectSlider.js" type="module"></script>
+    <script src="scripts/main.js" type="module"></script>
+</body>
+
+</html>
