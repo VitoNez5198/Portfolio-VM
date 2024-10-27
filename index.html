@@ -45,7 +45,7 @@
             <a href="#contacto" class="btn">¡Contáctame!</a> <!-- Cambiado a botón -->
         </p>
     </section>
-    
+
     <!-- Fin Sección de Inicio -->
 
     <!-- Sección de Habilidades -->
@@ -55,22 +55,50 @@
             <div class="category">
                 <h3>Frontend</h3>
 
-                <img src="assets/icons/html5.svg" class="icons-skills" alt="icon-html">
-                <img src="assets/icons/css3.svg" class="icons-skills" alt="icon-css">
-                <img src="assets/icons/javascript-js.svg" class="icons-skills" alt="icon-js">
-                <img src="assets/icons/react.svg" class="icons-skills" alt="icon-react">
+                <div class="image-container">
+                    <img src="assets/icons/html5.svg" class="icons-skills" alt="icon-html">
+                    <span class="tooltip">HTML5</span>
+                </div>
+                <div class="image-container">
+                    <img src="assets/icons/css3.svg" class="icons-skills" alt="icon-css">
+                    <span class="tooltip">CSS3</span>
+                </div>
+                <div class="image-container">
+                    <img src="assets/icons/javascript-js.svg" class="icons-skills" alt="icon-js">
+                    <span class="tooltip">JavaScript</span>
+                </div>
+                <div class="image-container">
+                    <img src="assets/icons/react.svg" class="icons-skills" alt="icon-react">
+                    <span class="tooltip">React</span>
+                </div>
+
 
             </div>
             <div class="category">
                 <h3>Backend</h3>
-                <img src=" assets/icons/node-js.svg " class="icons-skills" alt="icon-node">
-                <img src="assets/icons/express-original.svg" class="icons-skills" alt="icon-express">
-                <img src="assets/icons/postgresql.svg" class="icons-skills" alt="icon-postgre">
+                <div class="image-container">
+                    <img src=" assets/icons/node-js.svg " class="icons-skills" alt="icon-node">
+                    <span class="tooltip">Node.js</span>
+                </div>
+                <div class="image-container">
+                    <img src="assets/icons/express-original.svg" class="icons-skills" alt="icon-express">
+                    <span class="tooltip">Express.js</span>
+                </div>
+                <div class="image-container">
+                    <img src="assets/icons/postgresql.svg" class="icons-skills" alt="icon-postgre">
+                    <span class="tooltip">PostgreSQL</span>
+                </div>
             </div>
             <div class="category">
                 <h3>Herramientas</h3>
-                <img src="assets/icons/git.svg" class="icons-skills" alt="icon-git">
-                <img src="assets/icons/github.svg" class="icons-skills" alt="icon-github">
+                <div class="image-container">
+                    <img src="assets/icons/git.svg" class="icons-skills" alt="icon-git">
+                    <span class="tooltip">Git</span>
+                </div>
+                <div class="image-container">
+                    <img src="assets/icons/github.svg" class="icons-skills" alt="icon-github">
+                    <span class="tooltip">GitHub</span>
+                </div>
             </div>
         </div>
     </section>
@@ -126,14 +154,14 @@
             <label for="email">Contáctame: </label>
             <input type="text" id="email" value="victor.ams84@gmail.com" readonly>
             <button id="copyEmailButton" class="btn"><span class="material-symbols-outlined">
-                content_copy
+                    content_copy
                 </span></button>
-            
-            
+
+
         </div>
         <span id="copyMessage" class="copy-message">¡Correo copiado!</span> <!-- Mover el mensaje aquí -->
     </section>
-<!-- Fin Sección de Contacto -->
+    <!-- Fin Sección de Contacto -->
 
 
     <!-- Botón para volver al inicio -->
@@ -156,6 +184,6 @@
     <script src="scripts/projectSlider.js" type="module"></script>
     <script src="scripts/main.js" type="module"></script>
     <script src="scripts/contact.js" type="module"></script>
-    
+
 
 </html>

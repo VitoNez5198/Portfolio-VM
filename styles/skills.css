@@ -3,3 +3,29 @@
     height: 80px; /* Mantiene la proporción de la imagen */
     margin-right: 8px; /* Espacio entre íconos, opcional */
 }
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    bottom: 110%; /* Posiciona el tooltip sobre la imagen */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    text-align: center;
+    z-index: 10;
+}
+
+.image-container:hover .tooltip {
+    display: block; /* Muestra el tooltip cuando el mouse está sobre el contenedor */
+}
