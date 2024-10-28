@@ -7,7 +7,7 @@
     <meta name="description"
         content="Portafolio de desarrollador web fullstack JavaScript especializado en el stack PERN.">
     <title>Víctor Martínez</title>
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="./styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
@@ -28,7 +28,7 @@
             <li><a href="#habilidades">Habilidades</a></li>
             <li><a href="#curriculum">Currículum</a></li>
             <li><a href="#contacto">Contacto</a></li>
-        </ul>
+        </ul>git
         <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
@@ -42,10 +42,9 @@
         <h2>Desarrollador Web Fullstack</h2>
         <p>Especializado en el stack PERN (PostgreSQL, Express, React, Node.js).</p>
         <p>
-            <a href="#contacto" class="btn">¡Contáctame!</a> <!-- Cambiado a botón -->
+            <a href="#contacto" class="btn">¡Contáctame!</a>
         </p>
     </section>
-
     <!-- Fin Sección de Inicio -->
 
     <!-- Sección de Habilidades -->
@@ -54,57 +53,54 @@
         <div class="skills">
             <div class="category">
                 <h3>Frontend</h3>
-
                 <div class="image-container">
-                    <img src="assets/icons/html5.svg" class="icons-skills" alt="icon-html">
+                    <img src="./assets/icons/html5.svg" class="icons-skills" alt="icon-html">
                     <span class="tooltip">HTML5</span>
                 </div>
                 <div class="image-container">
-                    <img src="assets/icons/css3.svg" class="icons-skills" alt="icon-css">
+                    <img src="./assets/icons/css3.svg" class="icons-skills" alt="icon-css">
                     <span class="tooltip">CSS3</span>
                 </div>
                 <div class="image-container">
-                    <img src="assets/icons/javascript-js.svg" class="icons-skills" alt="icon-js">
+                    <img src="./assets/icons/javascript-js.svg" class="icons-skills" alt="icon-js">
                     <span class="tooltip">JavaScript</span>
                 </div>
                 <div class="image-container">
-                    <img src="assets/icons/react.svg" class="icons-skills" alt="icon-react">
+                    <img src="./assets/icons/react.svg" class="icons-skills" alt="icon-react">
                     <span class="tooltip">React</span>
                 </div>
-
-
             </div>
             <div class="category">
                 <h3>Backend</h3>
                 <div class="image-container">
-                    <img src=" assets/icons/node-js.svg " class="icons-skills" alt="icon-node">
+                    <img src="./assets/icons/node-js.svg" class="icons-skills" alt="icon-node">
                     <span class="tooltip">Node.js</span>
                 </div>
                 <div class="image-container">
-                    <img src="assets/icons/express-original.svg" class="icons-skills" alt="icon-express">
+                    <img src="./assets/icons/express-original.svg" class="icons-skills" alt="icon-express">
                     <span class="tooltip">Express.js</span>
                 </div>
                 <div class="image-container">
-                    <img src="assets/icons/postgresql.svg" class="icons-skills" alt="icon-postgre">
+                    <img src="./assets/icons/postgresql.svg" class="icons-skills" alt="icon-postgre">
                     <span class="tooltip">PostgreSQL</span>
                 </div>
             </div>
             <div class="category">
                 <h3>Herramientas</h3>
                 <div class="image-container">
-                    <img src="assets/icons/git.svg" class="icons-skills" alt="icon-git">
+                    <img src="./assets/icons/git.svg" class="icons-skills" alt="icon-git">
                     <span class="tooltip">Git</span>
                 </div>
                 <div class="image-container">
-                    <img src="assets/icons/github.svg" class="icons-skills" alt="icon-github">
+                    <img src="./assets/icons/github.svg" class="icons-skills" alt="icon-github">
                     <span class="tooltip">GitHub</span>
                 </div>
                 <div class="image-container">
-                    <img src="assets/icons/PS_icon.svg" class="icons-skills" alt="icon-photoshop">
+                    <img src="./assets/icons/PS_icon.svg" class="icons-skills" alt="icon-photoshop">
                     <span class="tooltip">PhotoShop</span>
                 </div>
                 <div class="image-container">
-                    <img src="assets/icons/Ai-icon.svg" class="icons-skills" alt="icon-illustrator">
+                    <img src="./assets/icons/Ai-icon.svg" class="icons-skills" alt="icon-illustrator">
                     <span class="tooltip">Illustrator</span>
                 </div>
             </div>
@@ -157,20 +153,17 @@
     <!-- Sección de Contacto -->
     <section id="contacto" class="contact section">
         <h2>Contacto</h2>
-        <p>¿Tienes alguna pregunta o quieres colaborar en un proyecto? </p>
+        <p>¿Tienes alguna pregunta o quieres colaborar en un proyecto?</p>
         <div class="contact-email">
             <label for="email">Contáctame: </label>
             <input type="text" id="email" value="developer.victorms@gmail.com" readonly>
             <button id="copyEmailButton" class="btn"><span class="material-symbols-outlined">
                     content_copy
                 </span></button>
-
-
         </div>
-        <span id="copyMessage" class="copy-message">¡Correo copiado!</span> <!-- Mover el mensaje aquí -->
+        <span id="copyMessage" class="copy-message">¡Correo copiado!</span>
     </section>
     <!-- Fin Sección de Contacto -->
-
 
     <!-- Botón para volver al inicio -->
     <button id="scrollToTopBtn" class="material-symbols-outlined">arrow_circle_up</button>
@@ -186,12 +179,14 @@
     <!-- Fin Footer -->
 
     <!-- Scripts -->
-    <script src="scripts/navbar.js" type="module"></script>
-    <script src="scripts/scrollToTop.js" type="module"></script>
-    <script src="scripts/formValidation.js" type="module"></script>
-    <script src="scripts/projectSlider.js" type="module"></script>
-    <script src="scripts/main.js" type="module"></script>
-    <script src="scripts/contact.js" type="module"></script>
+    <script src="./scripts/navbar.js" type="module"></script>
+    <script src="./scripts/scrollToTop.js" type="module"></script>
+    <script src="./scripts/formValidation.js" type="module"></script>
+    <script src="./scripts/projectSlider.js" type="module"></script>
+    <script src="./scripts/main.js" type="module"></script>
+    <script src="./scripts/contact.js" type="module"></script>
+    <!-- Fin Scripts -->
 
+</body>
 
 </html>
