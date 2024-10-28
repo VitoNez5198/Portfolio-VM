@@ -4,6 +4,7 @@
 @import url(footer.css);
 @import url(skills.css);
 @import url(contact.css);
+
 /* Estilos Globales */
 * {
     box-sizing: border-box;
@@ -13,26 +14,22 @@
 
 body {
     font-family: "Quicksand", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 300;
     line-height: 1.6;
     background: #f4f4f4;
-    font-size: 25px;
+    font-size: 25px; /* Tamaño base */
 }
 
-
 .section {
-    list-style: none;
     padding: 20px;
-    margin: 20px auto; /* Centra la sección horizontalmente */
-    max-width: 800px; /* Limita el ancho para una mejor lectura en pantallas grandes */
+    margin: 20px auto;
+    max-width: 800px;
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 90%; /* Se ajusta al 90% del ancho de la página */
-    min-height: 70vh; /* Ocupa al menos el 70% de la altura de la ventana */
-    box-sizing: border-box;
+    width: 90%;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,6 +38,10 @@ body {
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 600px) {
+    body {
+        font-size: 100%  ; /* Tamaño de fuente más pequeño en móviles */
+    }
+    
     .section {
         padding: 15px;
         margin: 15px auto;
@@ -49,15 +50,10 @@ body {
     }
 }
 
-
-
-
-
 /* Títulos */
 h2 {
     font-family: "Fira Code", monospace;
     font-weight: 700;
-    /* Corregido */
-    font-size: 50px;
+    font-size: 2.5rem; /* Ajustado */
     color: #333;
 }
