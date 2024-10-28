@@ -2,33 +2,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Espacio entre los elementos */
+    gap: 15px; /* Espacio entre los elementos */
     margin-top: 20px;
+    width: 70%; /* Asegúrate de que el contenedor ocupe todo el ancho disponible */
 }
 
 #email {
     border: 1px solid #ccc;
     padding: 10px; /* Aumentar el padding para que el campo sea más grande */
-    border-radius: 4px; /* Puedes ajustar este valor si deseas esquinas más redondeadas */
-    width: auto; /* Cambiado de 100% a auto */
-    max-width: 250px; /* Aumentar el ancho máximo para que se vea más grande */
-    box-sizing: border-box;
+    border-radius: 10px; /* Puedes ajustar este valor si deseas esquinas más redondeadas */
+    width: 100%; /* Cambiado a 100% para que el campo ocupe todo el ancho del contenedor */
+    max-width: none; /* Eliminar o ajustar el ancho máximo si es necesario */
+    box-sizing: border-box; /* Asegúrate de incluir el padding en el cálculo del ancho */
     text-align: center; /* Centra el texto en el campo */
-    font-size: 16px; /* Aumentar el tamaño de la fuente */
+    font-size: 20px; /* Aumentar el tamaño de la fuente */
 }
+
 
 /* Media Query para pantallas pequeñas */
 @media (max-width: 600px) {
     .contact-email {
         flex-direction: column; /* Los elementos se apilan verticalmente en pantallas pequeñas */
         align-items: stretch; /* Los elementos ocupan todo el ancho disponible */
-        gap: 5px;
+        gap: 15px;
+        width: 70%;
     }
     
     #email {
         width: 100%; /* Mantener el ancho completo en pantallas pequeñas */
         max-width: none; /* Sin ancho máximo */
         font-size: 16px; /* Aumentar el tamaño de la fuente también en pantallas pequeñas */
+        
     }
 
     button {
