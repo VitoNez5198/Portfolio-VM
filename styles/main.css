@@ -57,3 +57,17 @@ h2 {
     font-size: 2.5rem; /* Ajustado */
     color: #333;
 }
+
+.article-wrapper figure {
+    margin: 0; /* Elimina el margen de la figura */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+}
+
+.article-wrapper img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 400px; /* Establece un ancho máximo (ajusta según tus necesidades) */
+    border-radius: 8px; /* Añade esquinas redondeadas si lo deseas */
+    object-fit: cover; /* Recorta la imagen si es necesario para que encaje */
+}
+
