@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portafolio Víctor Martínez">
+    <meta name="description" content="Portafolio Víctor Martínez">
     <title>Víctor Martínez</title>
     <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon">
 
@@ -43,7 +42,7 @@
     <section id="inicio" class="intro section">
         <h2>Desarrollador Web Fullstack</h2>
         <p>Especializado en el stack PERN (PostgreSQL, Express, React, Node.js).</p>
-        <p>
+        <p><br>
             <a href="#contacto" class="btn">¡Contáctame!</a>
         </p>
     </section>
@@ -110,84 +109,119 @@
     </section>
     <!-- Fin Sección de Habilidades -->
 
-    <!-- Sección de Proyectos -->
-    <section id="proyectos" class="projects section">
-        <h2>Proyectos Destacados</h2>
-        <div class="project">
-            <h3>Proyecto 1 - [Nombre del Proyecto]</h3>
-            <p>Descripción del proyecto: [Breve descripción de la app, su objetivo y tu rol].</p>
-            <p>Tecnologías usadas: React, Node.js, Express, PostgreSQL.</p>
-            <p>
-                <a href="[enlace demo]" target="_blank">Ver Demo</a> |
-                <a href="[enlace github]" target="_blank">Ver Código</a>
+    <section id="proyectos" class="section projects-section">
+        <h2>Mis Proyectos</h2>
+        <div class="projects-container">
+            <div class="projects-card">
+                <div class="articles">
+                    <article>
+                        <div class="article-wrapper">
+                            <figure>
+                                <img src="assets/img/project-1.jpeg" alt="" />
+                            </figure>
+                            <div class="article-body">
+                                <h3>Proyecto 1 - Portafolio Personal</h3>
+                                <p>
+                                    Portafolio personal de desarrollo web fullstack, creado con HTML, CSS y JavaScript. Presenta mis proyectos, habilidades y experiencia en el stack PERN.
+                                </p>
+                                <a href="https://vitonez5198.github.io/Portfolio-VM/" target="_blank" rel="noopener" class="btn-demo">Demo</a>
+                                <a href="https://github.com/VitoNez5198/Portfolio-VM" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article>
+                        <div class="article-wrapper">
+                            <figure>
+                                <img src="assets/img/project-1.jpeg" alt="" />
+                            </figure>
+                            <div class="article-body">
+                                <h3>Proyecto 1 - Portafolio Personal</h3>
+                                <p>
+                                    Portafolio personal de desarrollo web fullstack, creado con HTML, CSS y JavaScript. Presenta mis proyectos, habilidades y experiencia en el stack PERN.
+                                </p>
+                                <a href="https://vitonez5198.github.io/Portfolio-VM/" target="_blank" rel="noopener" class="btn-demo">Demo</a>
+                                <a href="https://github.com/VitoNez5198/Portfolio-VM" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="article-wrapper">
+                            <figure>
+                                <img src="assets/img/project-1.jpeg" alt="" />
+                            </figure>
+                            <div class="article-body">
+                                <h3>Proyecto 1 - Portafolio Personal</h3>
+                                <p>
+                                    Portafolio personal de desarrollo web fullstack, creado con HTML, CSS y JavaScript. Presenta mis proyectos, habilidades y experiencia en el stack PERN.
+                                </p>
+                                <a href="https://vitonez5198.github.io/Portfolio-VM/" target="_blank" rel="noopener" class="btn-demo">Demo</a>
+                                <a href="https://github.com/VitoNez5198/Portfolio-VM" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Sección Sobre Mí -->
+        <section id="sobre-mi" class="about section">
+            <h2>Sobre Mí</h2>
+            <p>Hola, soy Víctor, un desarrollador fullstack con experiencia en el stack PERN. Me apasiona construir
+                aplicaciones funcionales y bien estructuradas.</p>
+            <p>Soy entusiasta de la tecnología y me gusta aprender continuamente sobre nuevas herramientas y métodos
+                para
+                mejorar mi trabajo.</p>
+        </section>
+        <!-- Fin Sección Sobre Mí -->
+
+        <!-- Sección de Currículum -->
+        <section id="curriculum" class="resume section">
+            <h2>Mi Currículum</h2>
+            <p>Puedes descargar mi currículum en PDF para conocer más sobre mi experiencia y habilidades.</p><br>
+            <a href="https://drive.google.com/uc?export=download&id=1RmWZ71K71DmTDfSIOAB4sBICuUvnR8SH" download
+                class="btn">Descargar Currículum</a>
+        </section>
+        <!-- Fin Sección de Currículum -->
+
+        <!-- Sección de Contacto -->
+        <section id="contacto" class="contact section">
+            <h2>Contacto</h2>
+            <p>¿Tienes alguna pregunta o quieres colaborar en un proyecto?</p>
+            <div class="contact-email">
+                <label for="email">Contáctame: </label>
+                <input type="text" id="email" value="developer.victorms@gmail.com" readonly>
+                <button id="copyEmailButton" class="btn"><span class="material-symbols-outlined">
+                        content_copy
+                    </span></button>
+            </div>
+            <span id="copyMessage" class="copy-message">¡Correo copiado!</span>
+        </section>
+        <!-- Fin Sección de Contacto -->
+
+        <!-- Botón para volver al inicio -->
+        <button id="scrollToTopBtn" class="material-symbols-outlined">arrow_circle_up</button>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Víctor Martínez. Todos los derechos reservados.</p>
+            <p><a href="https://www.linkedin.com/in/victor-martinez-santibanez/" target="_blank"
+                    rel="noopener">LinkedIn</a>
+                |
+                <a href="https://github.com/VitoNez5198" target="_blank" rel="noopener">GitHub</a>
             </p>
-        </div>
-        <div class="project">
-            <h3>Proyecto 2 - [Nombre del Proyecto]</h3>
-            <p>Descripción del proyecto: [Breve descripción de la app, su objetivo y tu rol].</p>
-            <p>Tecnologías usadas: React, Node.js, Express, PostgreSQL.</p>
-            <p>
-                <a href="[enlace demo]" target="_blank">Ver Demo</a> |
-                <a href="[enlace github]" target="_blank">Ver Código</a>
-            </p>
-        </div>
-    </section>
-    <!-- Fin Sección de Proyectos -->
+        </footer>
+        <!-- Fin Footer -->
 
-    <!-- Sección Sobre Mí -->
-    <section id="sobre-mi" class="about section">
-        <h2>Sobre Mí</h2>
-        <p>Hola, soy Víctor, un desarrollador fullstack con experiencia en el stack PERN. Me apasiona construir
-            aplicaciones funcionales y bien estructuradas.</p>
-        <p>Soy entusiasta de la tecnología y me gusta aprender continuamente sobre nuevas herramientas y métodos para
-            mejorar mi trabajo.</p>
-    </section>
-    <!-- Fin Sección Sobre Mí -->
-
-    <!-- Sección de Currículum -->
-    <section id="curriculum" class="resume section">
-        <h2>Mi Currículum</h2>
-        <p>Puedes descargar mi currículum en PDF para conocer más sobre mi experiencia y habilidades.</p><br>
-        <a href="https://drive.google.com/uc?export=download&id=1RmWZ71K71DmTDfSIOAB4sBICuUvnR8SH" download class="btn">Descargar Currículum</a>
-    </section>
-    <!-- Fin Sección de Currículum -->
-
-    <!-- Sección de Contacto -->
-    <section id="contacto" class="contact section">
-        <h2>Contacto</h2>
-        <p>¿Tienes alguna pregunta o quieres colaborar en un proyecto?</p>
-        <div class="contact-email">
-            <label for="email">Contáctame: </label>
-            <input type="text" id="email" value="developer.victorms@gmail.com" readonly>
-            <button id="copyEmailButton" class="btn"><span class="material-symbols-outlined">
-                    content_copy
-                </span></button>
-        </div>
-        <span id="copyMessage" class="copy-message">¡Correo copiado!</span>
-    </section>
-    <!-- Fin Sección de Contacto -->
-
-    <!-- Botón para volver al inicio -->
-    <button id="scrollToTopBtn" class="material-symbols-outlined">arrow_circle_up</button>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Víctor Martínez. Todos los derechos reservados.</p>
-        <p><a href="https://www.linkedin.com/in/victor-martinez-santibanez/" target="_blank" rel="noopener">LinkedIn</a>
-            |
-            <a href="https://github.com/VitoNez5198" target="_blank" rel="noopener">GitHub</a>
-        </p>
-    </footer>
-    <!-- Fin Footer -->
-
-    <!-- Scripts -->
-    <script src="./scripts/navbar.js" type="module"></script>
-    <script src="./scripts/scrollToTop.js" type="module"></script>
-    <script src="./scripts/formValidation.js" type="module"></script>
-    <script src="./scripts/projectSlider.js" type="module"></script>
-    <script src="./scripts/main.js" type="module"></script>
-    <script src="./scripts/contact.js" type="module"></script>
-    <!-- Fin Scripts -->
+        <!-- Scripts -->
+        <script src="./scripts/navbar.js" type="module"></script>
+        <script src="./scripts/scrollToTop.js" type="module"></script>
+        <script src="./scripts/formValidation.js" type="module"></script>
+        <script src="./scripts/projectSlider.js" type="module"></script>
+        <script src="./scripts/main.js" type="module"></script>
+        <script src="./scripts/contact.js" type="module"></script>
+        <!-- Fin Scripts -->
 
 </body>
 
