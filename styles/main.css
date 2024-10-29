@@ -39,16 +39,38 @@ body {
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 600px) {
     body {
-        font-size: 100%  ; /* Tamaño de fuente más pequeño en móviles */
+        font-size: 100%; /* Tamaño de fuente más pequeño en móviles */
     }
-    
+
     .section {
         padding: 15px;
         margin: 15px auto;
         min-height: 60vh;
         max-width: 95%; /* Se ajusta aún más en pantallas pequeñas */
     }
+
+    /* Asegúrate de que las tarjetas se alineen verticalmente */
+    .projects-section {
+        display: flex;
+        flex-direction: column; /* Alineación vertical */
+        align-items: center; /* Centra las tarjetas horizontalmente */
+    }
+    
+    .projects-card {
+        padding: 15px;
+        margin: 15px auto;
+        max-width: 95%; /* Ajustado en pantallas pequeñas */
+        width: 100%; /* Asegura que ocupen el ancho completo del contenedor */
+    }
+
+    /* Ajustes para las imágenes dentro de las tarjetas */
+    .article-wrapper img {
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+        height: auto; /* Mantiene la proporción */
+        max-width: 100%; /* Evita que la imagen supere el contenedor */
+    }
 }
+
 
 /* Títulos */
 h2 {
