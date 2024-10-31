@@ -105,3 +105,31 @@ article a:hover {
         max-width: 100%; /* Evita que la imagen supere el contenedor */
     }
 }
+
+/* Modo oscuro para .projects-card */
+body.dark-mode .projects-card {
+    background: #000000;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Modo oscuro para .articles */
+body.dark-mode .articles {
+    color: #e0e0e0;
+}
+
+/* Modo oscuro para cada article */
+body.dark-mode article {
+    background: #444444ae;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Modo oscuro para enlaces en article */
+body.dark-mode article a {
+    color: #ffbb33;
+}
+
+body.dark-mode article a:hover {
+    color: #ffdd55; /* Color de enlace en hover para destacar en modo oscuro */
+}

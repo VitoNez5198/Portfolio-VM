@@ -3,6 +3,7 @@ import './scrollToTop.js';
 import './formValidation.js';
 import './projectSlider.js';
 import { copiarCorreo } from './contact.js';
+import './colorModel.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     initNavbar();

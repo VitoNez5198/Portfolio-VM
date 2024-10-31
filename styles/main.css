@@ -17,9 +17,17 @@ body {
     font-weight: 300;
     line-height: 1.6;
     background: #f4f4f4;
-    font-size: 25px; /* Tamaño base */
+    font-size: 25px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Sección con fondo oscuro */
 .section {
     padding: 20px;
     margin: 20px auto;
@@ -34,62 +42,136 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilos de las secciones en modo oscuro */
+body.dark-mode .section {
+    background: #444444ae;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Títulos */
+h2 {
+    font-family: "Fira Code", monospace;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/* Títulos en modo oscuro */
+body.dark-mode h2 {
+    color: #e0e0e0;
+}
+
+.article-wrapper figure {
+    margin: 0;
+    overflow: hidden;
+}
+
+.article-wrapper img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 600px) {
     body {
-        font-size: 100%; /* Tamaño de fuente más pequeño en móviles */
+        font-size: 100%;
     }
 
     .section {
         padding: 15px;
         margin: 15px auto;
         min-height: 60vh;
-        max-width: 95%; /* Se ajusta aún más en pantallas pequeñas */
+        max-width: 95%;
     }
 
-    /* Asegúrate de que las tarjetas se alineen verticalmente */
     .projects-section {
         display: flex;
-        flex-direction: column; /* Alineación vertical */
-        align-items: center; /* Centra las tarjetas horizontalmente */
+        flex-direction: column;
+        align-items: center;
     }
-    
+
     .projects-card {
         padding: 15px;
         margin: 15px auto;
-        max-width: 95%; /* Ajustado en pantallas pequeñas */
-        width: 100%; /* Asegura que ocupen el ancho completo del contenedor */
+        max-width: 95%;
+        width: 100%;
     }
 
-    /* Ajustes para las imágenes dentro de las tarjetas */
     .article-wrapper img {
-        width: 100%; /* Ocupa todo el ancho del contenedor */
-        height: auto; /* Mantiene la proporción */
-        max-width: 100%; /* Evita que la imagen supere el contenedor */
+        width: 100%;
+        height: auto;
+        max-width: 100%;
     }
 }
 
 
-/* Títulos */
-h2 {
-    font-family: "Fira Code", monospace;
-    font-weight: 700;
-    font-size: 2.5rem; /* Ajustado */
-    color: #333;
+.checkbox {
+    display: none;
+    /* Ocultamos el checkbox */
 }
 
-.article-wrapper figure {
-    margin: 0; /* Elimina el margen de la figura */
-    overflow: hidden; /* Oculta cualquier desbordamiento */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    width: 50px;
+    height: 24px;
+    background-color: #000000;
+    border-radius: 50px;
+    padding: 5px;
+    transition: background-color 0.3s;
 }
 
-.article-wrapper img {
-    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    max-width: 400px; /* Establece un ancho máximo (ajusta según tus necesidades) */
-    border-radius: 8px; /* Añade esquinas redondeadas si lo deseas */
-    object-fit: cover; /* Recorta la imagen si es necesario para que encaje */
+.checkbox-label .fas {
+    position: absolute;
+    font-size: 12px;
+    color: #ffffff;
+    transition: opacity 0.3s;
 }
 
+.checkbox-label .fa-moon {
+    left: 8px;
+    opacity: 1;
+}
+
+.checkbox-label .fa-sun {
+    right: 8px;
+    opacity: 0;
+}
+
+.checkbox:checked+.checkbox-label {
+    background-color: #ffbb33;
+    /* Cambia el color al activar el modo claro */
+}
+
+.checkbox:checked+.checkbox-label .fa-moon {
+    opacity: 0;
+}
+
+.checkbox:checked+.checkbox-label .fa-sun {
+    opacity: 1;
+}
+
+.ball {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.checkbox:checked+.checkbox-label .ball {
+    transform: translateX(26px);
+    /* Mueve la bola a la derecha */
+}

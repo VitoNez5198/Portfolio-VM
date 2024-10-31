@@ -4,6 +4,11 @@
     margin-right: 8px; /* Espacio entre íconos, opcional */
 }
 
+.icons-skills:hover {
+    transform: scale(1.2);
+}
+
+
 .image-container {
     position: relative;
     display: inline-block;
