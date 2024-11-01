@@ -1,11 +1,10 @@
-# Portafolio Víctor Martínez
+# Portafolio
 
 Bienvenido a mi portafolio personal, donde muestro mis proyectos y habilidades como desarrollador web fullstack especializado en el stack PERN (PostgreSQL, Express, React, Node.js).
 
 ## Contenido
 
 - [Características](#características)
-- [Tecnologías Utilizadas](#tecnologías-utilizadas)
 - [Demostración](#demostración)
 - [Instalación](#instalación)
 - [Sobre Mí](#sobre-mí)
@@ -17,25 +16,6 @@ Bienvenido a mi portafolio personal, donde muestro mis proyectos y habilidades c
 - Modo oscuro que mejora la experiencia del usuario.
 - Secciones que muestran mis habilidades, proyectos y mi currículum.
 - Funcionalidad de copia de correo electrónico para contacto fácil.
-
-## Tecnologías Utilizadas
-
-- **Frontend:**
-  - HTML5
-  - CSS3
-  - JavaScript
-  - React
-
-- **Backend:**
-  - Node.js
-  - Express.js
-  - PostgreSQL
-
-- **Herramientas:**
-  - Git
-  - GitHub
-  - Photoshop
-  - Illustrator
 
 ## Demostración
 
