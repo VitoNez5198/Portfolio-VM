@@ -42,12 +42,9 @@ article {
     flex-direction: column;
     justify-content: flex-start; /* Alinea el contenido al inicio */
     height: 100%;
-    padding: 0; /* Elimina el padding si no es necesario */
 }
 
 figure {
-    margin: 0;
-    padding: 0;
     aspect-ratio: 16 / 9; /* Mantiene la proporción de la imagen */
     overflow: hidden;
 }
@@ -58,7 +55,7 @@ figure img {
 }
 
 figure:hover img {
-    transform: scale(1.05); /* Efecto de zoom suave al pasar el mouse */
+    transform: scale(1.1); /* Efecto de zoom suave al pasar el mouse */
 }
 
 .article-body {
@@ -74,7 +71,7 @@ article a {
 }
 
 article a:hover {
-    color: #1b4a4e; /* Color de enlace en hover para destacar */
+    color: #4ed2de; /* Color de enlace en hover para destacar */
 }
 
 /* Estilos para pantallas pequeñas */

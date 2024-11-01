@@ -30,7 +30,7 @@ body.dark-mode {
 /* Sección con fondo oscuro */
 .section {
     padding: 20px;
-    margin: 20px auto;
+    margin: 50px auto;
     max-width: 900px;
     background: #fff;
     border-radius: 15px;
@@ -50,6 +50,7 @@ body.dark-mode .section {
     background: #444444ae;
     color: #ffffff;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    border: solid 2px cyan;
 }
 
 /* Títulos */
