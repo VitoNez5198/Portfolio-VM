@@ -149,7 +149,7 @@ body.dark-mode h2 {
 }
 
 .checkbox:checked+.checkbox-label {
-    background-color: #ffbb33;
+    background-color: cyan;
     /* Cambia el color al activar el modo claro */
 }
 
