@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-# Portafolio de Víctor Martínez
+# Portafolio Víctor Martínez
 =======
 # Portafolio
->>>>>>> ba473f6c65b4202686cd4d204e2bce66478b5c87
 
 Bienvenido a mi portafolio personal, donde muestro mis proyectos y habilidades como desarrollador web fullstack especializado en el stack PERN (PostgreSQL, Express, React, Node.js).
 
