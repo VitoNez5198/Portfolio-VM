@@ -54,33 +54,34 @@ Puedes ver una demostración en vivo de mi portafolio [aquí](https://vitonez519
 Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 
 1. Clona el repositorio:
-   
-   ```
-   git clone https://github.com/VitoNez5198/Portfolio-VM.git
-   ```
+
+```bash
+git clone https://github.com/VitoNez5198/Portfolio-VM.git
+```
+
 3. Navega al directorio del proyecto:
 
-  ```
-  cd Portfolio-VM
-  ```
+```bash
+cd Portfolio-VM
+```
 
 3. Instala las dependencias necesarias:
    
-  ```
-  npm install
-  ```
+```bash
+npm install
+```
 
 4. Inicia el servidor de desarrollo:
    
-  ```  
-  npm start  
-  ```
+```bash
+npm start  
+```
 
 5. Abre tu navegador y visita:
   
-  ```
-  http://localhost:3000
-  ```
+```bash
+http://localhost:3000
+```
 
 ## Sobre Mí
 
