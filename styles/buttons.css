@@ -70,3 +70,15 @@
 .btn-github:hover {
     background-color: #000;
 }
+
+.article-buttons {
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 15px; /* Espacio por si el texto llega justo hasta arriba */
+    flex-wrap: wrap; /* Si no caben, se ajustan */
+}
+
+.article-buttons a {
+    white-space: nowrap; 
+}

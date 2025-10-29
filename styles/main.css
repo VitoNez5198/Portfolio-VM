@@ -180,30 +180,46 @@ body.dark-mode h2 {
 /* --- Estilos para las etiquetas de tecnología en los proyectos --- */
 .tech-stack {
     display: flex;
-    flex-wrap: wrap; /* Permite que las etiquetas salten de línea si hay muchas */
-    gap: 8px; /* Espacio entre las etiquetas */
+    flex-wrap: wrap; 
+    gap: 8px; 
     margin-top: 15px;
-    margin-bottom: 15px; /* Para separarlo de la descripción y los botones */
+    margin-bottom: 15px;
+    justify-content: center; /* Centra las etiquetas */
 }
 
 .tech-stack span {
-    background-color: var(--primary-color-light); /* Color de fondo */
-    color: var(--text-color-dark); /* Color del texto (ajustar si es necesario) */
+    /* Estilo base (Modo Claro) */
+    background-color: #e9ecef; /* Fondo gris claro */
+    color: #495057; /* Texto gris oscuro */
     padding: 6px 12px;
-    border-radius: 20px; /* Bordes redondeados para parecer píldoras */
+    border-radius: 20px;
     font-size: 0.85em;
     font-weight: 500;
-    white-space: nowrap; /* Evita que el texto de la etiqueta se rompa */
-    border: 1px solid var(--border-color); /* Un pequeño borde para definición */
+    white-space: nowrap;
+    border: 1px solid #dee2e6; /* Borde sutil */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+/* Estilo de etiquetas en Modo Oscuro */
+body.dark-mode .tech-stack span {
+    background-color: #343a40; /* Fondo gris oscuro */
+    color: #e9ecef; /* Texto claro */
+    border-color: #495057; /* Borde un poco más claro */
 }
 
 /* --- Estilos para el separador del footer --- */
 .footer-separator {
-    margin: 0 5px; /* Espacio alrededor del separador */
-    color: var(--text-color); /* O un color más sutil */
+    margin: 0 5px;
+    color: #6c757d; /* Color sutil (Modo Claro) */
+    transition: color 0.3s; /* Transición suave */
 }
 
-/* Puedes añadir media queries para hacer las etiquetas más pequeñas en móviles si es necesario */
+/* Separador en Modo Oscuro */
+body.dark-mode .footer-separator {
+    color: #adb5bd; /* Color sutil (Modo Oscuro) */
+}
+
+/* Media query para etiquetas en móviles */
 @media (max-width: 768px) {
     .tech-stack span {
         font-size: 0.8em;

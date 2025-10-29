@@ -60,6 +60,10 @@ figure:hover img {
 
 .article-body {
     padding: 16px;
+    flex-grow: 1; /* 1. Hace que el "cuerpo" llene el espacio sobrante de la tarjeta */
+    display: flex; /* 2. Lo convierte en un contenedor flex */
+    flex-direction: column; /* 3. Apila a sus hijos (el div de texto y el div de botones) */
+    justify-content: space-between; /* 4. MAGIA: Empuja el primer hijo arriba y el último (botones) abajo */
 }
 
 article a {
