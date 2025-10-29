@@ -176,3 +176,37 @@ body.dark-mode h2 {
     transform: translateX(26px);
     /* Mueve la bola a la derecha */
 }
+
+/* --- Estilos para las etiquetas de tecnología en los proyectos --- */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las etiquetas salten de línea si hay muchas */
+    gap: 8px; /* Espacio entre las etiquetas */
+    margin-top: 15px;
+    margin-bottom: 15px; /* Para separarlo de la descripción y los botones */
+}
+
+.tech-stack span {
+    background-color: var(--primary-color-light); /* Color de fondo */
+    color: var(--text-color-dark); /* Color del texto (ajustar si es necesario) */
+    padding: 6px 12px;
+    border-radius: 20px; /* Bordes redondeados para parecer píldoras */
+    font-size: 0.85em;
+    font-weight: 500;
+    white-space: nowrap; /* Evita que el texto de la etiqueta se rompa */
+    border: 1px solid var(--border-color); /* Un pequeño borde para definición */
+}
+
+/* --- Estilos para el separador del footer --- */
+.footer-separator {
+    margin: 0 5px; /* Espacio alrededor del separador */
+    color: var(--text-color); /* O un color más sutil */
+}
+
+/* Puedes añadir media queries para hacer las etiquetas más pequeñas en móviles si es necesario */
+@media (max-width: 768px) {
+    .tech-stack span {
+        font-size: 0.8em;
+        padding: 5px 10px;
+    }
+}
