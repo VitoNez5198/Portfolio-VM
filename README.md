@@ -1,13 +1,12 @@
 # Portafolio - Víctor Martínez
 
-¡Bienvenido a mi portafolio personal! Aquí muestro mis proyectos y habilidades como desarrollador web fullstack, especializado en el stack PERN (PostgreSQL, Express, React, Node.js).
+¡Bienvenido a mi portafolio! Aquí muestro mis proyectos y habilidades como desarrollador, con conocimientos en el stack PERN (PostgreSQL, Express, React, Node.js) y actualmente expandiendo mis habilidades hacia la Ingeniería de Datos con Python y SQL.
 
 ## Contenido
 
 - [Características](#características)
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
 - [Demostración](#demostración)
-- [Instalación](#instalación)
 - [Sobre Mí](#sobre-mí)
 - [Contacto](#contacto)
 
@@ -22,14 +21,14 @@
 
 ---
 
-## Tecnologías Utilizadas
+## Habilidades Técnicas
 
 ### Backend
-- **Python**
-- **Flask(Framkework)**
-- **SQL(PostgreSQL - SQLite)**
-- **Node.js(Conocimiento)**
-- **Express.js(Conocimiento)**
+- Python
+- Flask (Framework)
+- SQL (PostgreSQL - SQLite)
+- Node.js (Conocimiento)
+- Express.js (Conocimiento)
 
 ### Frontend (Conocimientos)
 - **HTML5**
@@ -52,7 +51,7 @@ Puedes ver una demostración en vivo de mi portafolio [aquí](https://vitonez519
 
 ## Sobre Mí
 
-Soy un desarrollador apasionado por la tecnología y la gestión de datos, con sólida experiencia en desarrollo backend (stack PERN) y enfocado en mi crecimiento como Ingeniero de Datos. Me especializo en construir soluciones eficientes y escalables utilizando Python, SQL, Docker y Node.js, conectando la lógica de negocio del backend con el procesamiento de datos.
+Soy un desarrollador apasionado por la tecnología y la gestión de datos. Mi objetivo es crecer como Ingeniero de Datos, construyendo sobre mis conocimientos en desarrollo backend (stack PERN). Disfruto creando soluciones eficientes y escalables utilizando Python y SQL, conectando la lógica de negocio con el procesamiento de datos.
 
 ## Contacto
 
