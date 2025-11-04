@@ -24,16 +24,18 @@
 
 ## Tecnologías Utilizadas
 
-### Frontend
+### Backend
+- **Python**
+- **Flask(Framkework)**
+- **SQL(PostgreSQL - SQLite)**
+- **Node.js(Conocimiento)**
+- **Express.js(Conocimiento)**
+
+### Frontend (Conocimientos)
 - **HTML5**
 - **CSS3**
 - **JavaScript**
 - **React**
-
-### Backend
-- **Node.js**
-- **Express.js**
-- **PostgreSQL**
 
 ### Herramientas
 - **Git** - Control de versiones.
@@ -85,7 +87,7 @@ http://localhost:3000
 
 ## Sobre Mí
 
-Soy un desarrollador web fullstack apasionado por la creación de soluciones tecnológicas innovadoras y eficientes. Me especializo en el stack PERN y disfruto trabajando tanto en el frontend como en el backend. Siempre estoy aprendiendo y mejorando mis habilidades para ofrecer productos de alta calidad.
+Soy un desarrollador apasionado por la tecnología y la gestión de datos, con sólida experiencia en desarrollo backend (stack PERN) y enfocado en mi crecimiento como Ingeniero de Datos. Me especializo en construir soluciones eficientes y escalables utilizando Python, SQL, Docker y Node.js, conectando la lógica de negocio del backend con el procesamiento de datos.
 
 ## Contacto
 
