@@ -1,136 +1,285 @@
-.projects-card {
-    display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en múltiples líneas */
-    gap: 1.5rem;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background: #f4f4f4;
-    border-radius: 16px;
-    max-width: 800px; /* Igual que en .section */
-    margin: 20px auto; /* Igual que en .section */
-}
+/* ========================================
+   Projects Section
+   ======================================== */
 
-.articles {
+.projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Se adapta automáticamente */
-    gap: 1.5rem;
-    width: 100%;
-    height: auto;
-    max-width: 1200px;
-    font-size: 68%;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
 }
 
-article {
-    --img-scale: 1.001;
-    --title-color: black;
-    --link-icon-translate: -20px;
-    --link-icon-opacity: 0;
-    position: relative;
-    border-radius: 16px;
-    background: #fff;
-    transition: all 0.4s ease-in-out;
+.project-card {
+    background: rgba(100, 255, 218, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
     overflow: hidden;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    min-height: 450px;
-}
-
-.article-wrapper {
+    transition: all var(--transition-normal);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Alinea el contenido al inicio */
+    position: relative;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
+    background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(0, 242, 254, 0.1) 100%);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+    pointer-events: none;
 }
 
-figure {
-    aspect-ratio: 16 / 9; /* Mantiene la proporción de la imagen */
+.project-card:hover::before {
+    opacity: 1;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 25px 50px rgba(79, 172, 254, 0.3);
+}
+
+body.light-mode .project-card {
+    background: rgba(0, 149, 168, 0.03);
+    border-color: var(--border-color-light);
+}
+
+body.light-mode .project-card:hover {
+    border-color: var(--accent-light);
+    box-shadow: 0 25px 50px rgba(0, 149, 168, 0.2);
+}
+
+/* Project Image */
+.project-image {
+    position: relative;
     overflow: hidden;
+    height: 250px;
+    background: var(--bg-secondary);
 }
 
-figure img {
-    max-width: 100%; /* Mantiene la imagen dentro del contenedor */
-    transition: transform 0.4s ease-in-out;
+body.light-mode .project-image {
+    background: var(--bg-secondary-light);
 }
 
-figure:hover img {
-    transform: scale(1.1); /* Efecto de zoom suave al pasar el mouse */
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
-.article-body {
-    padding: 16px;
-    flex-grow: 1; /* 1. Hace que el "cuerpo" llene el espacio sobrante de la tarjeta */
-    display: flex; /* 2. Lo convierte en un contenedor flex */
-    flex-direction: column; /* 3. Apila a sus hijos (el div de texto y el div de botones) */
-    justify-content: space-between; /* 4. MAGIA: Empuja el primer hijo arriba y el último (botones) abajo */
+.project-card:hover .project-image img {
+    transform: scale(1.1);
 }
 
-article a {
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 25, 47, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+body.light-mode .project-overlay {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay .material-symbols-outlined {
+    font-size: 4rem;
+    color: var(--accent);
+}
+
+body.light-mode .project-overlay .material-symbols-outlined {
+    color: var(--accent-light);
+}
+
+/* Project Content */
+.project-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.project-header h3 {
+    font-size: 1.5rem;
+    color: var(--text-heading);
+    margin: 0;
+}
+
+body.light-mode .project-header h3 {
+    color: var(--text-heading-light);
+}
+
+.project-type {
+    background: rgba(100, 255, 218, 0.1);
+    color: var(--accent);
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+body.light-mode .project-type {
+    background: rgba(0, 149, 168, 0.1);
+    color: var(--accent-light);
+}
+
+.project-description {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+body.light-mode .project-description {
+    color: var(--text-secondary-light);
+}
+
+/* Tech Tags */
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+    background: rgba(100, 255, 218, 0.1);
+    color: var(--text-primary);
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid transparent;
+    transition: all var(--transition-normal);
+}
+
+.tech-tag:hover {
+    border-color: var(--accent);
+    background: rgba(100, 255, 218, 0.15);
+    transform: translateY(-2px);
+}
+
+body.light-mode .tech-tag {
+    background: rgba(0, 149, 168, 0.1);
+    color: var(--text-primary-light);
+}
+
+body.light-mode .tech-tag:hover {
+    border-color: var(--accent-light);
+    background: rgba(0, 149, 168, 0.15);
+}
+
+/* Project Links */
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.btn-link {
     display: inline-flex;
     align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-md);
     text-decoration: none;
-    color: #28666e;
-    transition: color 0.3s ease-out;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all var(--transition-normal);
+    flex: 1;
+    justify-content: center;
 }
 
-article a:hover {
-    color: #4ed2de; /* Color de enlace en hover para destacar */
+.btn-link:hover {
+    background: var(--accent);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(79, 172, 254, 0.3);
 }
 
-/* Estilos para pantallas pequeñas */
-@media (max-width: 600px) {
-    .projects-section {
-        display: flex;
-        flex-direction: column; /* Cambia a alineación vertical */
-        align-items: center; /* Centra las tarjetas horizontalmente */
+body.light-mode .btn-link {
+    color: var(--accent-light);
+    border-color: var(--accent-light);
+}
+
+body.light-mode .btn-link:hover {
+    background: var(--accent-light);
+    color: #fff;
+}
+
+.btn-link .material-symbols-outlined {
+    font-size: 1.2rem;
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
-
-    .projects-card {
-        width: 100%; /* Asegura que ocupen el ancho completo del contenedor */
-        max-width: none; /* Elimina el ancho máximo para que ocupen el 100% */
-        padding: 15px;
-        margin: 15px auto;
+    
+    .project-image {
+        height: 220px;
     }
-
-    .articles {
-        display: flex; /* Cambia a flex en lugar de grid */
-        flex-direction: column; /* Alinea las tarjetas verticalmente */
-        align-items: center; /* Centra los artículos */
+    
+    .project-content {
+        padding: 1.5rem;
     }
-
-    /* Ajustes para las imágenes dentro de las tarjetas */
-    .article-wrapper img {
-        width: 100%; /* Ocupa todo el ancho del contenedor */
-        height: auto; /* Mantiene la proporción */
-        max-width: 100%; /* Evita que la imagen supere el contenedor */
+    
+    .project-header h3 {
+        font-size: 1.25rem;
     }
 }
 
-/* Modo oscuro para .projects-card */
-body.dark-mode .projects-card {
-    background: #000000;
-    color: #ffffff;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-}
-
-/* Modo oscuro para .articles */
-body.dark-mode .articles {
-    color: #e0e0e0;
-}
-
-/* Modo oscuro para cada article */
-body.dark-mode article {
-    background: #444444ae;
-    color: #ffffff;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-}
-
-/* Modo oscuro para enlaces en article */
-body.dark-mode article a {
-    color: #ffbb33;
-}
-
-body.dark-mode article a:hover {
-    color: #ffdd55; /* Color de enlace en hover para destacar en modo oscuro */
+@media (max-width: 480px) {
+    .project-image {
+        height: 200px;
+    }
+    
+    .project-content {
+        padding: 1.25rem;
+    }
+    
+    .project-links {
+        flex-direction: column;
+    }
+    
+    .btn-link {
+        width: 100%;
+    }
+    
+    .tech-tag {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.75rem;
+    }
 }
