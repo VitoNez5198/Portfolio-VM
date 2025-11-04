@@ -1,5 +1,5 @@
 /* ========================================
-   Navbar
+Navbar
    ======================================== */
 
 .navbar {
@@ -8,8 +8,8 @@
     left: 0;
     right: 0;
     background: rgba(10, 25, 47, 0.85);
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     z-index: var(--z-fixed);
     padding: 1.5rem 0;
     transition: all var(--transition-normal);
@@ -188,7 +188,7 @@ body.light-mode .hamburger span {
 }
 
 /* ========================================
-   Responsive
+Responsive
    ======================================== */
 
 @media (max-width: 768px) {
