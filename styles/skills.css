@@ -1,36 +1,206 @@
-.icons-skills {
-    width: auto; /* Ajusta el ancho del ícono */
-    height: 80px; /* Mantiene la proporción de la imagen */
-    margin-right: 8px; /* Espacio entre íconos, opcional */
+/* ========================================
+   Skills Section
+   ======================================== */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
-.icons-skills:hover {
+.skill-category {
+    background: rgba(100, 255, 218, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 2.5rem;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-normal);
+}
+
+.skill-category:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px rgba(79, 172, 254, 0.2);
+}
+
+.skill-category:hover::before {
+    transform: scaleX(1);
+}
+
+body.light-mode .skill-category {
+    background: rgba(0, 149, 168, 0.03);
+    border-color: var(--border-color-light);
+}
+
+body.light-mode .skill-category:hover {
+    border-color: var(--accent-light);
+    box-shadow: 0 20px 40px rgba(0, 149, 168, 0.15);
+}
+
+.category-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(100, 255, 218, 0.1);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all var(--transition-normal);
+}
+
+.skill-category:hover .category-icon {
+    background: var(--accent);
+    transform: scale(1.1) rotate(5deg);
+}
+
+body.light-mode .skill-category:hover .category-icon {
+    background: var(--accent-light);
+}
+
+.category-icon .material-symbols-outlined {
+    font-size: 2rem;
+    color: var(--accent);
+}
+
+.skill-category:hover .category-icon .material-symbols-outlined {
+    color: var(--bg-primary);
+}
+
+body.light-mode .category-icon .material-symbols-outlined {
+    color: var(--accent-light);
+}
+
+body.light-mode .skill-category:hover .category-icon .material-symbols-outlined {
+    color: #fff;
+}
+
+.skill-category h3 {
+    color: var(--text-heading);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+body.light-mode .skill-category h3 {
+    color: var(--text-heading-light);
+}
+
+.skill-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: rgba(100, 255, 218, 0.05);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-normal);
+    cursor: pointer;
+}
+
+.skill-item:hover {
+    background: rgba(100, 255, 218, 0.1);
+    transform: translateY(-5px);
+}
+
+body.light-mode .skill-item {
+    background: rgba(0, 149, 168, 0.05);
+}
+
+body.light-mode .skill-item:hover {
+    background: rgba(0, 149, 168, 0.1);
+}
+
+.skill-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: transform var(--transition-normal);
+}
+
+.skill-item:hover img {
     transform: scale(1.2);
 }
 
-
-.image-container {
-    position: relative;
-    display: inline-block;
-    margin: 10px;
-}
-
-.tooltip {
-    display: none;
-    position: absolute;
-    bottom: 110%; /* Posiciona el tooltip sobre la imagen */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    white-space: nowrap;
+.skill-item span {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
     text-align: center;
-    z-index: 10;
 }
 
-.image-container:hover .tooltip {
-    display: block; /* Muestra el tooltip cuando el mouse está sobre el contenedor */
+body.light-mode .skill-item span {
+    color: var(--text-secondary-light);
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .skill-category {
+        padding: 2rem;
+    }
+    
+    .skill-items {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 1rem;
+    }
+    
+    .skill-item {
+        padding: 0.75rem;
+    }
+    
+    .skill-item img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-category {
+        padding: 1.5rem;
+    }
+    
+    .category-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .category-icon .material-symbols-outlined {
+        font-size: 1.5rem;
+    }
+    
+    .skill-category h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .skill-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
