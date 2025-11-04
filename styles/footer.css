@@ -1,12 +1,37 @@
-/* Footer */
-footer {
+/* ========================================
+   FOOTER.CSS
+   ======================================== */
+
+.footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    padding: 2rem;
     text-align: center;
-    padding: 20px;
-    background: #1a1a1a;
-    color: #fff;
-    font-size: small;
 }
 
-footer a {
-    color: #ffd700; /* Color de los enlaces en el pie de página */
+body.light-mode .footer {
+    background: var(--bg-secondary-light);
+    border-top-color: var(--border-color-light);
+}
+
+.footer p {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+body.light-mode .footer p {
+    color: var(--text-secondary-light);
+}
+
+.footer .heart {
+    color: #ff6b6b;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    10%, 30% { transform: scale(0.9); }
+    20%, 40%, 60%, 80% { transform: scale(1.1); }
+    50%, 70% { transform: scale(1.05); }
 }
