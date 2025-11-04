@@ -1,48 +1,235 @@
-.contact-email {
+/* ========================================
+   Contact Section
+   ======================================== */
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-text {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    line-height: 1.8;
+}
+
+body.light-mode .contact-text {
+    color: var(--text-secondary-light);
+}
+
+/* Email Box */
+.contact-email-box {
+    background: rgba(100, 255, 218, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+body.light-mode .contact-email-box {
+    background: rgba(0, 149, 168, 0.05);
+    border-color: var(--border-color-light);
+}
+
+.contact-email-box label {
+    display: block;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+body.light-mode .contact-email-box label {
+    color: var(--accent-light);
+}
+
+.email-input-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.email-input-group input {
+    flex: 1;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-family: var(--font-mono);
+    text-align: center;
+    transition: all var(--transition-normal);
+}
+
+.email-input-group input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.1);
+}
+
+body.light-mode .email-input-group input {
+    background: var(--bg-secondary-light);
+    border-color: var(--border-color-light);
+    color: var(--text-primary-light);
+}
+
+body.light-mode .email-input-group input:focus {
+    border-color: var(--accent-light);
+    box-shadow: 0 0 0 3px rgba(0, 149, 168, 0.1);
+}
+
+.btn-copy {
+    background: var(--accent);
+    color: var(--bg-primary);
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-normal);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px; /* Espacio entre los elementos */
-    margin-top: 20px;
-    width: 70%; /* Asegúrate de que el contenedor ocupe todo el ancho disponible */
+    min-width: 60px;
 }
 
-#email {
-    border: 1px solid #ccc;
-    padding: 10px; /* Aumentar el padding para que el campo sea más grande */
-    border-radius: 10px; /* Puedes ajustar este valor si deseas esquinas más redondeadas */
-    width: 100%; /* Cambiado a 100% para que el campo ocupe todo el ancho del contenedor */
-    max-width: none; /* Eliminar o ajustar el ancho máximo si es necesario */
-    box-sizing: border-box; /* Asegúrate de incluir el padding en el cálculo del ancho */
-    text-align: center; /* Centra el texto en el campo */
-    font-size: 20px; /* Aumentar el tamaño de la fuente */
+.btn-copy:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.4);
 }
 
+.btn-copy:active {
+    transform: translateY(0);
+}
 
-/* Media Query para pantallas pequeñas */
-@media (max-width: 600px) {
-    .contact-email {
-        flex-direction: column; /* Los elementos se apilan verticalmente en pantallas pequeñas */
-        align-items: stretch; /* Los elementos ocupan todo el ancho disponible */
-        gap: 15px;
-        width: 70%;
+body.light-mode .btn-copy {
+    background: var(--accent-light);
+    color: #fff;
+}
+
+/* Copy Message */
+.copy-message {
+    display: inline-block;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.95rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all var(--transition-normal);
+    pointer-events: none;
+}
+
+.copy-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.light-mode .copy-message {
+    color: var(--accent-light);
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    background: rgba(100, 255, 218, 0.1);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    transition: all var(--transition-normal);
+}
+
+.social-link:hover {
+    background: var(--accent);
+    color: var(--bg-primary);
+    transform: translateY(-5px) rotate(5deg);
+    box-shadow: 0 10px 20px rgba(100, 255, 218, 0.3);
+}
+
+body.light-mode .social-link {
+    background: rgba(0, 149, 168, 0.1);
+    border-color: var(--border-color-light);
+    color: var(--accent-light);
+}
+
+body.light-mode .social-link:hover {
+    background: var(--accent-light);
+    color: #fff;
+}
+
+.social-link svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Download Button */
+.btn-download {
+    margin-top: 2rem;
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 768px) {
+    .contact-text {
+        font-size: 1.1rem;
+        margin-bottom: 2.5rem;
     }
     
-    #email {
-        width: 100%; /* Mantener el ancho completo en pantallas pequeñas */
-        max-width: none; /* Sin ancho máximo */
-        font-size: 16px; /* Aumentar el tamaño de la fuente también en pantallas pequeñas */
-        
+    .contact-email-box {
+        padding: 1.5rem;
     }
-
-    button {
-        width: 100%; /* Los botones ocupan todo el ancho en pantallas pequeñas */
+    
+    .email-input-group {
+        flex-direction: column;
+    }
+    
+    .btn-copy {
+        width: 100%;
     }
 }
 
-.copy-message {
-    display: none; /* Ocultar por defecto */
-    color: #007bff; /* Color del mensaje */
-    font-weight: bold; /* Hacer el texto en negrita */
-    margin-top: 10px; /* Espaciado superior para separar del formulario */
+@media (max-width: 480px) {
+    .contact-text {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .contact-email-box {
+        padding: 1.25rem;
+    }
+    
+    .contact-email-box label {
+        font-size: 1rem;
+    }
+    
+    .email-input-group input {
+        font-size: 0.9rem;
+        padding: 0.85rem 1rem;
+    }
+    
+    .social-links {
+        gap: 1rem;
+    }
+    
+    .social-link {
+        width: 45px;
+        height: 45px;
+    }
 }
