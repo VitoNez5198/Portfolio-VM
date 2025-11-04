@@ -1,0 +1,331 @@
+/* ========================================
+   Responsive Design - Media Queries
+   ======================================== */
+
+/* ========================================
+   Extra Large Devices (>= 1400px)
+   ======================================== */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+/* ========================================
+   Large Devices (>= 1200px)
+   ======================================== */
+@media (min-width: 1200px) {
+    .section {
+        padding: 140px 0;
+    }
+}
+
+/* ========================================
+   Medium Devices (<= 992px)
+   ======================================== */
+@media (max-width: 992px) {
+    html {
+        font-size: 15px;
+    }
+    
+    .section {
+        padding: 100px 0;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .section-title::after {
+        max-width: 200px;
+    }
+    
+    .container {
+        padding: 0 1.5rem;
+    }
+}
+
+/* ========================================
+   Tablet Devices (<= 768px)
+   ======================================== */
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .section {
+        padding: 80px 0;
+    }
+    
+    .container {
+        padding: 0 1.25rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .title-number {
+        font-size: 1.25rem;
+    }
+    
+    .section-title::after {
+        margin-left: 1rem;
+        max-width: 150px;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 0.85rem 1.75rem;
+        font-size: 0.95rem;
+    }
+    
+    /* Hide elements on mobile */
+    .desktop-only {
+        display: none !important;
+    }
+}
+
+/* ========================================
+   Mobile Devices (<= 480px)
+   ======================================== */
+@media (max-width: 480px) {
+    html {
+        font-size: 13px;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+    }
+    
+    .title-number {
+        font-size: 1.1rem;
+        margin-right: 0.75rem;
+    }
+    
+    .section-title::after {
+        display: none;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Typography */
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+    }
+    
+    p {
+        font-size: 0.95rem;
+    }
+}
+
+/* ========================================
+   Small Mobile Devices (<= 375px)
+   ======================================== */
+@media (max-width: 375px) {
+    html {
+        font-size: 12px;
+    }
+    
+    .container {
+        padding: 0 0.75rem;
+    }
+    
+    .section {
+        padding: 50px 0;
+    }
+}
+
+/* ========================================
+   Orientation: Landscape (Mobile)
+   ======================================== */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 100px 2rem 50px;
+    }
+    
+    .scroll-indicator {
+        display: none;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+}
+
+/* ========================================
+   High DPI / Retina Displays
+   ======================================== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Optimizaciones para pantallas retina */
+    .skill-item img,
+    .project-image img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* ========================================
+   Print Styles
+   ======================================== */
+@media print {
+    .navbar,
+    .scroll-to-top,
+    .hamburger,
+    .theme-toggle,
+    .scroll-indicator,
+    .shape,
+    .hero-buttons {
+        display: none !important;
+    }
+    
+    .section {
+        page-break-inside: avoid;
+        padding: 20px 0;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+}
+
+/* ========================================
+   Accessibility - Reduced Motion
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .shape {
+        animation: none !important;
+    }
+}
+
+/* ========================================
+   Dark Mode Preferences
+   ======================================== */
+@media (prefers-color-scheme: dark) {
+    /* Respeta la preferencia del sistema */
+    body:not(.light-mode) {
+        /* Estilos ya definidos por defecto */
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    /* Si el usuario no ha elegido tema, usar claro */
+    body:not([data-theme]) {
+        /* Opcional: aplicar tema claro por defecto */
+    }
+}
+
+/* ========================================
+   Contrast Preferences
+   ======================================== */
+@media (prefers-contrast: high) {
+    body {
+        --border-color: rgba(255, 255, 255, 0.5);
+    }
+    
+    .btn,
+    .skill-category,
+    .project-card {
+        border-width: 2px;
+    }
+}
+
+/* ========================================
+   Touch Devices
+   ======================================== */
+@media (hover: none) and (pointer: coarse) {
+    /* Ajustes para dispositivos táctiles */
+    .btn,
+    .social-link,
+    .skill-item {
+        min-height: 44px; /* Tamaño mínimo recomendado para touch */
+        min-width: 44px;
+    }
+    
+    /* Eliminar efectos hover en dispositivos táctiles */
+    .hover-lift:hover,
+    .hover-scale:hover {
+        transform: none;
+    }
+}
+
+/* ========================================
+   Utilities Responsive
+   ======================================== */
+
+/* Hide on Mobile */
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* Hide on Desktop */
+@media (min-width: 769px) {
+    .hide-desktop {
+        display: none !important;
+    }
+}
+
+/* Text Alignment */
+@media (max-width: 768px) {
+    .text-center-mobile {
+        text-align: center !important;
+    }
+}
+
+/* Spacing Adjustments */
+@media (max-width: 768px) {
+    .gap-mobile-sm {
+        gap: 1rem !important;
+    }
+    
+    .padding-mobile-sm {
+        padding: 1rem !important;
+    }
+    
+    .margin-mobile-sm {
+        margin: 1rem !important;
+    }
+}
