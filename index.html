@@ -1,272 +1,347 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio Víctor Martínez">
-    <title>Víctor Martínez</title>
+    <meta name="description" content="Portafolio de Víctor Martínez - Desarrollador Backend especializado en Python, Flask y SQL">
+    <title>Víctor Martínez | Backend Developer</title>
     <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon">
-
     <link rel="stylesheet" href="./styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Gowun+Dodum&family=Quicksand:wght@300&display=swap');
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">
-            <a href="#">Víctor Martínez</a>
-        </div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#sobre-mi">Sobre Mí</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#curriculum">Currículum</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-
-        </ul>
-        <input type="checkbox" class="checkbox" id="checkbox" title="Activar modo oscuro"
-            aria-label="Activar modo oscuro">
-        <label for="checkbox" class="checkbox-label">🌜
-            <span class="ball"></span>🌞
-        </label>
-
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#inicio">&lt;VM /&gt;</a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </div>
     </nav>
-    <!-- Fin Navbar -->
 
-    <!-- Sección de Inicio -->
-    <section id="inicio" class="intro section">
-        <h2>Desarrollador Backend</h2>
-        <p>Especializado en Python, API REST y SQL (PostgreSQL, SQLite).</p>
-        <p><br>
-            <a href="#contacto" class="btn">¡Contáctame!</a>
-        </p>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-background">
+            <div class="shape shape1"></div>
+            <div class="shape shape2"></div>
+            <div class="shape shape3"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-greeting">Hola, mi nombre es</p>
+            <h1 class="hero-title">Víctor Martínez</h1>
+            <h2 class="hero-subtitle">Desarrollador Backend</h2>
+            <p class="hero-description">
+                Especializado en <strong>Python</strong>, <strong>Flask</strong> y <strong>SQL</strong>. 
+                Construyo APIs REST escalables y eficientes con enfoque en calidad de código y arquitectura limpia.
+            </p>
+            <div class="hero-buttons">
+                <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+                <a href="#contacto" class="btn btn-secondary">Contáctame</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="material-symbols-outlined">expand_more</span>
+        </div>
     </section>
-    <!-- Fin Sección de Inicio -->
 
-    <!-- Sección de Habilidades -->
-    <section id="habilidades" class="skills section">
-        <h2>Habilidades Técnicas</h2>
-        <div class="skills">
-            <div class="category">
-                <h3>Backend & Bases de Datos</h3>
-                <div class="image-container">
-                    <img src="./assets/icons/pythonicon.svg" class="icons-skills" alt="icon-python">
-                    <span class="tooltip">Python</span>
+    <!-- Sobre Mí -->
+    <section id="sobre-mi" class="section about-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">01.</span> Sobre Mí
+            </h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Soy un <strong>Desarrollador Backend</strong> apasionado por crear soluciones eficientes 
+                        y escalables. Mi enfoque principal está en el ecosistema de <strong>Python</strong> y el 
+                        diseño de <strong>APIs REST</strong>.
+                    </p>
+                    <p>
+                        Tengo experiencia sólida trabajando con bases de datos SQL como <strong>PostgreSQL</strong> 
+                        y <strong>SQLite</strong>, implementando arquitecturas de datos robustas y optimizadas.
+                    </p>
+                    <p>
+                        Mi experiencia previa como desarrollador Full-Stack (React + Node.js) me proporciona una 
+                        visión completa del ciclo de desarrollo, permitiéndome diseñar APIs que son intuitivas 
+                        y fáciles de consumir desde el frontend.
+                    </p>
+                    <p>
+                        Actualmente estoy estudiando <strong>Ingeniería en Informática</strong> en AIEP y cuento 
+                        con certificaciones que validan mis fundamentos en Python y desarrollo de software.
+                    </p>
                 </div>
-                <div class="image-container">
-                    <img src="./assets/icons/Flask.svg" class="icons-skills" alt="icon-flask"> <span
-                        class="tooltip">Flask Framework</span>
-                </div>
-                <div class="image-container">
-                    <img src="./assets/icons/postgresql.svg" class="icons-skills" alt="icon-postgre">
-                    <span class="tooltip">PostgreSQL</span>
-                </div>
-                <div class="image-container">
-                    <img src="./assets/icons/SQLite.svg" class="icons-skills" alt="icon-sqlite"> <span
-                        class="tooltip">SQLite</span>
-                </div>
-                <div class="image-container">
-                    <img src="./assets/icons/node-js.svg" class="icons-skills" alt="icon-node">
-                    <span class="tooltip">Node.js (Conocimiento)</span>
-                </div>
-                <div class="image-container">
-                    <img src="./assets/icons/express-original.svg" class="icons-skills" alt="icon-express">
-                    <span class="tooltip">Express.js (Conocimiento)</span>
-                </div>
-            </div>
-            <div class="category">
-                <h3>Frontend (Conocimiento)</h3>
-                <div class="image-container">
-                    <img src="./assets/icons/html5.svg" class="icons-skills" alt="icon-html">
-                    <span class="tooltip">HTML5</span>
-                </div>
-                <div class="image-container">
-                    <img src="./assets/icons/css3.svg" class="icons-skills" alt="icon-css">
-                    <span class="tooltip">CSS3</span>
-                </div>
-                <div class="image-container">
-                    <img src="./assets/icons/javascript-js.svg" class="icons-skills" alt="icon-js">
-                    <span class="tooltip">JavaScript</span>
-                </div>
-                <div class="image-container">
-                    <img src="./assets/icons/react.svg" class="icons-skills" alt="icon-react">
-                    <span class="tooltip">React</span>
-                </div>
-            </div>
-
-            <div class="category">
-                <h3>Herramientas</h3>
-                <div class="image-container">
-                    <img src="./assets/icons/git.svg" class="icons-skills" alt="icon-git">
-                    <span class="tooltip">Git</span>
-                </div>
-                <div class="image-container">
-                    <img src="./assets/icons/github.svg" class="icons-skills" alt="icon-github">
-                    <span class="tooltip">GitHub</span>
-                </div>
-                <div class="image-container">
-                    <img src="./assets/icons/Ai-icon.svg" class="icons-skills" alt="icon-ai">
-                    <span class="tooltip">Adobe Illustrator</span>
-                </div>
-                <div class="image-container">
-                    <img src="./assets/icons/PS_icon.svg" class="icons-skills" alt="icon-ps">
-                    <span class="tooltip">Adobe Photoshop</span>
+                <div class="about-image">
+                    <div class="code-block">
+                        <pre><code><span class="code-keyword">class</span> <span class="code-class">Developer</span>:
+    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(self):
+        self.name = <span class="code-string">"Víctor Martínez"</span>
+        self.role = <span class="code-string">"Backend Developer"</span>
+        self.skills = [
+            <span class="code-string">"Python"</span>,
+            <span class="code-string">"Flask"</span>,
+            <span class="code-string">"PostgreSQL"</span>,
+            <span class="code-string">"API REST"</span>
+        ]
+    
+    <span class="code-keyword">def</span> <span class="code-function">build_solution</span>(self):
+        <span class="code-keyword">return</span> <span class="code-string">"Clean & Scalable Code"</span></code></pre>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Fin Sección de Habilidades -->
 
+    <!-- Habilidades -->
+    <section id="habilidades" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">02.</span> Habilidades Técnicas
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category" data-category="backend">
+                    <div class="category-icon">
+                        <span class="material-symbols-outlined">code</span>
+                    </div>
+                    <h3>Backend & Bases de Datos</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="./assets/icons/pythonicon.svg" alt="Python">
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./assets/icons/Flask.svg" alt="Flask">
+                            <span>Flask</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./assets/icons/postgresql.svg" alt="PostgreSQL">
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./assets/icons/SQLite.svg" alt="SQLite">
+                            <span>SQLite</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./assets/icons/node-js.svg" alt="Node.js">
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./assets/icons/express-original.svg" alt="Express">
+                            <span>Express.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-category="frontend">
+                    <div class="category-icon">
+                        <span class="material-symbols-outlined">palette</span>
+                    </div>
+                    <h3>Frontend (Conocimiento)</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="./assets/icons/html5.svg" alt="HTML5">
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./assets/icons/css3.svg" alt="CSS3">
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./assets/icons/javascript-js.svg" alt="JavaScript">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./assets/icons/react.svg" alt="React">
+                            <span>React</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-category="tools">
+                    <div class="category-icon">
+                        <span class="material-symbols-outlined">build</span>
+                    </div>
+                    <h3>Herramientas</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="./assets/icons/git.svg" alt="Git">
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./assets/icons/github.svg" alt="GitHub">
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./assets/icons/Ai-icon.svg" alt="Illustrator">
+                            <span>Illustrator</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./assets/icons/PS_icon.svg" alt="Photoshop">
+                            <span>Photoshop</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
     <section id="proyectos" class="section projects-section">
-        <h2>Mis Proyectos</h2>
-        <div class="projects-container">
-            <div class="projects-card">
-                <div class="articles">
-                    <article>
-                        <div class="article-wrapper">
-                            <figure>
-                                <img src="assets/img/3.png" alt="API de Tareas" />
-                            </figure>
-
-                            <div class="article-body">
-
-                                <div>
-                                    <h3>ToDo_API (Backend)</h3>
-                                    <p>
-                                        API RESTful para la gestión de tareas, desarrollada con <strong>Python</strong>,
-                                        <strong>Flask</strong> y <strong>SQLite</strong>. Implementa lógica CRUD
-                                        completa y código refactorizado.
-                                    </p>
-                                    <div class="tech-stack">
-                                        <span>Python</span>
-                                        <span>Flask</span>
-                                        <span>SQLite</span>
-                                        <span>API REST</span>
-                                    </div>
-                                </div>
-
-                                <div class="article-buttons">
-                                    <a href="https://github.com/VitoNez5198/ToDo_API/blob/main/README.md"
-                                        target="_blank" rel="noopener" class="btn-demo">Documentación</a>
-                                    <a href="https://github.com/VitoNez5198/ToDo_API" target="_blank" rel="noopener"
-                                        class="btn-github">GitHub</a>
-                                </div>
-
-                            </div>
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">03.</span> Proyectos Destacados
+            </h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/img/3.png" alt="ToDo API">
+                        <div class="project-overlay">
+                            <span class="material-symbols-outlined">open_in_new</span>
                         </div>
-                    </article>
-
-                    <article>
-                        <div class="article-wrapper">
-                            <figure>
-                                <img src="assets/img/2.png" alt="Clon de Trello" />
-                            </figure>
-
-                            <div class="article-body">
-
-                                <div>
-                                    <h3>Clon de Trello</h3>
-                                    <p>
-                                        Proyecto Full-Stack (PERN) donde diseñé y consumí una API REST con Node.js y
-                                        PostgreSQL. Demuestra mi entendimiento del ciclo completo de desarrollo.
-                                    </p>
-                                    <div class="tech-stack">
-                                        <span>React</span>
-                                        <span>Node.js</span>
-                                        <span>Express</span>
-                                        <span>PostgreSQL</span>
-                                    </div>
-                                </div>
-
-                                <div class="article-buttons">
-                                    <a href="https://vitonez5198.github.io/clonTrello/" target="_blank" rel="noopener"
-                                        class="btn-demo">Demo</a>
-                                    <a href="https://github.com/VitoNez5198/clonTrello" target="_blank" rel="noopener"
-                                        class="btn-github">GitHub</a>
-                                </div>
-
-                            </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>ToDo API</h3>
+                            <span class="project-type">Backend</span>
                         </div>
-                    </article>
-                </div>
+                        <p class="project-description">
+                            API RESTful para gestión de tareas con arquitectura limpia. Implementa operaciones 
+                            CRUD completas, validación de datos y manejo de errores robusto.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">API REST</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/VitoNez5198/ToDo_API/blob/main/README.md" 
+                               target="_blank" rel="noopener" class="btn-link">
+                                <span class="material-symbols-outlined">description</span>
+                                Documentación
+                            </a>
+                            <a href="https://github.com/VitoNez5198/ToDo_API" 
+                               target="_blank" rel="noopener" class="btn-link">
+                                <span class="material-symbols-outlined">code</span>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/img/2.png" alt="Clon de Trello">
+                        <div class="project-overlay">
+                            <span class="material-symbols-outlined">open_in_new</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Clon de Trello</h3>
+                            <span class="project-type">Full-Stack</span>
+                        </div>
+                        <p class="project-description">
+                            Aplicación completa tipo Kanban board. Diseño e implementación de API REST con 
+                            Node.js/Express y frontend interactivo con React.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://vitonez5198.github.io/clonTrello/" 
+                               target="_blank" rel="noopener" class="btn-link">
+                                <span class="material-symbols-outlined">visibility</span>
+                                Demo
+                            </a>
+                            <a href="https://github.com/VitoNez5198/clonTrello" 
+                               target="_blank" rel="noopener" class="btn-link">
+                                <span class="material-symbols-outlined">code</span>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Sección Sobre Mí -->
-    <section id="sobre-mi" class="about section">
-        <h2>Sobre Mí</h2>
-        <p>Hola, soy Víctor, un <strong>Desarrollador Backend</strong> enfocado en el ecosistema de
-            <strong>Python</strong> y el diseño de APIs REST. Tengo experiencia sólida con bases de datos SQL como
-            <strong>PostgreSQL</strong> y SQLite.
-        </p>
-        <p>Mi experiencia previa como desarrollador Full-Stack (con React y Node.js) me da una visión completa del ciclo
-            de desarrollo, permitiéndome construir APIs eficientes que son fáciles de consumir por el frontend.</p>
-        <p>Cuento con una certificación que valida mis fundamentos en <strong>Python</strong> y actualmente me encuentro
-            estudiando Ingeniería en Informática en AIEP para seguir profundizando mis conocimientos.</p>
-    </section>
-    ```
-    <!-- Fin Sección Sobre Mí -->
-
-    <!-- Sección de Currículum -->
-    <section id="curriculum" class="resume section">
-        <h2>Mi Currículum</h2>
-        <p>Puedes descargar mi currículum en PDF para conocer más sobre mi experiencia y habilidades.</p><br>
-        <a href="https://drive.google.com/uc?export=download&id=1BJ4cSeiUhw5bgMxCFp4Hal75gW94iJna" download
-            class="btn">Descargar Currículum</a>
-    </section>
-    <!-- Fin Sección de Currículum -->
-
-    <!-- Sección de Contacto -->
-    <section id="contacto" class="contact section">
-
-        <p>¿Tienes alguna pregunta o quieres colaborar en un proyecto?</p>
-        <div class="contact-email">
-            <label for="email">Contáctame: </label>
-            <input type="text" id="email" value="developer.victorms@gmail.com" readonly>
-            <button id="copyEmailButton" class="btn"><span class="material-symbols-outlined">
-                    content_copy
-                </span></button>
+    <!-- Contacto -->
+    <section id="contacto" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">04.</span> Contacto
+            </h2>
+            <div class="contact-content">
+                <p class="contact-text">
+                    ¿Tienes un proyecto en mente o quieres colaborar? Mi bandeja de entrada siempre está abierta. 
+                    Ya sea para una pregunta o simplemente saludar, haré mi mejor esfuerzo para responderte.
+                </p>
+                <div class="contact-email-box">
+                    <label for="email">Email:</label>
+                    <div class="email-input-group">
+                        <input type="text" id="email" value="developer.victorms@gmail.com" readonly>
+                        <button id="copyEmailButton" class="btn-copy" aria-label="Copiar email">
+                            <span class="material-symbols-outlined">content_copy</span>
+                        </button>
+                    </div>
+                    <span id="copyMessage" class="copy-message">¡Email copiado al portapapeles!</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/victor-ms-dev/" target="_blank" rel="noopener" 
+                       class="social-link" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/VitoNez5198" target="_blank" rel="noopener" 
+                       class="social-link" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+                        </svg>
+                    </a>
+                </div>
+                <a href="https://drive.google.com/uc?export=download&id=1BJ4cSeiUhw5bgMxCFp4Hal75gW94iJna" 
+                   download class="btn btn-primary btn-download">
+                    <span class="material-symbols-outlined">download</span>
+                    Descargar CV
+                </a>
+            </div>
         </div>
-        <span id="copyMessage" class="copy-message">¡Correo copiado!</span>
     </section>
-    <!-- Fin Sección de Contacto -->
 
-    <!-- Botón para volver al inicio -->
-    <button id="scrollToTopBtn" class="material-symbols-outlined">arrow_circle_up</button>
+    <!-- Scroll to Top -->
+    <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Volver arriba">
+        <span class="material-symbols-outlined">arrow_upward</span>
+    </button>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Víctor Martínez. Todos los derechos reservados.</p>
-        <p>
-            <a href="https://www.linkedin.com/in/victor-ms-dev/" target="_blank" rel="noopener">LinkedIn</a>
-            <span class="footer-separator">|</span> <a href="https://github.com/VitoNez5198" target="_blank"
-                rel="noopener">GitHub</a>
-        </p>
-        </footer>
-        <!-- Fin Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Víctor Martínez. Diseñado y desarrollado con <span class="heart">❤</span></p>
+    </footer>
 
-        <!-- Scripts -->
-        <script src="./scripts/navbar.js" type="module"></script>
-        <script src="./scripts/scrollToTop.js" type="module"></script>
-        <script src="./scripts/projectSlider.js" type="module"></script>
-        <script src="./scripts/script.js" type="module"></script>
-        <script src="./scripts/contact.js" type="module"></script>
-        <script src="./scripts/colorMode.js"></script>
-        <!-- Fin Scripts -->
-
+    <!-- Scripts -->
+    <script src="./scripts/main.js" type="module"></script>
 </body>
-
 </html>
