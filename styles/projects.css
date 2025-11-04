@@ -58,6 +58,7 @@ body.light-mode .project-card:hover {
     overflow: hidden;
     height: 250px;
     background: var(--bg-secondary);
+    text-decoration: none;
 }
 
 body.light-mode .project-image {
@@ -69,10 +70,12 @@ body.light-mode .project-image {
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
+    text-decoration: none;
 }
 
 .project-card:hover .project-image img {
     transform: scale(1.1);
+    text-decoration: none;
 }
 
 .project-overlay {
