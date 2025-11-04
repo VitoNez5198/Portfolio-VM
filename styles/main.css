@@ -1,228 +1,287 @@
-@import url(navbar.css);
-@import url(buttons.css);
-@import url(proyects.css);
-@import url(footer.css);
-@import url(skills.css);
-@import url(contact.css);
+/* ========================================
+   Importaciones
+   ======================================== */
+@import url('variables.css');
+@import url('navbar.css');
+@import url('hero.css');
+@import url('sections.css');
+@import url('skills.css');
+@import url('projects.css');
+@import url('contact.css');
+@import url('footer.css');
+@import url('animations.css');
+@import url('responsive.css');
 
-/* Estilos Globales */
+/* ========================================
+   Reset y Base
+   ======================================== */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
-    font-family: "Quicksand", sans-serif;
-    font-weight: 300;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0a192f 0%, #020c1b 100%);
+    color: var(--text-primary);
     line-height: 1.6;
-    background: #f4f4f4;
-    font-size: 25px;
-    transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Modo oscuro */
-body.dark-mode {
-    background-color: #000000;
-    color: #ffffff;
+body.light-mode {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    color: var(--text-primary-light);
 }
 
-/* Sección con fondo oscuro */
+/* ========================================
+   Contenedores
+   ======================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
 .section {
-    padding: 20px;
-    margin: 50px auto;
-    max-width: 900px;
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 90%;
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-/* Estilos de las secciones en modo oscuro */
-body.dark-mode .section {
-    background: #444444ae;
-    color: #ffffff;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-    border: solid 2px cyan;
-}
-
-/* Títulos */
-h2 {
-    font-family: "Fira Code", monospace;
-    font-weight: 700;
-    font-size: 2.5rem;
-    color: #333;
-}
-
-/* Títulos en modo oscuro */
-body.dark-mode h2 {
-    color: #e0e0e0;
-}
-
-.article-wrapper figure {
-    margin: 0;
-    overflow: hidden;
-}
-
-.article-wrapper img {
-    width: 100%;
-    height: auto;
-    max-width: 400px;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 600px) {
-    body {
-        font-size: 100%;
-    }
-
-    .section {
-        padding: 15px;
-        margin: 15px auto;
-        min-height: 60vh;
-        max-width: 95%;
-    }
-
-    .projects-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .projects-card {
-        padding: 15px;
-        margin: 15px auto;
-        max-width: 95%;
-        width: 100%;
-    }
-
-    .article-wrapper img {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-    }
-}
-
-
-.checkbox {
-    display: none;
-    /* Ocultamos el checkbox */
-}
-
-.checkbox-label {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+    padding: 120px 0;
     position: relative;
-    width: 50px;
-    height: 24px;
-    background-color: #535353;
-    border-radius: 50px;
-    padding: 5px;
-    transition: background-color 0.3s;
 }
 
-.checkbox-label .fas {
-    position: absolute;
-    font-size: 12px;
-    color: #ffffff;
-    transition: opacity 0.3s;
+/* ========================================
+   Tipografía
+   ======================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-heading);
 }
 
-.checkbox-label .fa-moon {
-    left: 8px;
-    opacity: 1;
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6 {
+    color: var(--text-heading-light);
 }
 
-.checkbox-label .fa-sun {
-    right: 8px;
-    opacity: 0;
+p {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
 }
 
-.checkbox:checked+.checkbox-label {
-    background-color: cyan;
-    /* Cambia el color al activar el modo claro */
+body.light-mode p {
+    color: var(--text-secondary-light);
 }
 
-.checkbox:checked+.checkbox-label .fa-moon {
-    opacity: 0;
+strong {
+    color: var(--accent);
+    font-weight: 600;
 }
 
-.checkbox:checked+.checkbox-label .fa-sun {
-    opacity: 1;
+body.light-mode strong {
+    color: var(--accent-light);
 }
 
-.ball {
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 18px;
-    height: 18px;
-    background-color: #fff;
-    border-radius: 50%;
-    transition: transform 0.3s;
+/* ========================================
+   Botones Base
+   ======================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
 }
 
-.checkbox:checked+.checkbox-label .ball {
-    transform: translateX(26px);
-    /* Mueve la bola a la derecha */
+.btn-primary {
+    background: var(--accent);
+    color: var(--bg-primary);
+    border: 2px solid var(--accent);
 }
 
-/* --- Estilos para las etiquetas de tecnología en los proyectos --- */
-.tech-stack {
+.btn-primary:hover {
+    background: transparent;
+    color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);
+}
+
+body.light-mode .btn-primary {
+    background: var(--accent-light);
+    color: #fff;
+    border-color: var(--accent-light);
+}
+
+body.light-mode .btn-primary:hover {
+    background: transparent;
+    color: var(--accent-light);
+    box-shadow: 0 10px 30px rgba(79, 172, 254, 0.2);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+}
+
+.btn-secondary:hover {
+    background: rgba(79, 172, 254, 0.1);
+    transform: translateY(-3px);
+}
+
+body.light-mode .btn-secondary {
+    color: var(--accent-light);
+    border-color: var(--accent-light);
+}
+
+body.light-mode .btn-secondary:hover {
+    background: rgba(79, 172, 254, 0.05);
+}
+
+/* ========================================
+   Section Titles
+   ======================================== */
+.section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 4rem;
     display: flex;
-    flex-wrap: wrap; 
-    gap: 8px; 
-    margin-top: 15px;
-    margin-bottom: 15px;
-    justify-content: center; /* Centra las etiquetas */
+    align-items: center;
+    position: relative;
+    color: var(--text-heading);
 }
 
-.tech-stack span {
-    /* Estilo base (Modo Claro) */
-    background-color: #e9ecef; /* Fondo gris claro */
-    color: #495057; /* Texto gris oscuro */
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.85em;
-    font-weight: 500;
-    white-space: nowrap;
-    border: 1px solid #dee2e6; /* Borde sutil */
-    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+body.light-mode .section-title {
+    color: var(--text-heading-light);
 }
 
-/* Estilo de etiquetas en Modo Oscuro */
-body.dark-mode .tech-stack span {
-    background-color: #343a40; /* Fondo gris oscuro */
-    color: #e9ecef; /* Texto claro */
-    border-color: #495057; /* Borde un poco más claro */
+.title-number {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-right: 1rem;
 }
 
-/* --- Estilos para el separador del footer --- */
-.footer-separator {
-    margin: 0 5px;
-    color: #6c757d; /* Color sutil (Modo Claro) */
-    transition: color 0.3s; /* Transición suave */
+body.light-mode .title-number {
+    color: var(--accent-light);
 }
 
-/* Separador en Modo Oscuro */
-body.dark-mode .footer-separator {
-    color: #adb5bd; /* Color sutil (Modo Oscuro) */
+.section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-color);
+    margin-left: 2rem;
+    max-width: 300px;
 }
 
-/* Media query para etiquetas en móviles */
-@media (max-width: 768px) {
-    .tech-stack span {
-        font-size: 0.8em;
-        padding: 5px 10px;
-    }
+body.light-mode .section-title::after {
+    background: var(--border-color-light);
+}
+
+/* ========================================
+   Scroll to Top Button
+   ======================================== */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--accent);
+    color: var(--bg-primary);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(79, 172, 254, 0.6);
+}
+
+.scroll-to-top.show {
+    display: flex;
+}
+
+body.light-mode .scroll-to-top {
+    background: var(--accent-light);
+    color: #fff;
+}
+
+/* ========================================
+   Utilidades
+   ======================================== */
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+/* Selection */
+::selection {
+    background: var(--accent);
+    color: var(--bg-primary);
+}
+
+body.light-mode ::selection {
+    background: var(--accent-light);
+    color: #fff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-hover);
+}
+
+body.light-mode ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+body.light-mode ::-webkit-scrollbar-thumb {
+    background: var(--accent-light);
+}
+
+/* Smooth transitions for theme */
+*,
+*::before,
+*::after {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
 }
