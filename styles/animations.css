@@ -209,6 +209,7 @@ body.loaded {
     );
     background-size: 1000px 100%;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shimmer 3s linear infinite;
 }

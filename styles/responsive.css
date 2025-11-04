@@ -1,9 +1,9 @@
 /* ========================================
-Responsive Design - Media Queries
+   Responsive Design - Media Queries
    ======================================== */
 
 /* ========================================
-Extra Large Devices (>= 1400px)
+   Extra Large Devices (>= 1400px)
    ======================================== */
 @media (min-width: 1400px) {
     .container {
@@ -12,7 +12,7 @@ Extra Large Devices (>= 1400px)
 }
 
 /* ========================================
-Large Devices (>= 1200px)
+   Large Devices (>= 1200px)
    ======================================== */
 @media (min-width: 1200px) {
     .section {
@@ -21,7 +21,7 @@ Large Devices (>= 1200px)
 }
 
 /* ========================================
-Medium Devices (<= 992px)
+   Medium Devices (<= 992px)
    ======================================== */
 @media (max-width: 992px) {
     html {
@@ -47,7 +47,7 @@ Medium Devices (<= 992px)
 }
 
 /* ========================================
-Tablet Devices (<= 768px)
+   Tablet Devices (<= 768px)
    ======================================== */
 @media (max-width: 768px) {
     html {
@@ -89,7 +89,7 @@ Tablet Devices (<= 768px)
 }
 
 /* ========================================
-Mobile Devices (<= 480px)
+   Mobile Devices (<= 480px)
    ======================================== */
 @media (max-width: 480px) {
     html {
@@ -146,7 +146,7 @@ Mobile Devices (<= 480px)
 }
 
 /* ========================================
-Small Mobile Devices (<= 375px)
+   Small Mobile Devices (<= 375px)
    ======================================== */
 @media (max-width: 375px) {
     html {
@@ -163,11 +163,11 @@ Small Mobile Devices (<= 375px)
 }
 
 /* ========================================
-Orientation: Landscape (Mobile)
+   Orientation: Landscape (Mobile)
    ======================================== */
 @media (max-height: 600px) and (orientation: landscape) {
     .hero {
-        min-height: 100vh;
+        min-height: 400px;
         padding: 100px 2rem 50px;
     }
     
@@ -181,7 +181,7 @@ Orientation: Landscape (Mobile)
 }
 
 /* ========================================
-High DPI / Retina Displays
+   High DPI / Retina Displays
    ======================================== */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     /* Optimizaciones para pantallas retina */
@@ -193,7 +193,7 @@ High DPI / Retina Displays
 }
 
 /* ========================================
-Print Styles
+   Print Styles
    ======================================== */
 @media print {
     .navbar,
@@ -240,26 +240,26 @@ Print Styles
 }
 
 /* ========================================
-Dark Mode Preferences
+   Dark Mode Preferences
    ======================================== */
 @media (prefers-color-scheme: dark) {
     /* Respeta la preferencia del sistema */
     body:not(.light-mode) {
-        background-color: var(--dark-bg);
-        color: var(--dark-text);
+        background-color: #121212;
+        color: #ffffff;
     }
 }
 
 @media (prefers-color-scheme: light) {
     /* Si el usuario no ha elegido tema, usar claro */
     body:not([data-theme]) {
-        background-color: var(--light-bg);
-        color: var(--light-text);
+        background-color: #ffffff;
+        color: #333333;
     }
 }
 
 /* ========================================
-Contrast Preferences
+   Contrast Preferences
    ======================================== */
 @media (prefers-contrast: high) {
     body {
@@ -267,9 +267,8 @@ Contrast Preferences
     }
     
     .btn,
-    .skill-category,
-    .project-card {
-        border-width: 2px;
+    .skill-category {
+        border: 2px solid var(--border-color);
     }
 }
 
