@@ -87,6 +87,7 @@ body.light-mode .project-image {
     justify-content: center;
     opacity: 0;
     transition: opacity var(--transition-normal);
+    text-decoration: none;
 }
 
 body.light-mode .project-overlay {
