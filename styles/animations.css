@@ -1,0 +1,243 @@
+/* ========================================
+   ANIMATIONS.CSS
+   ======================================== */
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide In From Left */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide In From Right */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Scale In */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Rotate In */
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-180deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0);
+    }
+}
+
+/* Hero Animations */
+.hero-greeting {
+    animation: fadeInUp 1s ease 0.2s backwards;
+}
+
+.hero-title {
+    animation: fadeInUp 1s ease 0.4s backwards;
+}
+
+.hero-subtitle {
+    animation: fadeInUp 1s ease 0.6s backwards;
+}
+
+.hero-description {
+    animation: fadeInUp 1s ease 0.8s backwards;
+}
+
+.hero-buttons {
+    animation: fadeInUp 1s ease 1s backwards;
+}
+
+/* Scroll Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.animate-on-scroll.animate-in {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Section Animations with Delays */
+.section:nth-child(even) .animate-on-scroll {
+    animation: slideInLeft 0.8s ease forwards;
+}
+
+.section:nth-child(odd) .animate-on-scroll {
+    animation: slideInRight 0.8s ease forwards;
+}
+
+/* Skill Category Animations */
+.skill-category {
+    animation: scaleIn 0.6s ease forwards;
+}
+
+.skill-category:nth-child(1) { animation-delay: 0.1s; }
+.skill-category:nth-child(2) { animation-delay: 0.2s; }
+.skill-category:nth-child(3) { animation-delay: 0.3s; }
+
+/* Project Card Animations */
+.project-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* Loading State */
+body:not(.loaded) * {
+    animation-play-state: paused !important;
+}
+
+body.loaded {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Hover Effects */
+.hover-lift {
+    transition: transform var(--transition-normal);
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+}
+
+.hover-scale {
+    transition: transform var(--transition-normal);
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Glow Effect */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px var(--accent),
+                    0 0 10px var(--accent),
+                    0 0 15px var(--accent);
+    }
+    50% {
+        box-shadow: 0 0 10px var(--accent),
+                    0 0 20px var(--accent),
+                    0 0 30px var(--accent);
+    }
+}
+
+.glow {
+    animation: glow 2s ease-in-out infinite;
+}
+
+/* Text Shimmer Effect */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.shimmer {
+    background: linear-gradient(
+        90deg,
+        var(--text-primary) 0%,
+        var(--accent) 50%,
+        var(--text-primary) 100%
+    );
+    background-size: 1000px 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s linear infinite;
+}
+
+/* Typing Effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.typing-effect {
+    overflow: hidden;
+    border-right: 2px solid var(--accent);
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end),
+               blink 0.75s step-end infinite;
+}
+
+/* Reduce Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
