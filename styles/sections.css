@@ -1,0 +1,125 @@
+/* ========================================
+   About Section
+   ======================================== */
+
+.about-section {
+    position: relative;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.about-image {
+    position: relative;
+}
+
+.code-block {
+    background: rgba(100, 255, 218, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    overflow-x: auto;
+    position: relative;
+}
+
+body.light-mode .code-block {
+    background: rgba(0, 149, 168, 0.05);
+    border-color: var(--border-color-light);
+}
+
+.code-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--gradient-accent);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.code-block code {
+    display: block;
+}
+
+.code-keyword {
+    color: #ff79c6;
+}
+
+.code-class {
+    color: #8be9fd;
+}
+
+.code-function {
+    color: #50fa7b;
+}
+
+.code-string {
+    color: #f1fa8c;
+}
+
+body.light-mode .code-keyword {
+    color: #d73a49;
+}
+
+body.light-mode .code-class {
+    color: #6f42c1;
+}
+
+body.light-mode .code-function {
+    color: #005cc5;
+}
+
+body.light-mode .code-string {
+    color: #032f62;
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 968px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .about-image {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        gap: 2rem;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+    }
+    
+    .code-block {
+        padding: 1.5rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .code-block {
+        padding: 1rem;
+        font-size: 0.75rem;
+    }
+}
