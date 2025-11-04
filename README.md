@@ -49,41 +49,6 @@
 
 Puedes ver una demostración en vivo de mi portafolio [aquí](https://vitonez5198.github.io/Portfolio-VM/).
 
----
-
-## Instalación
-
-Sigue estos pasos para ejecutar el proyecto en tu entorno local:
-
-1. Clona el repositorio:
-
-```bash
-git clone https://github.com/VitoNez5198/Portfolio-VM.git
-```
-
-3. Navega al directorio del proyecto:
-
-```bash
-cd Portfolio-VM
-```
-
-3. Instala las dependencias necesarias:
-   
-```bash
-npm install
-```
-
-4. Inicia el servidor de desarrollo:
-   
-```bash
-npm start  
-```
-
-5. Abre tu navegador y visita:
-  
-```bash
-http://localhost:3000
-```
 
 ## Sobre Mí
 
