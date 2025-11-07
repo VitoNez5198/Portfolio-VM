@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initEmailCopy();
     initScrollAnimations();
     initSmoothScroll();
+    initTimelineAnimations(); // <-- Agregar esta línea
+
 });
 
 // ========================================
@@ -321,17 +323,3 @@ function initTimelineAnimations() {
     });
 }
 
-// ========================================
-// Actualizar la inicialización principal
-// Agregar esta línea en el DOMContentLoaded existente
-// ========================================
-
-document.addEventListener('DOMContentLoaded', () => {
-    initNavbar();
-    initThemeToggle();
-    initScrollToTop();
-    initEmailCopy();
-    initScrollAnimations();
-    initSmoothScroll();
-    initTimelineAnimations(); // <-- Agregar esta línea
-});

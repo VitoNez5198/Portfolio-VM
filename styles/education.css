@@ -327,6 +327,51 @@ body.light-mode .education-note strong {
     color: var(--accent-light);
 }
 
+/* Timeline Actions (Certificate Buttons) */
+.timeline-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-certificate {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all var(--transition-normal);
+    cursor: pointer;
+}
+
+.btn-certificate:hover {
+    background: var(--accent);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+}
+
+body.light-mode .btn-certificate {
+    color: var(--accent-light);
+    border-color: var(--accent-light);
+}
+
+body.light-mode .btn-certificate:hover {
+    background: var(--accent-light);
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 149, 168, 0.2);
+}
+
+.btn-certificate .material-symbols-outlined {
+    font-size: 1.2rem;
+}
+
 /* ========================================
    Responsive
    ======================================== */
