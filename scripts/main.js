@@ -288,3 +288,50 @@ if ('PerformanceObserver' in window) {
         console.log('Performance observer not supported');
     }
 }
+
+// ========================================
+// Timeline Animations - Agregar esta función a main.js
+// ========================================
+
+function initTimelineAnimations() {
+    const timelineItems = document.querySelectorAll('.timeline-item[data-animate]');
+    
+    if (timelineItems.length === 0) return;
+    
+    const observerOptions = {
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // Agregar delay progresivo para efecto cascada
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, index * 100);
+                
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    timelineItems.forEach(item => {
+        observer.observe(item);
+    });
+}
+
+// ========================================
+// Actualizar la inicialización principal
+// Agregar esta línea en el DOMContentLoaded existente
+// ========================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    initNavbar();
+    initThemeToggle();
+    initScrollToTop();
+    initEmailCopy();
+    initScrollAnimations();
+    initSmoothScroll();
+    initTimelineAnimations(); // <-- Agregar esta línea
+});
