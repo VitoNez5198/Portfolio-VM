@@ -287,3 +287,127 @@ body.light-mode .btn-link:hover {
         padding: 0.35rem 0.75rem;
     }
 }
+
+/* ========================================
+   Subcategorías de Proyectos
+   ======================================== */
+.projects-subtitle {
+    font-size: 1.8rem;
+    color: var(--text-heading);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.projects-subtitle:not(:first-of-type) {
+    margin-top: 5rem;
+}
+
+.projects-subtitle .subtitle-icon {
+    color: var(--accent);
+    font-size: 2rem;
+}
+
+body.light-mode .projects-subtitle {
+    color: var(--text-heading-light);
+}
+
+body.light-mode .projects-subtitle .subtitle-icon {
+    color: var(--accent-light);
+}
+
+/* ========================================
+   Tarjetas Placeholder (AWS Cloud)
+   ======================================== */
+.placeholder-card {
+    border-style: dashed;
+    border-width: 2px;
+}
+
+.placeholder-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.placeholder-svg .svg-bg {
+    fill: var(--bg-secondary);
+    transition: fill var(--transition-normal);
+}
+
+body.light-mode .placeholder-svg .svg-bg {
+    fill: var(--bg-secondary-light);
+}
+
+.placeholder-svg .svg-circle {
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 1.5;
+    stroke-dasharray: 4 4;
+    opacity: 0.25;
+}
+
+body.light-mode .placeholder-svg .svg-circle {
+    stroke: var(--accent-light);
+}
+
+.placeholder-svg .svg-cloud {
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 2;
+    opacity: 0.7;
+}
+
+body.light-mode .placeholder-svg .svg-cloud {
+    stroke: var(--accent-light);
+}
+
+.placeholder-svg .svg-node {
+    fill: none;
+    stroke: var(--text-secondary);
+    stroke-width: 1.5;
+    opacity: 0.5;
+}
+
+body.light-mode .placeholder-svg .svg-node {
+    stroke: var(--text-secondary-light);
+}
+
+.placeholder-svg .svg-text-mono {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    fill: var(--text-secondary);
+    text-anchor: middle;
+    opacity: 0.7;
+}
+
+body.light-mode .placeholder-svg .svg-text-mono {
+    fill: var(--text-secondary-light);
+}
+
+.placeholder-svg .svg-link {
+    fill: none;
+    stroke: var(--text-secondary);
+    stroke-width: 1.2;
+    stroke-dasharray: 3 3;
+    opacity: 0.4;
+}
+
+body.light-mode .placeholder-svg .svg-link {
+    stroke: var(--text-secondary-light);
+}
+
+.placeholder-svg .svg-text-main {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    fill: var(--accent);
+    text-anchor: middle;
+    letter-spacing: 0.5px;
+    opacity: 0.85;
+}
+
+body.light-mode .placeholder-svg .svg-text-main {
+    fill: var(--accent-light);
+}

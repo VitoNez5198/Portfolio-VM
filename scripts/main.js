@@ -272,6 +272,16 @@ window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
 
+// Fallback: Si el evento window 'load' tarda demasiado o no se dispara (por ejemplo,
+// recursos externos bloqueados), forzamos la carga después de 1 segundo
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        if (!document.body.classList.contains('loaded')) {
+            document.body.classList.add('loaded');
+        }
+    }, 1000);
+});
+
 // ========================================
 // Performance Monitoring
 // ========================================
@@ -301,7 +311,7 @@ function initTimelineAnimations() {
     if (timelineItems.length === 0) return;
     
     const observerOptions = {
-        threshold: 0.2,
+        threshold: 0.05,
         rootMargin: '0px 0px -50px 0px'
     };
     
