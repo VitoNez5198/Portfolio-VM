@@ -8,6 +8,52 @@
     gap: 2.5rem;
 }
 
+/* Cards Grandes (Cloud, DevOps & Automatización) */
+.projects-grid--large {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 992px) {
+    .projects-grid--large .project-card {
+        flex-direction: row;
+        align-items: stretch;
+        min-height: 380px;
+    }
+    .projects-grid--large .project-image {
+        width: 45%;
+        height: auto;
+        min-height: 100%;
+    }
+    .projects-grid--large .project-content {
+        width: 55%;
+        padding: 2.5rem;
+    }
+}
+
+/* Cards Pequeñas (Otros Proyectos Backend) */
+.projects-grid--small {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.projects-grid--small .project-image {
+    height: 180px;
+}
+
+.projects-grid--small .project-content {
+    padding: 1.5rem;
+}
+
+.projects-grid--small .project-header h3 {
+    font-size: 1.3rem;
+}
+
+.projects-grid--small .project-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
 .project-card {
     background: rgba(100, 255, 218, 0.03);
     border: 1px solid var(--border-color);
