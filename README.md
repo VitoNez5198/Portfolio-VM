@@ -1,12 +1,16 @@
-# Portafolio - Víctor Martínez
+# Portafolio — Víctor Martínez
 
-¡Bienvenido a mi portafolio! Aquí muestro mis proyectos y habilidades como desarrollador, con conocimientos en el stack PERN (PostgreSQL, Express, React, Node.js) y actualmente expandiendo mis habilidades hacia la Ingeniería de Datos con Python y SQL.
+Portafolio personal orientado a roles de **Cloud Support & DevOps**. Egresado del programa AWS Cloud re/Start y certificado **AWS Cloud Practitioner**, con base en Python, Bash y Linux aplicada a automatización de infraestructura y operación de entornos en la nube.
+
+🔗 **Demo en vivo:** [vitonez5198.github.io/Portfolio-VM](https://vitonez5198.github.io/Portfolio-VM/)
+
+---
 
 ## Contenido
 
 - [Características](#características)
-- [Tecnologías Utilizadas](#tecnologías-utilizadas)
-- [Demostración](#demostración)
+- [Habilidades Técnicas](#habilidades-técnicas)
+- [Proyectos](#proyectos)
 - [Sobre Mí](#sobre-mí)
 - [Contacto](#contacto)
 
@@ -14,51 +18,58 @@
 
 ## Características
 
-- **Diseño responsivo**: Adaptable a distintos tamaños de pantalla (móvil, tablet, escritorio).
-- **Modo oscuro**: Opción de modo oscuro para una mejor experiencia.
-- **Secciones organizadas**: Incluye secciones dedicadas a mis habilidades, proyectos destacados y currículum.
-- **Contacto rápido**: Funcionalidad de copia de correo electrónico para facilitar la comunicación.
+- **Diseño responsivo** — adaptable a móvil, tablet y escritorio
+- **Modo oscuro / claro** — toggle persistente
+- **Secciones organizadas** — Cloud & DevOps primero, luego proyectos de contexto backend
+- **Contacto rápido** — copia de email con un clic
 
 ---
 
 ## Habilidades Técnicas
 
-### Backend
-- Python
-- Flask (Framework)
-- SQL (PostgreSQL - SQLite)
-- Node.js (Conocimiento)
-- Express.js (Conocimiento)
+### ☁️ AWS Cloud · Cloud Practitioner
+- Amazon EC2, S3, VPC, IAM, RDS
+- CloudWatch (monitoreo y observabilidad)
+- CloudTrail (auditoría de eventos)
+- AWS Systems Manager
 
-### Frontend (Conocimientos)
-- **HTML5**
-- **CSS3**
-- **JavaScript**
-- **React**
+### ⚙️ Automatización & Sistemas
+- Python, Bash, SQL
+- PostgreSQL, SQLite
+- Linux / Redes (TCP/IP, subredes)
+- Git, GitHub
 
-### Herramientas
-- **Git** - Control de versiones.
-- **GitHub** - Alojamiento del código.
-- **Photoshop** - Diseño gráfico.
-- **Illustrator** - Creación de ilustraciones.
+### 🖥️ Scripting & Dev (Contexto)
+- Flask, Node.js, Express.js, JavaScript
 
 ---
 
-## Demostración
+## Proyectos
 
-Puedes ver una demostración en vivo de mi portafolio [aquí](https://vitonez5198.github.io/Portfolio-VM/).
+### Cloud & DevOps
+| Proyecto | Descripción | Stack |
+|---|---|---|
+| [Despliegue Automatizado AWS](https://github.com/VitoNez5198/aws-automated-web-server) | Arquitectura VPC + bootstrapping de servidor Apache con Bash | AWS, EC2, VPC, Bash, Linux |
+| [Bot de Automatización Logística](https://github.com/VitoNez5198/Respaldo_Puerto_Bot) | Redujo en 90% el tiempo de registro documental en entorno portuario | Python, Telegram API, Pipeline de Datos |
 
+### Otros Proyectos (Backend)
+| Proyecto | Descripción | Stack |
+|---|---|---|
+| [Nexthora](https://github.com/VitoNez5198/nexthora) | SaaS Link-in-Bio con reserva de horas para profesionales independientes | Python, Django, PostgreSQL |
+| [Indicadores Económicos](https://github.com/VitoNez5198/Indicadores_Economicos) | Panel ETL + API REST de datos financieros en tiempo real | Python, Flask, PostgreSQL, JS |
+
+---
 
 ## Sobre Mí
 
-Soy un desarrollador apasionado por la tecnología y la gestión de datos. Mi objetivo es crecer como Ingeniero de Datos, construyendo sobre mis conocimientos en desarrollo backend (stack PERN). Disfruto creando soluciones eficientes y escalables utilizando Python y SQL, conectando la lógica de negocio con el procesamiento de datos.
+Egresado del programa intensivo **AWS Cloud re/Start** (400 horas), certificado **AWS Cloud Practitioner**. Estudio Ingeniería en Informática en el IP AIEP. Mi experiencia previa en entornos industriales de alta exigencia (Wintec S.A.) me formó para el troubleshooting metódico y la operación continua bajo presión — habilidades directamente aplicables a soporte cloud y operaciones DevOps.
+
+---
 
 ## Contacto
 
-Si deseas contactarme, no dudes en enviarme un correo electrónico o visitar mis redes sociales:
-
-### Email: developer.victorms@gmail.com
-
-### LinkedIn: [Víctor Martínez](https://www.linkedin.com/in/victor-ms-dev/)
-
-### GitHub: [VitoNez5198](https://github.com/VitoNez5198)
+| Canal | Enlace |
+|---|---|
+| 📧 Email | developer.victorms@gmail.com |
+| 💼 LinkedIn | [victor-ms-dev](https://www.linkedin.com/in/victor-ms-dev/) |
+| 🐙 GitHub | [VitoNez5198](https://github.com/VitoNez5198) |
