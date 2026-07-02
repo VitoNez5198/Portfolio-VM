@@ -141,6 +141,26 @@ body.light-mode .skill-item:hover {
     transform: scale(1.2);
 }
 
+/* Variante: icono Material Symbols en lugar de SVG */
+.skill-ms-icon {
+    font-size: 2.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    transition: transform var(--transition-normal);
+}
+
+.skill-item:hover .skill-ms-icon {
+    transform: scale(1.2);
+}
+
+body.light-mode .skill-ms-icon {
+    color: var(--accent-light);
+}
+
 .skill-item span {
     font-size: 0.85rem;
     color: var(--text-secondary);
