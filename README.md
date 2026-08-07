@@ -55,7 +55,7 @@ Portafolio personal orientado a roles de **Cloud Support & DevOps**. Egresado de
 ### Otros Proyectos (Backend)
 | Proyecto | Descripción | Stack |
 |---|---|---|
-| [Nexthora](https://github.com/VitoNez5198/nexthora) | SaaS Link-in-Bio con reserva de horas para profesionales independientes | Python, Django, PostgreSQL |
+| [Nexthora](https://github.com/VitoNez5198/nexthora-public) | Repo público con la estructura core del SaaS Link-in-Bio y reserva de horas | Python, Django, PostgreSQL |
 | [Indicadores Económicos](https://github.com/VitoNez5198/Indicadores_Economicos) | Panel ETL + API REST de datos financieros en tiempo real | Python, Flask, PostgreSQL, JS |
 
 ---
