@@ -1,11 +1,9 @@
-mkdir -p .github/workflows
-cat << 'EOF' > .github/workflows/deploy.yml
 name: Deploy to S3
 
 on:
   push:
     branches:
-      - main 
+      - main
 
 jobs:
   deploy:
@@ -23,4 +21,3 @@ jobs:
 
       - name: Deploy to S3
         run: aws s3 sync . s3://portfolio-vmartinez-2026 --delete
-EOF
