@@ -311,6 +311,18 @@ body.light-mode .btn-link:hover {
     }
 }
 
+@media (max-width: 600px) {
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .project-type {
+        white-space: normal;
+    }
+}
+
 @media (max-width: 480px) {
     .project-image {
         height: 200px;

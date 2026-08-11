@@ -332,6 +332,7 @@ body.light-mode .education-note strong {
     margin-top: 1.5rem;
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .btn-certificate {
@@ -411,6 +412,19 @@ body.light-mode .btn-certificate:hover {
 
     .education-note p {
         padding: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .timeline-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-certificate {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
     }
 }
 
