@@ -1,82 +1,66 @@
-/* ========================================
-   Variables CSS - Tema Oscuro y Claro
-   ======================================== */
+/* Variables CSS - Tema Oscuro Grafito y Modo Claro */
 
 :root {
-    /* Colores Principales - Tema Oscuro */
-    --primary: #4facfe;
-    --secondary: #00f2fe;
-    --accent: #64ffda;
-    --accent-hover: #52e6c6;
-    
-    /* Backgrounds - Tema Oscuro */
-    --bg-primary: #0a192f;
-    --bg-secondary: #112240;
-    --bg-tertiary: #1a2f4f;
-    
-    /* Texto - Tema Oscuro */
-    --text-primary: #e6f1ff;
-    --text-secondary: #8892b0;
-    --text-heading: #ccd6f6;
-    
-    /* Bordes - Tema Oscuro */
-    --border-color: rgba(100, 255, 218, 0.1);
-    --border-hover: rgba(100, 255, 218, 0.3);
-    
-    /* Sombras - Tema Oscuro */
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
-    --shadow-accent: 0 10px 40px rgba(79, 172, 254, 0.3);
-    
-    /* Colores para Modo Claro */
-    --primary-light: #0066cc;
-    --secondary-light: #00b8d4;
-    --accent-light: #0095a8;
-    
-    /* Backgrounds - Tema Claro */
-    --bg-primary-light: #ffffff;
-    --bg-secondary-light: #f8f9fa;
-    --bg-tertiary-light: #e9ecef;
-    
-    /* Texto - Tema Claro */
-    --text-primary-light: #1a202c;
-    --text-secondary-light: #4a5568;
-    --text-heading-light: #2d3748;
-    
-    /* Bordes - Tema Claro */
-    --border-color-light: rgba(0, 0, 0, 0.1);
-    --border-hover-light: rgba(0, 0, 0, 0.2);
-    
-    /* Sombras - Tema Claro */
-    --shadow-sm-light: 0 2px 8px rgba(0, 0, 0, 0.1);
-    --shadow-md-light: 0 4px 16px rgba(0, 0, 0, 0.15);
-    --shadow-lg-light: 0 8px 32px rgba(0, 0, 0, 0.2);
-    
-    /* Gradientes */
+    --primary: #3b82f6;
+    --secondary: #38bdf8;
+    --accent: #5ba4f5;
+    --accent-hover: #7bb8fa;
+    --status-ok: #34d399;
+
+    --bg-primary: #0b0f14;
+    --bg-secondary: #111720;
+    --bg-tertiary: #17202c;
+
+    --text-primary: #e6edf3;
+    --text-secondary: #94a3b8;
+    --text-heading: #f0f6fc;
+
+    --border-color: rgba(148, 163, 184, 0.15);
+    --border-hover: rgba(91, 164, 245, 0.42);
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+    --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.45);
+    --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.55);
+    --shadow-accent: 0 10px 30px rgba(59, 130, 246, 0.18);
+
+    --primary-light: #1d4ed8;
+    --secondary-light: #0284c7;
+    --accent-light: #1e40af;
+
+    --bg-primary-light: #f8fafc;
+    --bg-secondary-light: #ffffff;
+    --bg-tertiary-light: #eef2f6;
+
+    --text-primary-light: #0f172a;
+    --text-secondary-light: #475569;
+    --text-heading-light: #0f172a;
+
+    --border-color-light: rgba(15, 23, 42, 0.1);
+    --border-hover-light: rgba(30, 64, 175, 0.3);
+
+    --shadow-sm-light: 0 2px 8px rgba(15, 23, 42, 0.06);
+    --shadow-md-light: 0 6px 20px rgba(15, 23, 42, 0.09);
+    --shadow-lg-light: 0 12px 32px rgba(15, 23, 42, 0.12);
+
     --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-    --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
-    
-    /* Espaciado */
+    --gradient-accent: linear-gradient(90deg, var(--accent) 0%, var(--secondary) 100%);
+
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 4rem;
     --spacing-xl: 6rem;
-    
-    /* Border Radius */
+
     --radius-sm: 4px;
     --radius-md: 8px;
-    --radius-lg: 12px;
-    --radius-xl: 16px;
+    --radius-lg: 10px;
+    --radius-xl: 14px;
     --radius-full: 9999px;
-    
-    /* Transiciones */
-    --transition-fast: 0.2s ease;
-    --transition-normal: 0.3s ease;
-    --transition-slow: 0.5s ease;
-    
-    /* Z-index */
+
+    --transition-fast: 0.18s ease;
+    --transition-normal: 0.25s ease;
+    --transition-slow: 0.45s ease;
+
     --z-dropdown: 100;
     --z-sticky: 200;
     --z-fixed: 300;
@@ -84,20 +68,17 @@
     --z-modal: 500;
     --z-popover: 600;
     --z-tooltip: 700;
-    
-    /* Breakpoints (para referencia) */
+
     --breakpoint-xs: 480px;
     --breakpoint-sm: 640px;
     --breakpoint-md: 768px;
     --breakpoint-lg: 1024px;
     --breakpoint-xl: 1280px;
     --breakpoint-2xl: 1536px;
-    
-    /* Fuentes */
+
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-mono: 'Fira Code', 'Courier New', monospace;
-    
-    /* Tamaños de fuente */
+
     --text-xs: 0.75rem;
     --text-sm: 0.875rem;
     --text-base: 1rem;

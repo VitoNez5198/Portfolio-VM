@@ -1,110 +1,101 @@
-/* ========================================
-   Contact Section
-   ======================================== */
+/* Contact Section */
 
 .contact-section {
     text-align: center;
 }
 
 .contact-content {
-    max-width: 700px;
+    max-width: 640px;
     margin: 0 auto;
 }
 
 .contact-text {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     color: var(--text-secondary);
-    margin-bottom: 3rem;
-    line-height: 1.8;
+    margin-bottom: 2.25rem;
+    line-height: 1.75;
 }
 
 body.light-mode .contact-text {
     color: var(--text-secondary-light);
 }
 
-/* Email Box */
 .contact-email-box {
-    background: rgba(100, 255, 218, 0.05);
+    background: var(--bg-secondary);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
-    padding: 2rem;
-    margin-bottom: 3rem;
+    padding: 1.75rem;
+    margin-bottom: 2.25rem;
 }
 
 body.light-mode .contact-email-box {
-    background: rgba(0, 149, 168, 0.05);
+    background: var(--bg-secondary-light);
     border-color: var(--border-color-light);
 }
 
 .contact-email-box label {
     display: block;
-    color: var(--accent);
-    font-weight: 600;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    margin-bottom: 0.85rem;
 }
 
 body.light-mode .contact-email-box label {
-    color: var(--accent-light);
+    color: var(--text-secondary-light);
 }
 
 .email-input-group {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
 .email-input-group input {
     flex: 1;
-    background: var(--bg-secondary);
+    background: var(--bg-tertiary);
     border: 1px solid var(--border-color);
     color: var(--text-primary);
-    padding: 1rem 1.5rem;
+    padding: 0.85rem 1.15rem;
     border-radius: var(--radius-md);
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-family: var(--font-mono);
     text-align: center;
-    transition: all var(--transition-normal);
+    transition: border-color var(--transition-fast);
 }
 
 .email-input-group input:focus {
     outline: none;
     border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.1);
 }
 
 body.light-mode .email-input-group input {
-    background: var(--bg-secondary-light);
+    background: var(--bg-tertiary-light);
     border-color: var(--border-color-light);
     color: var(--text-primary-light);
 }
 
 body.light-mode .email-input-group input:focus {
     border-color: var(--accent-light);
-    box-shadow: 0 0 0 3px rgba(0, 149, 168, 0.1);
 }
 
 .btn-copy {
     background: var(--accent);
     color: var(--bg-primary);
     border: none;
-    padding: 1rem 1.5rem;
+    padding: 0.85rem 1.25rem;
     border-radius: var(--radius-md);
     cursor: pointer;
-    transition: all var(--transition-normal);
+    transition: background var(--transition-fast), transform var(--transition-fast);
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 60px;
+    min-width: 54px;
 }
 
 .btn-copy:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.4);
-}
-
-.btn-copy:active {
-    transform: translateY(0);
+    background: var(--accent-hover);
+    transform: translateY(-1px);
 }
 
 body.light-mode .btn-copy {
@@ -112,15 +103,14 @@ body.light-mode .btn-copy {
     color: #fff;
 }
 
-/* Copy Message */
 .copy-message {
     display: inline-block;
-    color: var(--accent);
-    font-weight: 600;
-    font-size: 0.95rem;
+    color: var(--status-ok);
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
     opacity: 0;
-    transform: translateY(-10px);
-    transition: all var(--transition-normal);
+    transform: translateY(-6px);
+    transition: all var(--transition-fast);
     pointer-events: none;
 }
 
@@ -129,107 +119,62 @@ body.light-mode .btn-copy {
     transform: translateY(0);
 }
 
-body.light-mode .copy-message {
-    color: var(--accent-light);
-}
-
-/* Social Links */
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 3rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .social-link {
-    width: 50px;
-    height: 50px;
-    background: rgba(100, 255, 218, 0.1);
+    width: 46px;
+    height: 46px;
+    background: var(--bg-secondary);
     border: 1px solid var(--border-color);
-    border-radius: 50%;
+    border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--accent);
-    transition: all var(--transition-normal);
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
 }
 
 .social-link:hover {
-    background: var(--accent);
-    color: var(--bg-primary);
-    transform: translateY(-5px) rotate(5deg);
-    box-shadow: 0 10px 20px rgba(100, 255, 218, 0.3);
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
 }
 
 body.light-mode .social-link {
-    background: rgba(0, 149, 168, 0.1);
+    background: var(--bg-secondary-light);
     border-color: var(--border-color-light);
-    color: var(--accent-light);
+    color: var(--text-secondary-light);
 }
 
 body.light-mode .social-link:hover {
-    background: var(--accent-light);
-    color: #fff;
+    border-color: var(--accent-light);
+    color: var(--accent-light);
 }
 
 .social-link svg {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
 }
 
-/* Download Button */
 .btn-download {
-    margin-top: 2rem;
+    margin-top: 0.5rem;
 }
-
-/* ========================================
-   Responsive
-   ======================================== */
 
 @media (max-width: 768px) {
-    .contact-text {
-        font-size: 1.1rem;
-        margin-bottom: 2.5rem;
-    }
-    
     .contact-email-box {
-        padding: 1.5rem;
+        padding: 1.35rem;
     }
-    
+
     .email-input-group {
         flex-direction: column;
     }
-    
+
     .btn-copy {
         width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .contact-text {
-        font-size: 1rem;
-        margin-bottom: 2rem;
-    }
-    
-    .contact-email-box {
-        padding: 1.25rem;
-    }
-    
-    .contact-email-box label {
-        font-size: 1rem;
-    }
-    
-    .email-input-group input {
-        font-size: 0.9rem;
-        padding: 0.85rem 1rem;
-    }
-    
-    .social-links {
-        gap: 1rem;
-    }
-    
-    .social-link {
-        width: 45px;
-        height: 45px;
     }
 }

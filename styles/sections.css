@@ -1,6 +1,4 @@
-/* ========================================
-   About Section
-   ======================================== */
+/* About Section */
 
 .about-section {
     position: relative;
@@ -8,14 +6,14 @@
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3.5rem;
+    align-items: start;
 }
 
 .about-text p {
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
+    margin-bottom: 1.35rem;
+    font-size: 1.05rem;
     line-height: 1.8;
 }
 
@@ -23,103 +21,106 @@
     position: relative;
 }
 
-.code-block {
-    background: rgba(100, 255, 218, 0.05);
+.manifest-card {
+    background: var(--bg-secondary);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
-    padding: 2rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+body.light-mode .manifest-card {
+    background: var(--bg-secondary-light);
+    border-color: var(--border-color-light);
+    box-shadow: var(--shadow-md-light);
+}
+
+.manifest-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border-color);
     font-family: var(--font-mono);
-    font-size: 0.95rem;
+    font-size: 0.8rem;
+}
+
+body.light-mode .manifest-header {
+    background: var(--bg-tertiary-light);
+    border-bottom-color: var(--border-color-light);
+}
+
+.manifest-file {
+    color: var(--text-heading);
+    font-weight: 500;
+}
+
+body.light-mode .manifest-file {
+    color: var(--text-heading-light);
+}
+
+.manifest-badge {
+    color: var(--accent);
+    font-size: 0.75rem;
+}
+
+body.light-mode .manifest-badge {
+    color: var(--accent-light);
+}
+
+.manifest-body {
+    padding: 1.5rem 1.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.88rem;
     line-height: 1.8;
     overflow-x: auto;
-    position: relative;
+    margin: 0;
 }
 
-body.light-mode .code-block {
-    background: rgba(0, 149, 168, 0.05);
-    border-color: var(--border-color-light);
-}
-
-.code-block::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: var(--gradient-accent);
-    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-}
-
-.code-block code {
+.manifest-body code {
     display: block;
+    color: var(--text-primary);
 }
 
-.code-keyword {
-    color: #ff79c6;
+body.light-mode .manifest-body code {
+    color: var(--text-primary-light);
 }
 
-.code-class {
-    color: #8be9fd;
+.yaml-key {
+    color: var(--accent);
 }
 
-.code-function {
-    color: #50fa7b;
+.yaml-val {
+    color: #cbd5e1;
 }
 
-.code-string {
-    color: #f1fa8c;
+.yaml-status {
+    color: var(--status-ok);
 }
 
-body.light-mode .code-keyword {
-    color: #d73a49;
+body.light-mode .yaml-key {
+    color: var(--accent-light);
 }
 
-body.light-mode .code-class {
-    color: #6f42c1;
+body.light-mode .yaml-val {
+    color: #334155;
 }
 
-body.light-mode .code-function {
-    color: #005cc5;
+body.light-mode .yaml-status {
+    color: #059669;
 }
-
-body.light-mode .code-string {
-    color: #032f62;
-}
-
-/* ========================================
-   Responsive
-   ======================================== */
 
 @media (max-width: 968px) {
     .about-content {
         grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-    
-    .about-image {
-        order: -1;
-    }
-}
-
-@media (max-width: 768px) {
-    .about-content {
-        gap: 2rem;
-    }
-    
-    .about-text p {
-        font-size: 1rem;
-    }
-    
-    .code-block {
-        padding: 1.5rem;
-        font-size: 0.85rem;
+        gap: 2.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    .code-block {
-        padding: 1rem;
-        font-size: 0.75rem;
+    .manifest-body {
+        padding: 1.15rem;
+        font-size: 0.78rem;
     }
 }

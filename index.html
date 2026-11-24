@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Portafolio de Víctor Martínez - Cloud Support & DevOps especializado en AWS, automatización con Python y Bash, e infraestructura en la nube.">
-    <title>Víctor Martínez | Cloud Support & DevOps</title>
+        content="Portafolio de Víctor Martínez - Junior Cloud Engineer enfocado en infraestructura AWS, FinOps, automatización e IA aplicada con Amazon Bedrock.">
+    <title>Víctor Martínez | Junior Cloud Engineer</title>
     <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
@@ -16,11 +16,13 @@
 </head>
 
 <body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="logo">
-                <a href="#inicio">&lt;VM /&gt;</a>
+                <a href="#inicio">VM <span class="logo-sep">/</span> <span class="logo-tag">cloud</span></a>
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#inicio">Inicio</a></li>
@@ -45,21 +47,20 @@
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
-        <div class="hero-background">
-            <div class="shape shape1"></div>
-            <div class="shape shape2"></div>
-            <div class="shape shape3"></div>
-        </div>
+        <div class="hero-background"></div>
         <div class="hero-content">
-            <p class="hero-greeting">Hola, mi nombre es</p>
+            <div class="hero-status">
+                <span class="status-dot"></span>
+                <span>AWS Certified Cloud Practitioner · En preparación SAA-C03</span>
+            </div>
             <h1 class="hero-title">Víctor Martínez</h1>
-            <h2 class="hero-subtitle">Cloud Support & DevOps</h2>
+            <h2 class="hero-subtitle">Junior Cloud Engineer | AWS, FinOps &amp; Applied AI</h2>
             <p class="hero-description">
-                <strong>AWS Certified Cloud Practitioner</strong> y egresado de <strong>AWS Cloud re/Start</strong>. Me especializo en infraestructura en la nube, automatización con <strong>Python</strong> y <strong>Bash</strong>, y soporte de entornos en <strong>AWS</strong>.
+                Diseño y opero infraestructura en <strong>AWS</strong> con foco en arquitecturas serverless, control de costos (<strong>FinOps</strong>), Infraestructura como Código e integración de soluciones con <strong>Amazon Bedrock</strong>.
             </p>
             <div class="hero-buttons">
                 <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
-                <a href="#contacto" class="btn btn-secondary">Contáctame</a>
+                <a href="#contacto" class="btn btn-secondary">Contacto</a>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -76,31 +77,34 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        Soy egresado del programa intensivo <strong>AWS Cloud re/Start</strong>, donde adquirí formación profunda en redes, administración de servidores <strong>Linux</strong>, seguridad de la información y servicios core de infraestructura en <strong>Amazon Web Services</strong> (VPC, EC2, S3, IAM, CloudWatch).
+                        Egresado del programa intensivo <strong>AWS Cloud re/Start</strong> y certificado <strong>AWS Certified Cloud Practitioner</strong>. Trabajo sobre los pilares de red, seguridad y cómputo en AWS (VPC, IAM, EC2, S3, Lambda, SQS, RDS y CloudWatch).
                     </p>
                     <p>
-                        Cuento con la certificación <strong>AWS Certified Cloud Practitioner</strong> y aplico mis conocimientos de <strong>Python</strong>, <strong>SQL</strong> y <strong>Bash</strong> a la automatización de procesos y el despliegue de infraestructura cloud.
+                        Mi enfoque está en conectar servicios gestionados para resolver problemas concretos: pipelines serverless desacoplados, auditoría de costos (<strong>FinOps</strong>), despliegue reproducible con <strong>Terraform</strong> y <strong>AWS SAM</strong>, e integración de IA aplicada con <strong>Amazon Bedrock</strong>. Uso <strong>Python</strong> y <strong>Bash</strong> como herramientas de automatización operativa.
                     </p>
                     <p>
-                        Estudio <strong>Ingeniería en Informática</strong> en el Instituto Profesional AIEP y cuento con experiencia previa en entornos operacionales de alta exigencia, lo que me ha entrenado para el <strong>troubleshooting bajo presión</strong> y el trabajo metódico ante incidentes críticos.
+                        Curso <strong>Ingeniería en Informática</strong> en AIEP y cuento con experiencia previa en entornos industriales de alta exigencia, lo que me formó en <strong>troubleshooting metódico</strong> y continuidad operacional bajo presión.
                     </p>
                 </div>
                 <div class="about-image">
-                    <div class="code-block">
-                        <pre><code><span class="code-keyword">class</span> <span class="code-class">CloudEngineer</span>:
-    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(self):
-        self.name = <span class="code-string">"Víctor Martínez"</span>
-        self.role = <span class="code-string">"Cloud Support & DevOps"</span>
-        self.cert = <span class="code-string">"AWS Cloud Practitioner"</span>
-        self.skills = [
-            <span class="code-string">"AWS Cloud"</span>,
-            <span class="code-string">"Python / Bash"</span>,
-            <span class="code-string">"Linux / Redes"</span>,
-            <span class="code-string">"Automatización"</span>
-        ]
-    
-    <span class="code-keyword">def</span> <span class="code-function">solve_incident</span>(self):
-        <span class="code-keyword">return</span> <span class="code-string">"Reliable Cloud Infrastructure"</span></code></pre>
+                    <div class="manifest-card">
+                        <div class="manifest-header">
+                            <span class="manifest-file">cloud-profile.yaml</span>
+                            <span class="manifest-badge">AWS / IaC</span>
+                        </div>
+                        <pre class="manifest-body"><code><span class="yaml-key">engineer:</span> <span class="yaml-val">Víctor Martínez</span>
+<span class="yaml-key">role:</span> <span class="yaml-val">Junior Cloud Engineer</span>
+<span class="yaml-key">location:</span> <span class="yaml-val">Chile</span>
+
+<span class="yaml-key">certifications:</span>
+  - <span class="yaml-status">AWS Cloud Practitioner (Activo)</span>
+  - <span class="yaml-val">AWS Solutions Architect Associate (En curso)</span>
+
+<span class="yaml-key">focus:</span>
+  - <span class="yaml-val">Arquitectura Serverless &amp; Redes (VPC/IAM)</span>
+  - <span class="yaml-val">FinOps &amp; Gobierno de Nube</span>
+  - <span class="yaml-val">IaC (Terraform, AWS SAM)</span>
+  - <span class="yaml-val">IA Aplicada (Amazon Bedrock)</span></code></pre>
                     </div>
                 </div>
             </div>
@@ -114,12 +118,12 @@
                 <span class="title-number">02.</span> Habilidades Técnicas
             </h2>
             <div class="skills-grid">
-                <!-- 1. AWS Cloud — primera categoría -->
+                <!-- 1. AWS Core & Redes -->
                 <div class="skill-category" data-category="cloud">
                     <div class="category-icon">
                         <span class="material-symbols-outlined">cloud</span>
                     </div>
-                    <h3>AWS Cloud · Cloud Practitioner</h3>
+                    <h3>AWS Core &amp; Redes</h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <img src="./assets/icons/EC2.svg" alt="Amazon EC2">
@@ -156,13 +160,67 @@
                     </div>
                 </div>
 
-                <!-- 2. Automatización & Sistemas -->
-                <div class="skill-category" data-category="backend">
+                <!-- 2. Serverless, IaC, FinOps & IA -->
+                <div class="skill-category" data-category="architecture">
+                    <div class="category-icon">
+                        <span class="material-symbols-outlined">hub</span>
+                    </div>
+                    <h3>Serverless, FinOps &amp; IA</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="./assets/icons/Lambda.svg" alt="AWS Lambda">
+                            <span>AWS Lambda</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./assets/icons/Terraform.svg" alt="Terraform">
+                            <span>Terraform</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./assets/icons/SAM.svg" alt="AWS SAM">
+                            <span>AWS SAM</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./assets/icons/Bedrock.svg" alt="Amazon Bedrock">
+                            <span>Amazon Bedrock</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./assets/icons/Budgets.svg" alt="FinOps / Budgets">
+                            <span>FinOps / Budgets</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./assets/icons/EventBridge.svg" alt="EventBridge">
+                            <span>EventBridge</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./assets/icons/SQS.svg" alt="SQS / DLQ">
+                            <span>SQS / DLQ</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./assets/icons/DynamoDB.svg" alt="DynamoDB">
+                            <span>DynamoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Sistemas & Automatización -->
+                <div class="skill-category" data-category="systems">
                     <div class="category-icon">
                         <span class="material-symbols-outlined">terminal</span>
                     </div>
-                    <h3>Automatización & Sistemas</h3>
+                    <h3>Sistemas &amp; Automatización</h3>
                     <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="./assets/icons/Linux.svg" alt="Linux">
+                            <span>Linux</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./assets/icons/red-global.png" alt="Redes TCP/IP">
+                            <span>Redes TCP/IP</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./assets/icons/Bash.svg" alt="Bash">
+                            <span>Bash</span>
+                        </div>
                         <div class="skill-item">
                             <img src="./assets/icons/pythonicon.svg" alt="Python">
                             <span>Python</span>
@@ -176,50 +234,12 @@
                             <span>SQLite</span>
                         </div>
                         <div class="skill-item">
-                            <img src="./assets/icons/Bash.svg" alt="Bash">
-                            <span>Bash</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="./assets/icons/Linux.svg" alt="Linux">
-                            <span>Linux</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="./assets/icons/red-global.png" alt="Redes">
-                            <span>Redes</span>
-                        </div>
-                        <div class="skill-item">
                             <img src="./assets/icons/git.svg" alt="Git">
                             <span>Git</span>
                         </div>
                         <div class="skill-item">
-                            <img src="./assets/icons/github.svg" alt="GitHub">
-                            <span>GitHub</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3. Scripting & Dev — contexto, no foco principal -->
-                <div class="skill-category" data-category="tools">
-                    <div class="category-icon">
-                        <span class="material-symbols-outlined">code</span>
-                    </div>
-                    <h3>Scripting & Dev (Contexto)</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <img src="./assets/icons/Flask.svg" alt="Flask">
-                            <span>Flask</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="./assets/icons/javascript-js.svg" alt="JavaScript">
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="./assets/icons/node-js.svg" alt="Node.js">
-                            <span>Node.js</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="./assets/icons/express-original.svg" alt="Express">
-                            <span>Express.js</span>
+                            <img src="./assets/icons/github.svg" alt="GitHub Actions">
+                            <span>GitHub Actions</span>
                         </div>
                     </div>
                 </div>
@@ -234,68 +254,215 @@
                 <span class="title-number">03.</span> Proyectos Destacados
             </h2>
 
-            <!-- Cloud, DevOps & Automatización — PRIMERA subsección -->
-            <h3 class="projects-subtitle">
-                <span class="material-symbols-outlined subtitle-icon">cloud_queue</span>
-                Cloud, DevOps & Automatización
-            </h3>
-            <div class="projects-grid projects-grid--large">
+            <div class="projects-toolbar">
+                <div class="projects-filters" id="projectFilters" role="tablist" aria-label="Filtrar proyectos">
+                    <button class="filter-btn active" data-filter="all" type="button">Todos (5)</button>
+                    <button class="filter-btn" data-filter="ai-finops" type="button">AWS, FinOps &amp; IA (2)</button>
+                    <button class="filter-btn" data-filter="infra" type="button">Infraestructura &amp; Redes (2)</button>
+                    <button class="filter-btn" data-filter="ops" type="button">Operaciones (1)</button>
+                </div>
+            </div>
 
-                <article class="project-card">
+            <div class="projects-grid projects-grid--large" id="projectsGrid">
+
+                <!-- Proyecto 1: Mercado Público RAG AWS -->
+                <article class="project-card" data-category="ai-finops">
                     <div class="project-image">
-                        <img src="assets/img/arquitectura-1.png" alt="Despliegue Automatizado de Servidores Web en AWS">
-                        <a href="https://github.com/VitoNez5198/aws-automated-web-server" target="_blank" rel="noopener" class="project-overlay" aria-label="Ver Documentación">
-                            <span class="material-symbols-outlined">description</span>
+                        <svg class="arch-diagram" viewBox="0 0 420 260" role="img" aria-label="Diagrama de arquitectura Mercado Público RAG en AWS">
+                            <defs>
+                                <marker id="arr-p1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                    <path class="diag-arrow" d="M 0 1 L 10 5 L 0 9 z" />
+                                </marker>
+                                <marker id="arr-p1-acc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                    <path class="diag-arrow-accent" d="M 0 1 L 10 5 L 0 9 z" />
+                                </marker>
+                            </defs>
+                            <rect class="diag-box" x="18" y="24" width="110" height="44" rx="6" />
+                            <text class="diag-label" x="73" y="44">API Gateway</text>
+                            <text class="diag-sub" x="73" y="58">Presigned URL</text>
+
+                            <rect class="diag-box" x="154" y="24" width="110" height="44" rx="6" />
+                            <text class="diag-label" x="209" y="44">Amazon S3</text>
+                            <text class="diag-sub" x="209" y="58">PDF Uploads</text>
+
+                            <rect class="diag-box" x="290" y="24" width="112" height="44" rx="6" />
+                            <text class="diag-label" x="346" y="44">SQS + DLQ</text>
+                            <text class="diag-sub" x="346" y="58">Cola Asíncrona</text>
+
+                            <rect class="diag-box-accent" x="150" y="110" width="124" height="50" rx="6" />
+                            <text class="diag-label" x="212" y="132">AWS Lambda</text>
+                            <text class="diag-sub" x="212" y="147">Parser + Verificador</text>
+
+                            <rect class="diag-box-accent" x="298" y="110" width="104" height="50" rx="6" />
+                            <text class="diag-label" x="350" y="132">Bedrock</text>
+                            <text class="diag-sub" x="350" y="147">Claude Haiku</text>
+
+                            <rect class="diag-box" x="18" y="196" width="134" height="44" rx="6" />
+                            <text class="diag-label" x="85" y="216">DynamoDB</text>
+                            <text class="diag-sub" x="85" y="230">Resultados + TTL</text>
+
+                            <rect class="diag-box-ok" x="258" y="196" width="144" height="44" rx="6" />
+                            <text class="diag-label" x="330" y="216">AWS Budgets</text>
+                            <text class="diag-sub" x="330" y="230">FinOps $0 Base</text>
+
+                            <line class="diag-line" x1="128" y1="46" x2="150" y2="46" marker-end="url(#arr-p1)" />
+                            <line class="diag-line" x1="264" y1="46" x2="286" y2="46" marker-end="url(#arr-p1)" />
+                            <path class="diag-line" d="M 346 68 L 346 90 L 212 90 L 212 106" marker-end="url(#arr-p1)" />
+                            <line class="diag-line-dashed" x1="274" y1="135" x2="294" y2="135" marker-end="url(#arr-p1-acc)" />
+                            <path class="diag-line" d="M 150 135 L 85 135 L 85 192" marker-end="url(#arr-p1)" />
+                        </svg>
+                        <a href="https://github.com/VitoNez5198/mercado-publico-rag-aws" target="_blank" rel="noopener" class="project-overlay" aria-label="Ver repositorio Mercado Público RAG AWS">
+                            <span class="material-symbols-outlined">open_in_new</span>
                         </a>
                     </div>
                     <div class="project-content">
                         <div class="project-header">
-                            <h3>Despliegue Automatizado de Servidores Web en AWS</h3>
-                            <span class="project-type">AWS Cloud & DevOps</span>
+                            <h3>Mercado Público RAG en AWS</h3>
+                            <span class="project-type">Serverless &amp; Applied AI</span>
                         </div>
                         <p class="project-description">
-                            Diseño de una arquitectura de red aislada (VPC) y aprovisionamiento automático (bootstrapping) de un servidor web Apache sobre Amazon Linux utilizando scripts de automatización Bash. Reduce el tiempo de configuración inicial de infraestructura a cero.
+                            Pipeline serverless event-driven en AWS para auditar riesgos contractuales (garantías, multas y plazos) en bases de licitación de Mercado Público (Ley 19.886). Desacoplado con S3 y SQS + DLQ, inferencia gestionada con Amazon Bedrock, despliegue vía AWS SAM y control de costos FinOps con costo fijo $0 bajo Free Tier.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">VPC</span>
-                            <span class="tech-tag">EC2</span>
-                            <span class="tech-tag">IGW</span>
-                            <span class="tech-tag">Bash</span>
-                            <span class="tech-tag">Linux</span>
+                            <span class="tech-tag">Amazon Bedrock</span>
+                            <span class="tech-tag">AWS Lambda</span>
+                            <span class="tech-tag">S3</span>
+                            <span class="tech-tag">SQS / DLQ</span>
+                            <span class="tech-tag">DynamoDB</span>
+                            <span class="tech-tag">AWS SAM</span>
+                            <span class="tech-tag">FinOps</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/VitoNez5198/aws-automated-web-server" target="_blank" rel="noopener" class="btn-link">
+                            <a href="https://github.com/VitoNez5198/mercado-publico-rag-aws" target="_blank" rel="noopener" class="btn-link">
                                 <span class="material-symbols-outlined">description</span>
-                                Ver Documentación
+                                Arquitectura y Repo
                             </a>
                         </div>
                     </div>
                 </article>
 
-                <article class="project-card">
+                <!-- Proyecto 2: AWS FinOps & Resource Auditor -->
+                <article class="project-card" data-category="ai-finops">
                     <div class="project-image">
-                        <!-- TODO: reemplazar con diagrama de arquitectura mejorado cuando esté listo -->
-                        <img src="assets/img/3.png" alt="API Serverless Python + RDS en AWS">
-                        <a href="https://github.com/VitoNez5198/aws-serverless-postgres-api" target="_blank" rel="noopener" class="project-overlay" aria-label="Ver Repositorio en GitHub">
+                        <svg class="arch-diagram" viewBox="0 0 420 260" role="img" aria-label="Diagrama de arquitectura AWS FinOps Auditor">
+                            <defs>
+                                <marker id="arr-p2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                    <path class="diag-arrow" d="M 0 1 L 10 5 L 0 9 z" />
+                                </marker>
+                                <marker id="arr-p2-acc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                    <path class="diag-arrow-accent" d="M 0 1 L 10 5 L 0 9 z" />
+                                </marker>
+                            </defs>
+                            <rect class="diag-box" x="22" y="24" width="154" height="46" rx="6" />
+                            <text class="diag-label" x="99" y="44">GitHub Actions</text>
+                            <text class="diag-sub" x="99" y="59">pytest + Terraform</text>
+
+                            <rect class="diag-box-accent" x="234" y="24" width="164" height="46" rx="6" />
+                            <text class="diag-label" x="316" y="44">EventBridge Cron</text>
+                            <text class="diag-sub" x="316" y="59">Ejecución Diaria 08:00</text>
+
+                            <rect class="diag-box-accent" x="130" y="110" width="160" height="48" rx="6" />
+                            <text class="diag-label" x="210" y="131">Lambda Auditor</text>
+                            <text class="diag-sub" x="210" y="146">Python + Boto3</text>
+
+                            <rect class="diag-box" x="22" y="196" width="154" height="44" rx="6" />
+                            <text class="diag-label" x="99" y="216">EC2 &amp; Cost Explorer</text>
+                            <text class="diag-sub" x="99" y="230">Etiquetas y Gasto</text>
+
+                            <rect class="diag-box-ok" x="244" y="196" width="154" height="44" rx="6" />
+                            <text class="diag-label" x="321" y="216">Alertas Webhook</text>
+                            <text class="diag-sub" x="321" y="230">Slack / Discord</text>
+
+                            <path class="diag-line-dashed" d="M 99 70 L 99 90 L 196 90 L 196 106" marker-end="url(#arr-p2-acc)" />
+                            <path class="diag-line" d="M 316 70 L 316 90 L 224 90 L 224 106" marker-end="url(#arr-p2)" />
+                            <path class="diag-line" d="M 170 158 L 170 176 L 99 176 L 99 192" marker-end="url(#arr-p2)" />
+                            <path class="diag-line" d="M 250 158 L 250 176 L 321 176 L 321 192" marker-end="url(#arr-p2)" />
+                        </svg>
+                        <a href="https://github.com/VitoNez5198/aws-finops-auditor" target="_blank" rel="noopener" class="project-overlay" aria-label="Ver repositorio AWS FinOps Auditor">
+                            <span class="material-symbols-outlined">open_in_new</span>
+                        </a>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>AWS FinOps &amp; Resource Auditor</h3>
+                            <span class="project-type">FinOps &amp; Gobierno</span>
+                        </div>
+                        <p class="project-description">
+                            Microservicio serverless para gobierno de nube y control de costos en AWS. Se ejecuta diariamente mediante EventBridge, detecta instancias EC2 sin etiquetas obligatorias, consulta el gasto acumulado del mes y envía alertas estructuradas vía webhook. Infraestructura desplegada con Terraform y GitHub Actions.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">EventBridge</span>
+                            <span class="tech-tag">AWS Lambda</span>
+                            <span class="tech-tag">FinOps</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/VitoNez5198/aws-finops-auditor" target="_blank" rel="noopener" class="btn-link">
+                                <span class="material-symbols-outlined">description</span>
+                                Arquitectura y Repo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 3: API Serverless + RDS en AWS -->
+                <article class="project-card" data-category="infra">
+                    <div class="project-image">
+                        <svg class="arch-diagram" viewBox="0 0 420 260" role="img" aria-label="Diagrama de arquitectura API Serverless y RDS en AWS">
+                            <defs>
+                                <marker id="arr-p3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                    <path class="diag-arrow" d="M 0 1 L 10 5 L 0 9 z" />
+                                </marker>
+                                <marker id="arr-p3-acc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                    <path class="diag-arrow-accent" d="M 0 1 L 10 5 L 0 9 z" />
+                                </marker>
+                            </defs>
+                            <rect class="diag-box" x="20" y="102" width="96" height="50" rx="6" />
+                            <text class="diag-label" x="68" y="124">Cliente HTTP</text>
+                            <text class="diag-sub" x="68" y="139">HTTPS Request</text>
+
+                            <rect class="diag-box-accent" x="150" y="102" width="120" height="50" rx="6" />
+                            <text class="diag-label" x="210" y="124">AWS Lambda</text>
+                            <text class="diag-sub" x="210" y="139">Function URL</text>
+
+                            <rect class="diag-box" x="302" y="102" width="100" height="50" rx="6" />
+                            <text class="diag-label" x="352" y="124">Amazon RDS</text>
+                            <text class="diag-sub" x="352" y="139">PostgreSQL</text>
+
+                            <rect class="diag-box-ok" x="122" y="24" width="176" height="42" rx="6" />
+                            <text class="diag-label" x="210" y="42">IAM &amp; EC2 Efímera</text>
+                            <text class="diag-sub" x="210" y="56">Empaquetado y Deploy</text>
+
+                            <rect class="diag-box" x="122" y="192" width="176" height="42" rx="6" />
+                            <text class="diag-label" x="210" y="210">VPC &amp; Security Groups</text>
+                            <text class="diag-sub" x="210" y="224">Aislamiento de Red</text>
+
+                            <line class="diag-line" x1="116" y1="127" x2="146" y2="127" marker-end="url(#arr-p3)" />
+                            <line class="diag-line" x1="270" y1="127" x2="298" y2="127" marker-end="url(#arr-p3)" />
+                            <line class="diag-line-dashed" x1="210" y1="66" x2="210" y2="98" marker-end="url(#arr-p3-acc)" />
+                            <line class="diag-line-dashed" x1="210" y1="152" x2="210" y2="188" marker-end="url(#arr-p3-acc)" />
+                        </svg>
+                        <a href="https://github.com/VitoNez5198/aws-serverless-postgres-api" target="_blank" rel="noopener" class="project-overlay" aria-label="Ver repositorio API Serverless RDS">
                             <span class="material-symbols-outlined">open_in_new</span>
                         </a>
                     </div>
                     <div class="project-content">
                         <div class="project-header">
                             <h3>API Serverless + RDS en AWS</h3>
-                            <span class="project-type">AWS Cloud & Troubleshooting</span>
+                            <span class="project-type">Troubleshooting Cloud</span>
                         </div>
                         <p class="project-description">
-                            API serverless Python conectada a RDS PostgreSQL, desplegada sorteando políticas IAM restrictivas mediante un flujo CI/CD efímero con EC2. Demuestra troubleshooting arquitectónico real: diagnóstico de errores de runtime, pivot de API Gateway a Lambda Function URLs y gestión segura de credenciales.
+                            API serverless conectada a Amazon RDS PostgreSQL desplegada sorteando políticas IAM restrictivas mediante empaquetado en EC2 efímera. Documenta troubleshooting arquitectónico real: diagnóstico de errores de runtime, pivot de API Gateway a Lambda Function URLs y gestión segura de credenciales.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">AWS Lambda</span>
                             <span class="tech-tag">Amazon RDS</span>
                             <span class="tech-tag">VPC</span>
-                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">IAM</span>
                             <span class="tech-tag">Bash</span>
-                            <span class="tech-tag">Serverless</span>
+                            <span class="tech-tag">Python</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/VitoNez5198/aws-serverless-postgres-api/blob/main/README.md" target="_blank" rel="noopener" class="btn-link">
@@ -306,9 +473,104 @@
                     </div>
                 </article>
 
-                <article class="project-card">
+                <!-- Proyecto 4: Despliegue Automatizado AWS -->
+                <article class="project-card" data-category="infra">
                     <div class="project-image">
-                        <img src="assets/img/2.png" alt="Bot de Automatización Logística">
+                        <svg class="arch-diagram" viewBox="0 0 420 260" role="img" aria-label="Diagrama de arquitectura VPC y EC2 con bootstrapping Bash en AWS">
+                            <defs>
+                                <marker id="arr-p4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                    <path class="diag-arrow" d="M 0 1 L 10 5 L 0 9 z" />
+                                </marker>
+                                <marker id="arr-p4-acc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                    <path class="diag-arrow-accent" d="M 0 1 L 10 5 L 0 9 z" />
+                                </marker>
+                            </defs>
+                            <rect class="diag-zone" x="112" y="18" width="290" height="224" rx="8" />
+                            <text class="diag-zone-label" x="124" y="34">VPC 10.0.0.0/16 · us-west-2</text>
+
+                            <rect class="diag-zone" x="228" y="46" width="160" height="182" rx="6" />
+                            <text class="diag-zone-label" x="238" y="62">Public Subnet /24</text>
+
+                            <rect class="diag-box" x="14" y="106" width="76" height="46" rx="6" />
+                            <text class="diag-label" x="52" y="126">Usuario</text>
+                            <text class="diag-sub" x="52" y="140">HTTP :80</text>
+
+                            <rect class="diag-box-accent" x="124" y="106" width="84" height="46" rx="6" />
+                            <text class="diag-label" x="166" y="126">IGW</text>
+                            <text class="diag-sub" x="166" y="140">Route Table</text>
+
+                            <rect class="diag-box-accent" x="242" y="80" width="132" height="52" rx="6" />
+                            <text class="diag-label" x="308" y="102">EC2 Web Server</text>
+                            <text class="diag-sub" x="308" y="117">Amazon Linux + SG</text>
+
+                            <rect class="diag-box-ok" x="242" y="162" width="132" height="46" rx="6" />
+                            <text class="diag-label" x="308" y="182">User Data Bash</text>
+                            <text class="diag-sub" x="308" y="196">Apache Bootstrapping</text>
+
+                            <line class="diag-line" x1="90" y1="129" x2="120" y2="129" marker-end="url(#arr-p4)" />
+                            <path class="diag-line" d="M 208 129 L 224 129 L 224 106 L 238 106" marker-end="url(#arr-p4)" />
+                            <line class="diag-line-dashed" x1="308" y1="162" x2="308" y2="136" marker-end="url(#arr-p4-acc)" />
+                        </svg>
+                        <a href="https://github.com/VitoNez5198/aws-automated-web-server" target="_blank" rel="noopener" class="project-overlay" aria-label="Ver documentación Despliegue Automatizado AWS">
+                            <span class="material-symbols-outlined">description</span>
+                        </a>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Despliegue Automatizado en AWS</h3>
+                            <span class="project-type">Redes &amp; Linux</span>
+                        </div>
+                        <p class="project-description">
+                            Diseño de una arquitectura de red aislada (VPC, subredes, Internet Gateway y tablas de ruteo) con aprovisionamiento automático (bootstrapping) de un servidor web Apache sobre Amazon Linux mediante scripts Bash.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Amazon VPC</span>
+                            <span class="tech-tag">Amazon EC2</span>
+                            <span class="tech-tag">IGW</span>
+                            <span class="tech-tag">Linux</span>
+                            <span class="tech-tag">Bash</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/VitoNez5198/aws-automated-web-server" target="_blank" rel="noopener" class="btn-link">
+                                <span class="material-symbols-outlined">description</span>
+                                Ver Documentación
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 5: Bot de Automatización Logística -->
+                <article class="project-card" data-category="ops">
+                    <div class="project-image">
+                        <svg class="arch-diagram" viewBox="0 0 420 260" role="img" aria-label="Diagrama de flujo Bot de Automatización Logística">
+                            <defs>
+                                <marker id="arr-p5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                    <path class="diag-arrow" d="M 0 1 L 10 5 L 0 9 z" />
+                                </marker>
+                                <marker id="arr-p5-acc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                    <path class="diag-arrow-accent" d="M 0 1 L 10 5 L 0 9 z" />
+                                </marker>
+                            </defs>
+                            <rect class="diag-box" x="18" y="34" width="126" height="48" rx="6" />
+                            <text class="diag-label" x="81" y="55">Operador Puerto</text>
+                            <text class="diag-sub" x="81" y="70">Telegram + Fotos</text>
+
+                            <rect class="diag-box-accent" x="176" y="34" width="224" height="48" rx="6" />
+                            <text class="diag-label" x="288" y="55">Bot Python (Ingesta)</text>
+                            <text class="diag-sub" x="288" y="70">Validación Regex Código ISO</text>
+
+                            <rect class="diag-box" x="18" y="156" width="174" height="52" rx="6" />
+                            <text class="diag-label" x="105" y="178">Clasificación Auto</text>
+                            <text class="diag-sub" x="105" y="193">Cliente / Nave / Contenedor</text>
+
+                            <rect class="diag-box-ok" x="226" y="156" width="174" height="52" rx="6" />
+                            <text class="diag-label" x="313" y="178">Respaldo Documental</text>
+                            <text class="diag-sub" x="313" y="193">-90% Tiempo de Registro</text>
+
+                            <line class="diag-line" x1="144" y1="58" x2="172" y2="58" marker-end="url(#arr-p5)" />
+                            <path class="diag-line" d="M 288 82 L 288 118 L 105 118 L 105 152" marker-end="url(#arr-p5)" />
+                            <line class="diag-line-dashed" x1="192" y1="182" x2="222" y2="182" marker-end="url(#arr-p5-acc)" />
+                        </svg>
                         <a href="https://github.com/VitoNez5198/Respaldo_Puerto_Bot" target="_blank" rel="noopener" class="project-overlay" aria-label="Ver Repositorio en GitHub">
                             <span class="material-symbols-outlined">open_in_new</span>
                         </a>
@@ -316,22 +578,21 @@
                     <div class="project-content">
                         <div class="project-header">
                             <h3>Bot de Automatización Logística</h3>
-                            <span class="project-type">Automatización & Operaciones</span>
+                            <span class="project-type">Operaciones</span>
                         </div>
                         <p class="project-description">
-                            Herramienta de automatización que redujo en un 90% el tiempo de registro documental y fotográfico de contenedores. Implementa un pipeline de datos que asegura la integridad de la información en entornos portuarios de alta exigencia operacional.
+                            Herramienta operativa que redujo en un 90% el tiempo de registro documental y fotográfico de contenedores. Implementa un flujo automatizado de ingesta que asegura la trazabilidad de la información en entornos portuarios de alta exigencia.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Telegram API</span>
                             <span class="tech-tag">Automatización</span>
-                            <span class="tech-tag">Pipeline de Datos</span>
+                            <span class="tech-tag">Operaciones</span>
                         </div>
                         <div class="project-links">
-                            <!-- TODO: actualizar con repo actualizado cuando esté disponible -->
                             <a href="https://github.com/VitoNez5198/Respaldo_Puerto_Bot" target="_blank" rel="noopener" class="btn-link">
                                 <span class="material-symbols-outlined">code</span>
-                                GitHub
+                                Ver Repositorio
                             </a>
                         </div>
                     </div>
@@ -339,122 +600,74 @@
 
             </div>
 
-            <!-- Otros Proyectos (Backend) — SEGUNDA subsección -->
-            <h3 class="projects-subtitle">
-                <span class="material-symbols-outlined subtitle-icon">terminal</span>
-                Otros Proyectos (Backend)
-            </h3>
-            <div class="projects-grid projects-grid--small">
-
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="assets/img/4.png" alt="Nexthora Link-in-Bio">
-                        <a href="https://github.com/VitoNez5198/nexthora-public" target="_blank" rel="noopener"
-                            class="project-overlay" aria-label="Ver Nexthora en GitHub">
-                            <span class="material-symbols-outlined">open_in_new</span>
-                        </a>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Nexthora</h3>
-                            <span class="project-type">Micro-SaaS (Repo Público Core)</span>
-                        </div>
-                        <p class="project-description">
-                            Solución "Link-in-Bio" para profesionales independientes. Repositorio público que contiene la estructura central del proyecto (modelos, autenticación y flujos base), reservando las funcionalidades avanzadas y MVP en repositorio privado.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python/Django</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">TailwindCSS</span>
-                            <span class="tech-tag">SaaS Architecture</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/VitoNez5198/nexthora-public/blob/main/README.md" target="_blank"
-                                rel="noopener" class="btn-link">
-                                <span class="material-symbols-outlined">description</span>
-                                Doc
-                            </a>
-                            <a href="https://github.com/VitoNez5198/nexthora-public" target="_blank" rel="noopener"
-                                class="btn-link">
-                                <span class="material-symbols-outlined">code</span>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="assets/img/1.jpeg" alt="Panel de Indicadores Económicos">
-                        <a href="https://github.com/VitoNez5198/Indicadores_Economicos" target="_blank" rel="noopener"
-                            class="project-overlay" aria-label="Ver Repositorio en GitHub"> <span
-                                class="material-symbols-outlined">open_in_new</span>
-                        </a>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Indicadores Económicos</h3>
-                            <span class="project-type">Full-Stack (Datos)</span>
-                        </div>
-                        <p class="project-description">
-                            Aplicación Full-Stack que rastrea y visualiza datos. Implementa un proceso ETL y una
-                            API REST con Python, Flask y SQLAlchemy, y un panel interactivo con
-                            JavaScript y Chart.js.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">ETL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/VitoNez5198/Indicadores_Economicos/blob/main/README.md"
-                                target="_blank" rel="noopener" class="btn-link">
-                                <span class="material-symbols-outlined">description</span>
-                                Doc
-                            </a>
-                            <a href="https://github.com/VitoNez5198/Indicadores_Economicos" target="_blank"
-                                rel="noopener" class="btn-link">
-                                <span class="material-symbols-outlined">code</span>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
+            <div class="projects-pagination" id="projectsPagination">
+                <button class="page-btn" id="prevPageBtn" type="button">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                    Anterior
+                </button>
+                <span class="page-info" id="pageInfo">1 / 3</span>
+                <button class="page-btn" id="nextPageBtn" type="button">
+                    Siguiente
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
             </div>
         </div>
     </section>
 
     <!-- Formación -->
-
     <section id="formacion" class="section education-section">
         <div class="container">
             <h2 class="section-title">
-                <span class="title-number">04.</span> Formación
+                <span class="title-number">04.</span> Formación y Certificaciones
             </h2>
             <p class="section-description">
-                Mi trayectoria de aprendizaje: desde el desarrollo de software hasta la especialización en arquitectura cloud, automatización e infraestructura en AWS.
+                Trayectoria enfocada en infraestructura en la nube, arquitectura AWS, automatización operativa y gobierno de costos.
             </p>
 
             <div class="timeline">
+                <!-- Item 0: AWS Solutions Architect Associate (En preparación) -->
+                <div class="timeline-item featured" data-animate>
+                    <div class="timeline-icon">
+                        <span class="material-symbols-outlined">architecture</span>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="featured-badge">En preparación</span>
+                        <div class="timeline-year">2026</div>
+                        <h3 class="timeline-title">AWS Certified Solutions Architect – Associate (SAA-C03)</h3>
+                        <p class="timeline-institution">
+                            <span class="material-symbols-outlined">cloud</span>
+                            Amazon Web Services · Laboratorio práctico continuo
+                            <span class="status-badge">En curso</span>
+                        </p>
+                        <p class="timeline-description">
+                            Preparación orientada a diseño de arquitecturas seguras, resilientes y optimizadas en costos sobre AWS: IAM avanzado, redes VPC multi-AZ, arquitecturas serverless desacopladas, observabilidad y FinOps.
+                        </p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">Arquitectura AWS</span>
+                            <span class="skill-tag">IAM</span>
+                            <span class="skill-tag">VPC</span>
+                            <span class="skill-tag">Serverless</span>
+                            <span class="skill-tag">FinOps</span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Item 1: AWS Cloud re/Start & Cloud Practitioner -->
                 <div class="timeline-item featured" data-animate>
                     <div class="timeline-icon">
                         <span class="material-symbols-outlined">cloud</span>
                     </div>
                     <div class="timeline-card">
-                        <span class="featured-badge">⭐ Destacado</span>
+                        <span class="featured-badge">Certificado</span>
                         <div class="timeline-year">Abril 2026 - Julio 2026</div>
-                        <h3 class="timeline-title">AWS Certified Cloud Practitioner & Egresado AWS Cloud re/Start</h3>
+                        <h3 class="timeline-title">AWS Certified Cloud Practitioner &amp; Egresado AWS Cloud re/Start</h3>
                         <p class="timeline-institution">
                             <span class="material-symbols-outlined">domain</span>
                             Generation Chile en colaboración con Amazon Web Services
-                            <span class="status-badge">Certificado & Egresado</span>
+                            <span class="status-badge">Activo</span>
                         </p>
                         <p class="timeline-description">
-                            Programa intensivo de 400 horas enfocado en arquitectura de redes, administración de servidores Linux, seguridad de la información, bases de datos (SQL) y automatización con Python, con especialización en servicios core de infraestructura AWS (VPC, EC2, S3, IAM, CloudWatch). Acreditado oficialmente con la certificación <strong>AWS Certified Cloud Practitioner</strong>.
+                            Programa intensivo de 400 horas enfocado en redes, administración de servidores Linux, seguridad, bases de datos (SQL), automatización con Python y servicios core de AWS (VPC, EC2, S3, IAM, CloudWatch). Acreditado con la certificación oficial <strong>AWS Certified Cloud Practitioner</strong>.
                         </p>
                         <div class="timeline-skills">
                             <span class="skill-tag">AWS Cloud</span>
@@ -466,8 +679,6 @@
                             <span class="skill-tag">Linux</span>
                             <span class="skill-tag">Redes</span>
                             <span class="skill-tag">Seguridad</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">SQL</span>
                         </div>
                         <div class="timeline-actions">
                             <a href="https://www.credly.com/badges/75acef33-fbf1-456f-aabf-6cf6de9362c0/public_url"
@@ -490,7 +701,7 @@
                         <span class="material-symbols-outlined">school</span>
                     </div>
                     <div class="timeline-card">
-                        <span class="featured-badge">⭐ Actual</span>
+                        <span class="featured-badge">Carrera</span>
                         <div class="timeline-year">2025 - 2028</div>
                         <h3 class="timeline-title">Ingeniería en Informática</h3>
                         <p class="timeline-institution">
@@ -499,8 +710,7 @@
                             <span class="status-badge">En curso</span>
                         </p>
                         <p class="timeline-description">
-                            Formación académica superior enfocada en desarrollo de software, arquitectura de sistemas y
-                            bases de datos.
+                            Formación académica superior enfocada en arquitectura de sistemas, bases de datos, redes y gestión de proyectos tecnológicos.
                         </p>
                     </div>
                 </div>
@@ -518,46 +728,15 @@
                             Google - Certificación Profesional
                         </p>
                         <p class="timeline-description">
-                            Sintaxis básica, estructuras de datos, Programación Orientada a Objetos (POO) y conceptos
-                            fundamentales.
+                            Fundamentos de scripting y automatización con Python, estructuras de datos y lógica aplicada.
                         </p>
                         <div class="timeline-skills">
                             <span class="skill-tag">Python</span>
-                            <span class="skill-tag">POO</span>
+                            <span class="skill-tag">Automatización</span>
                             <span class="skill-tag">Estructuras de Datos</span>
                         </div>
                         <div class="timeline-actions">
                             <a href="https://www.coursera.org/account/accomplishments/verify/EZG06UBG02FE"
-                                target="_blank" rel="noopener noreferrer" class="btn-certificate">
-                                <span class="material-symbols-outlined">verified</span>
-                                Ver Certificado
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 3: JavaScript Alura -->
-                <div class="timeline-item" data-animate>
-                    <div class="timeline-icon">
-                        <span class="material-symbols-outlined">emoji_objects</span>
-                    </div>
-                    <div class="timeline-card">
-                        <div class="timeline-year">2025</div>
-                        <h3 class="timeline-title">Lógica de Programación con JavaScript</h3>
-                        <p class="timeline-institution">
-                            <span class="material-symbols-outlined">workspace_premium</span>
-                            Alura Latam
-                        </p>
-                        <p class="timeline-description">
-                            Fundamentos de lógica, algoritmos y estructuras de datos aplicados con JavaScript.
-                        </p>
-                        <div class="timeline-skills">
-                            <span class="skill-tag">Lógica</span>
-                            <span class="skill-tag">Algoritmos</span>
-                            <span class="skill-tag">JavaScript</span>
-                        </div>
-                        <div class="timeline-actions">
-                            <a href="https://app.aluracursos.com/certificate/6de24fe8-079b-4c79-957a-2a122e4644a5"
                                 target="_blank" rel="noopener noreferrer" class="btn-certificate">
                                 <span class="material-symbols-outlined">verified</span>
                                 Ver Certificado
@@ -573,22 +752,17 @@
                     </div>
                     <div class="timeline-card">
                         <div class="timeline-year">2022 - 2023</div>
-                        <h3 class="timeline-title">Desarrollador Full-Stack JavaScript</h3>
+                        <h3 class="timeline-title">Bases de Desarrollo Web Full-Stack</h3>
                         <p class="timeline-institution">
                             <span class="material-symbols-outlined">workspace_premium</span>
                             Desafío Latam - Bootcamp
                         </p>
                         <p class="timeline-description">
-                            Bootcamp intensivo enfocado en el desarrollo completo de aplicaciones web con el stack PERN
-                            (PostgreSQL, Express, React, Node.js).
+                            Formación base en aplicaciones web, APIs REST y bases de datos relacionales (PostgreSQL), útil como contexto para entender y operar entornos cloud que alojan servicios web.
                         </p>
                         <div class="timeline-skills">
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">Express</span>
+                            <span class="skill-tag">APIs REST</span>
                             <span class="skill-tag">PostgreSQL</span>
-                            <span class="skill-tag">HTML5</span>
-                            <span class="skill-tag">CSS3</span>
                             <span class="skill-tag">JavaScript</span>
                         </div>
                         <div class="timeline-actions">
@@ -605,7 +779,7 @@
             <!-- Bottom Note -->
             <div class="education-note">
                 <p>
-                    <strong>Mi enfoque actual:</strong> Cloud Support & DevOps — infraestructura en <strong>AWS</strong>, automatización con <strong>Python</strong> y <strong>Bash</strong>, y operación de entornos en la nube con criterio técnico y experiencia bajo presión.
+                    <strong>Enfoque actual:</strong> Junior Cloud Engineer — infraestructura en <strong>AWS</strong>, arquitecturas serverless, gobierno de costos (<strong>FinOps</strong>), <strong>IaC</strong> e integración de soluciones con <strong>Amazon Bedrock</strong>.
                 </p>
             </div>
         </div>
@@ -619,8 +793,7 @@
             </h2>
             <div class="contact-content">
                 <p class="contact-text">
-                    ¿Tienes un proyecto en mente o quieres colaborar? Mi bandeja de entrada siempre está abierta.
-                    Ya sea para una pregunta o simplemente saludar, haré mi mejor esfuerzo para responderte.
+                    Disponible para oportunidades en soporte cloud, infraestructura AWS, operaciones o prácticas de arquitectura. Escríbeme directamente o revisa mis perfiles.
                 </p>
                 <div class="contact-email-box">
                     <label for="email">Email:</label>
@@ -668,7 +841,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="./scripts/main.js" type="module"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 
 </html>
