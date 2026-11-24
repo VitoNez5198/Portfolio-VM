@@ -1,13 +1,14 @@
+let deckController = null;
+let projectsController = null;
+
 document.addEventListener('DOMContentLoaded', () => {
     initNavbar();
     initThemeToggle();
     initScrollToTop();
     initEmailCopy();
+    projectsController = initProjectsPagination();
+    deckController = initSectionDeck();
     initSmoothScroll();
-    initScrollProgress();
-    initSectionFade();
-    initActiveNavSection();
-    initProjectsPagination();
 });
 
 function initNavbar() {
@@ -100,64 +101,134 @@ function initEmailCopy() {
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
+            const targetId = this.getAttribute('href').slice(1);
+            if (!targetId) return;
 
-            const targetElement = document.querySelector(targetId);
+            if (deckController && deckController.isActive()) {
+                e.preventDefault();
+                deckController.goToId(targetId);
+                return;
+            }
+
+            const targetElement = document.getElementById(targetId);
             if (!targetElement) return;
 
             e.preventDefault();
             const navbarHeight = document.querySelector('.navbar').offsetHeight;
-            const targetPosition = targetElement.offsetTop - navbarHeight;
-            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-        });
-    });
-}
-
-function initScrollProgress() {
-    const bar = document.getElementById('scrollProgress');
-    if (!bar) return;
-
-    window.addEventListener('scroll', () => {
-        const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-        bar.style.width = `${pct}%`;
-    }, { passive: true });
-}
-
-function initSectionFade() {
-    const sections = document.querySelectorAll('.section');
-    if (!('IntersectionObserver' in window)) return;
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            entry.target.classList.toggle('in-view', entry.isIntersecting);
-        });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-
-    sections.forEach(section => {
-        section.classList.add('section-reveal');
-        observer.observe(section);
-    });
-}
-
-function initActiveNavSection() {
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-    if (!('IntersectionObserver' in window)) return;
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            const id = entry.target.getAttribute('id');
-            navLinks.forEach(link => {
-                link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+            window.scrollTo({
+                top: targetElement.offsetTop - navbarHeight,
+                behavior: 'smooth'
             });
         });
-    }, { rootMargin: '-40% 0px -50% 0px' });
+    });
+}
 
-    sections.forEach(section => observer.observe(section));
+function initSectionDeck() {
+    const sections = Array.from(document.querySelectorAll('section[data-deck]'));
+    const navLinks = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
+    const railItems = Array.from(document.querySelectorAll('.rail-item'));
+    const progressBar = document.getElementById('scrollProgress');
+    const desktopQuery = window.matchMedia('(min-width: 1024px)');
+
+    if (sections.length === 0) return null;
+
+    let currentIndex = 0;
+    let wheelLocked = false;
+
+    function updateProgress() {
+        if (!progressBar) return;
+        const pct = ((currentIndex + 1) / sections.length) * 100;
+        progressBar.style.width = `${pct}%`;
+    }
+
+    function setActive(index) {
+        currentIndex = Math.max(0, Math.min(sections.length - 1, index));
+        const activeId = sections[currentIndex].id;
+
+        sections.forEach((sec, i) => {
+            sec.classList.toggle('deck-active', i === currentIndex);
+            if (i === currentIndex) sec.scrollTop = 0;
+        });
+
+        navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${activeId}`);
+        });
+
+        railItems.forEach(item => {
+            item.classList.toggle('active', item.dataset.target === activeId);
+        });
+
+        updateProgress();
+    }
+
+    function applyMode() {
+        if (desktopQuery.matches) {
+            document.body.classList.add('deck-mode');
+            setActive(currentIndex);
+        } else {
+            document.body.classList.remove('deck-mode');
+            sections.forEach(sec => sec.classList.remove('deck-active'));
+        }
+    }
+
+    railItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const idx = sections.findIndex(s => s.id === item.dataset.target);
+            if (idx !== -1) setActive(idx);
+        });
+    });
+
+    window.addEventListener('wheel', (e) => {
+        if (!desktopQuery.matches || wheelLocked) return;
+        if (Math.abs(e.deltaY) < 18) return;
+
+        const activeSection = sections[currentIndex];
+        const canScrollDown = activeSection.scrollTop + activeSection.clientHeight < activeSection.scrollHeight - 4;
+        const canScrollUp = activeSection.scrollTop > 4;
+
+        if (e.deltaY > 0 && canScrollDown) return;
+        if (e.deltaY < 0 && canScrollUp) return;
+
+        e.preventDefault();
+        wheelLocked = true;
+
+        if (e.deltaY > 0 && currentIndex < sections.length - 1) {
+            setActive(currentIndex + 1);
+        } else if (e.deltaY < 0 && currentIndex > 0) {
+            setActive(currentIndex - 1);
+        }
+
+        setTimeout(() => {
+            wheelLocked = false;
+        }, 480);
+    }, { passive: false });
+
+    window.addEventListener('keydown', (e) => {
+        if (!desktopQuery.matches) return;
+        if (['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) return;
+
+        if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+            e.preventDefault();
+            if (currentIndex < sections.length - 1) setActive(currentIndex + 1);
+        } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+            e.preventDefault();
+            if (currentIndex > 0) setActive(currentIndex - 1);
+        } else if (sections[currentIndex].id === 'proyectos' && projectsController) {
+            if (e.key === 'ArrowRight') projectsController.next();
+            if (e.key === 'ArrowLeft') projectsController.prev();
+        }
+    });
+
+    desktopQuery.addEventListener('change', applyMode);
+    applyMode();
+
+    return {
+        isActive: () => desktopQuery.matches,
+        goToId: (id) => {
+            const idx = sections.findIndex(s => s.id === id);
+            if (idx !== -1) setActive(idx);
+        }
+    };
 }
 
 function initProjectsPagination() {
@@ -168,7 +239,7 @@ function initProjectsPagination() {
     const nextBtn = document.getElementById('nextPageBtn');
     const pageInfo = document.getElementById('pageInfo');
 
-    if (!grid || !filterContainer || !pagination) return;
+    if (!grid || !filterContainer || !pagination) return null;
 
     const cards = Array.from(grid.querySelectorAll('.project-card'));
     const filterBtns = Array.from(filterContainer.querySelectorAll('.filter-btn'));
@@ -176,13 +247,14 @@ function initProjectsPagination() {
 
     let currentFilter = 'all';
     let currentPage = 1;
+    let totalPages = 1;
 
     function render() {
         const filtered = cards.filter(card =>
             currentFilter === 'all' || card.dataset.category === currentFilter
         );
 
-        const totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
+        totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
         if (currentPage > totalPages) currentPage = totalPages;
 
         const start = (currentPage - 1) * perPage;
@@ -223,9 +295,26 @@ function initProjectsPagination() {
     });
 
     nextBtn.addEventListener('click', () => {
-        currentPage += 1;
-        render();
+        if (currentPage < totalPages) {
+            currentPage += 1;
+            render();
+        }
     });
 
     render();
+
+    return {
+        prev: () => {
+            if (currentPage > 1) {
+                currentPage -= 1;
+                render();
+            }
+        },
+        next: () => {
+            if (currentPage < totalPages) {
+                currentPage += 1;
+                render();
+            }
+        }
+    };
 }
