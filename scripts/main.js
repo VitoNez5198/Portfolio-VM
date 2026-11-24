@@ -183,8 +183,10 @@ function initSectionDeck() {
         if (Math.abs(e.deltaY) < 18) return;
 
         const activeSection = sections[currentIndex];
-        const canScrollDown = activeSection.scrollTop + activeSection.clientHeight < activeSection.scrollHeight - 4;
-        const canScrollUp = activeSection.scrollTop > 4;
+        const overflow = activeSection.scrollHeight - activeSection.clientHeight;
+        const hasRealOverflow = overflow > 24;
+        const canScrollDown = hasRealOverflow && (activeSection.scrollTop + activeSection.clientHeight < activeSection.scrollHeight - 8);
+        const canScrollUp = hasRealOverflow && (activeSection.scrollTop > 8);
 
         if (e.deltaY > 0 && canScrollDown) return;
         if (e.deltaY < 0 && canScrollUp) return;
