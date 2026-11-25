@@ -296,9 +296,9 @@
 
             <div class="projects-toolbar">
                 <div class="projects-filters" id="projectFilters" role="tablist" aria-label="Filtrar proyectos">
-                    <button class="filter-btn active" data-filter="all" type="button">Todos (5)</button>
+                    <button class="filter-btn active" data-filter="all" type="button">Todos (6)</button>
                     <button class="filter-btn" data-filter="ai-finops" type="button">AWS, FinOps &amp; IA (2)</button>
-                    <button class="filter-btn" data-filter="infra" type="button">Infraestructura &amp; Redes (2)</button>
+                    <button class="filter-btn" data-filter="infra" type="button">Infraestructura &amp; Redes (3)</button>
                     <button class="filter-btn" data-filter="ops" type="button">Operaciones (1)</button>
                 </div>
             </div>
@@ -370,7 +370,40 @@
                     </div>
                 </article>
 
-                <!-- Proyecto 3: API Serverless + RDS en AWS -->
+                <!-- Proyecto 3: StockBarrio AWS (Arquitectura Multi-AZ en desarrollo) -->
+                <article class="project-card" data-category="infra">
+                    <div class="project-image">
+                        <img class="arch-diagram-img" src="./assets/img/diagrams/stockbarrio-aws.png" alt="Diagrama de arquitectura Multi-AZ para StockBarrio en AWS" loading="lazy">
+                        <div class="project-hover-panel">
+                            <p class="project-description">
+                                Arquitectura cloud de referencia y análisis FinOps (Fase 1 · IaC en desarrollo) para la plataforma SaaS de inventario y POS StockBarrio. Diseño Multi-AZ con CloudFront + WAF, ALB, ECS Fargate en subredes privadas, RDS PostgreSQL aislado, S3 para reportes/boletas y alertas asíncronas con EventBridge + Lambda + WhatsApp API, pensado para despliegue efímero dev/prod con Terraform.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/VitoNez5198/stockbarrio-aws" target="_blank" rel="noopener" class="btn-link">
+                                    <span class="material-symbols-outlined">open_in_new</span>
+                                    Arquitectura y Repo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>StockBarrio AWS (Multi-AZ)</h3>
+                            <span class="project-type">En desarrollo · IaC</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">ECS Fargate</span>
+                            <span class="tech-tag">RDS Multi-AZ</span>
+                            <span class="tech-tag">CloudFront + WAF</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">Amazon S3</span>
+                            <span class="tech-tag">EventBridge</span>
+                            <span class="tech-tag">FinOps</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 4: API Serverless + RDS en AWS -->
                 <article class="project-card" data-category="infra">
                     <div class="project-image">
                         <img class="arch-diagram-img" src="./assets/img/diagrams/aws-serverless-postgres.png" alt="Diagrama de arquitectura API Serverless y RDS en AWS" loading="lazy">
