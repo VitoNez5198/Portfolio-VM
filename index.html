@@ -308,61 +308,7 @@
                 <!-- Proyecto 1: Mercado Público RAG AWS -->
                 <article class="project-card" data-category="ai-finops">
                     <div class="project-image">
-                        <svg class="arch-diagram" viewBox="0 0 420 260" role="img" aria-label="Diagrama de arquitectura Mercado Público RAG en AWS">
-                            <defs>
-                                <marker id="arr-p1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                    <path class="diag-arrow" d="M 0 1 L 10 5 L 0 9 z" />
-                                </marker>
-                                <marker id="arr-p1-acc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                    <path class="diag-arrow-accent" d="M 0 1 L 10 5 L 0 9 z" />
-                                </marker>
-                            </defs>
-                            <rect class="diag-zone" x="8" y="8" width="404" height="244" rx="8" />
-                            <text class="diag-zone-label" x="18" y="22">AWS Cloud · Event-Driven Serverless (AWS SAM)</text>
-
-                            <rect class="diag-zone" x="16" y="30" width="388" height="62" rx="6" />
-                            <text class="diag-zone-label" x="24" y="42">Ingesta &amp; Desacople</text>
-
-                            <rect class="diag-box" x="24" y="48" width="104" height="36" rx="5" />
-                            <text class="diag-label" x="76" y="64">API Gateway</text>
-                            <text class="diag-sub" x="76" y="76">Presigned URL</text>
-
-                            <rect class="diag-box" x="152" y="48" width="104" height="36" rx="5" />
-                            <text class="diag-label" x="204" y="64">Amazon S3</text>
-                            <text class="diag-sub" x="204" y="76">PDF Uploads</text>
-
-                            <rect class="diag-box" x="280" y="48" width="114" height="36" rx="5" />
-                            <text class="diag-label" x="337" y="64">SQS + DLQ</text>
-                            <text class="diag-sub" x="337" y="76">Cola Asíncrona</text>
-
-                            <rect class="diag-zone" x="140" y="102" width="264" height="68" rx="6" />
-                            <text class="diag-zone-label" x="148" y="114">Cómputo &amp; IA Gestionada</text>
-
-                            <rect class="diag-box-accent" x="148" y="122" width="122" height="40" rx="5" />
-                            <text class="diag-label" x="209" y="140">AWS Lambda</text>
-                            <text class="diag-sub" x="209" y="153">Parser + Verificador</text>
-
-                            <rect class="diag-box-accent" x="292" y="122" width="102" height="40" rx="5" />
-                            <text class="diag-label" x="343" y="140">Bedrock</text>
-                            <text class="diag-sub" x="343" y="153">Claude Haiku</text>
-
-                            <rect class="diag-zone" x="16" y="180" width="388" height="64" rx="6" />
-                            <text class="diag-zone-label" x="24" y="192">Persistencia &amp; FinOps</text>
-
-                            <rect class="diag-box" x="24" y="198" width="136" height="38" rx="5" />
-                            <text class="diag-label" x="92" y="215">DynamoDB</text>
-                            <text class="diag-sub" x="92" y="227">Resultados + TTL</text>
-
-                            <rect class="diag-box-ok" x="248" y="198" width="146" height="38" rx="5" />
-                            <text class="diag-label" x="321" y="215">AWS Budgets</text>
-                            <text class="diag-sub" x="321" y="227">FinOps $0 Base</text>
-
-                            <line class="diag-line" x1="128" y1="66" x2="148" y2="66" marker-end="url(#arr-p1)" />
-                            <line class="diag-line" x1="256" y1="66" x2="276" y2="66" marker-end="url(#arr-p1)" />
-                            <path class="diag-line" d="M 337 84 L 337 98 L 209 98 L 209 118" marker-end="url(#arr-p1)" />
-                            <line class="diag-line-dashed" x1="270" y1="142" x2="288" y2="142" marker-end="url(#arr-p1-acc)" />
-                            <path class="diag-line" d="M 148 142 L 92 142 L 92 194" marker-end="url(#arr-p1)" />
-                        </svg>
+                        <img class="arch-diagram-img" src="./assets/img/diagrams/mercado-publico-rag.png" alt="Diagrama de arquitectura Mercado Público RAG en AWS" loading="lazy">
                         <div class="project-hover-panel">
                             <p class="project-description">
                                 Pipeline serverless event-driven en AWS para auditar riesgos contractuales (garantías, multas y plazos) en bases de licitación de Mercado Público (Ley 19.886). Desacoplado con S3 y SQS + DLQ, inferencia gestionada con Amazon Bedrock, despliegue vía AWS SAM y control de costos FinOps con costo fijo $0 bajo Free Tier.
@@ -395,49 +341,7 @@
                 <!-- Proyecto 2: AWS FinOps & Resource Auditor -->
                 <article class="project-card" data-category="ai-finops">
                     <div class="project-image">
-                        <svg class="arch-diagram" viewBox="0 0 420 260" role="img" aria-label="Diagrama de arquitectura AWS FinOps Auditor">
-                            <defs>
-                                <marker id="arr-p2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                    <path class="diag-arrow" d="M 0 1 L 10 5 L 0 9 z" />
-                                </marker>
-                                <marker id="arr-p2-acc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                    <path class="diag-arrow-accent" d="M 0 1 L 10 5 L 0 9 z" />
-                                </marker>
-                            </defs>
-                            <rect class="diag-zone" x="10" y="14" width="124" height="80" rx="7" />
-                            <text class="diag-zone-label" x="18" y="28">CI/CD · IaC</text>
-
-                            <rect class="diag-box" x="18" y="38" width="108" height="44" rx="5" />
-                            <text class="diag-label" x="72" y="57">GitHub Actions</text>
-                            <text class="diag-sub" x="72" y="70">pytest + Terraform</text>
-
-                            <rect class="diag-zone" x="150" y="14" width="260" height="232" rx="8" />
-                            <text class="diag-zone-label" x="160" y="29">AWS Cloud · Free Tier ($0/mes)</text>
-
-                            <rect class="diag-box-accent" x="168" y="40" width="224" height="40" rx="5" />
-                            <text class="diag-label" x="280" y="58">EventBridge Cron</text>
-                            <text class="diag-sub" x="280" y="70">Trigger Diario · 08:00 AM</text>
-
-                            <rect class="diag-box-accent" x="168" y="106" width="224" height="44" rx="5" />
-                            <text class="diag-label" x="280" y="125">AWS Lambda Auditor</text>
-                            <text class="diag-sub" x="280" y="139">Python 3.11 + Boto3</text>
-
-                            <rect class="diag-box" x="168" y="182" width="224" height="46" rx="5" />
-                            <text class="diag-label" x="280" y="202">EC2 &amp; Cost Explorer</text>
-                            <text class="diag-sub" x="280" y="216">Auditoría de Tags y Gasto USD</text>
-
-                            <rect class="diag-zone" x="10" y="164" width="124" height="82" rx="7" />
-                            <text class="diag-zone-label" x="18" y="178">Notificación</text>
-
-                            <rect class="diag-box-ok" x="18" y="188" width="108" height="44" rx="5" />
-                            <text class="diag-label" x="72" y="207">Webhook / SNS</text>
-                            <text class="diag-sub" x="72" y="220">Slack / Discord</text>
-
-                            <path class="diag-line-dashed" d="M 72 82 L 72 128 L 164 128" marker-end="url(#arr-p2-acc)" />
-                            <line class="diag-line" x1="280" y1="80" x2="280" y2="102" marker-end="url(#arr-p2)" />
-                            <line class="diag-line" x1="280" y1="150" x2="280" y2="178" marker-end="url(#arr-p2)" />
-                            <path class="diag-line-dashed" d="M 168 140 L 142 140 L 142 210 L 130 210" marker-end="url(#arr-p2-acc)" />
-                        </svg>
+                        <img class="arch-diagram-img" src="./assets/img/diagrams/aws-finops-auditor.png" alt="Diagrama de arquitectura AWS FinOps Auditor" loading="lazy">
                         <div class="project-hover-panel">
                             <p class="project-description">
                                 Microservicio serverless para gobierno de nube y control de costos en AWS. Se ejecuta diariamente mediante EventBridge, detecta instancias EC2 sin etiquetas obligatorias, consulta el gasto acumulado del mes y envía alertas estructuradas vía webhook. Infraestructura desplegada con Terraform y GitHub Actions.
@@ -469,49 +373,7 @@
                 <!-- Proyecto 3: API Serverless + RDS en AWS -->
                 <article class="project-card" data-category="infra">
                     <div class="project-image">
-                        <svg class="arch-diagram" viewBox="0 0 420 260" role="img" aria-label="Diagrama de arquitectura API Serverless y RDS en AWS">
-                            <defs>
-                                <marker id="arr-p3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                    <path class="diag-arrow" d="M 0 1 L 10 5 L 0 9 z" />
-                                </marker>
-                                <marker id="arr-p3-acc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                    <path class="diag-arrow-accent" d="M 0 1 L 10 5 L 0 9 z" />
-                                </marker>
-                            </defs>
-                            <rect class="diag-box" x="10" y="138" width="80" height="46" rx="6" />
-                            <text class="diag-label" x="50" y="158">Cliente</text>
-                            <text class="diag-sub" x="50" y="172">HTTPS</text>
-
-                            <rect class="diag-zone" x="106" y="12" width="304" height="236" rx="8" />
-                            <text class="diag-zone-label" x="116" y="27">AWS Cloud · Zero-Trust IAM</text>
-
-                            <rect class="diag-zone" x="118" y="38" width="142" height="72" rx="6" />
-                            <text class="diag-zone-label" x="126" y="51">CI/CD Efímero</text>
-
-                            <rect class="diag-box-ok" x="126" y="58" width="126" height="42" rx="5" />
-                            <text class="diag-label" x="189" y="76">EC2 Builder</text>
-                            <text class="diag-sub" x="189" y="90">psycopg2 + AWS CLI</text>
-
-                            <rect class="diag-box-accent" x="122" y="138" width="134" height="48" rx="6" />
-                            <text class="diag-label" x="189" y="159">AWS Lambda</text>
-                            <text class="diag-sub" x="189" y="173">Function URL · Py 3.11</text>
-
-                            <rect class="diag-zone" x="274" y="64" width="126" height="168" rx="6" />
-                            <text class="diag-zone-label" x="282" y="78">Amazon VPC</text>
-
-                            <rect class="diag-box" x="284" y="92" width="106" height="40" rx="5" />
-                            <text class="diag-label" x="337" y="110">Security Group</text>
-                            <text class="diag-sub" x="337" y="123">Inbound TCP 5432</text>
-
-                            <rect class="diag-box" x="284" y="164" width="106" height="46" rx="5" />
-                            <text class="diag-label" x="337" y="185">Amazon RDS</text>
-                            <text class="diag-sub" x="337" y="199">PostgreSQL</text>
-
-                            <line class="diag-line" x1="90" y1="161" x2="118" y2="161" marker-end="url(#arr-p3)" />
-                            <line class="diag-line-dashed" x1="189" y1="100" x2="189" y2="134" marker-end="url(#arr-p3-acc)" />
-                            <path class="diag-line" d="M 256 161 L 266 161 L 266 112 L 280 112" marker-end="url(#arr-p3)" />
-                            <line class="diag-line" x1="337" y1="132" x2="337" y2="160" marker-end="url(#arr-p3)" />
-                        </svg>
+                        <img class="arch-diagram-img" src="./assets/img/diagrams/aws-serverless-postgres.png" alt="Diagrama de arquitectura API Serverless y RDS en AWS" loading="lazy">
                         <div class="project-hover-panel">
                             <p class="project-description">
                                 API serverless conectada a Amazon RDS PostgreSQL desplegada sorteando políticas IAM restrictivas mediante empaquetado en EC2 efímera. Documenta troubleshooting arquitectónico real: diagnóstico de errores de runtime, pivot de API Gateway a Lambda Function URLs y gestión segura de credenciales.
@@ -543,41 +405,7 @@
                 <!-- Proyecto 4: Despliegue Automatizado AWS -->
                 <article class="project-card" data-category="infra">
                     <div class="project-image">
-                        <svg class="arch-diagram" viewBox="0 0 420 260" role="img" aria-label="Diagrama de arquitectura VPC y EC2 con bootstrapping Bash en AWS">
-                            <defs>
-                                <marker id="arr-p4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                    <path class="diag-arrow" d="M 0 1 L 10 5 L 0 9 z" />
-                                </marker>
-                                <marker id="arr-p4-acc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                    <path class="diag-arrow-accent" d="M 0 1 L 10 5 L 0 9 z" />
-                                </marker>
-                            </defs>
-                            <rect class="diag-zone" x="112" y="18" width="290" height="224" rx="8" />
-                            <text class="diag-zone-label" x="124" y="34">VPC 10.0.0.0/16 · us-west-2</text>
-
-                            <rect class="diag-zone" x="228" y="46" width="160" height="182" rx="6" />
-                            <text class="diag-zone-label" x="238" y="62">Public Subnet /24</text>
-
-                            <rect class="diag-box" x="14" y="106" width="76" height="46" rx="6" />
-                            <text class="diag-label" x="52" y="126">Usuario</text>
-                            <text class="diag-sub" x="52" y="140">HTTP :80</text>
-
-                            <rect class="diag-box-accent" x="124" y="106" width="84" height="46" rx="6" />
-                            <text class="diag-label" x="166" y="126">IGW</text>
-                            <text class="diag-sub" x="166" y="140">Route Table</text>
-
-                            <rect class="diag-box-accent" x="242" y="80" width="132" height="52" rx="6" />
-                            <text class="diag-label" x="308" y="102">EC2 Web Server</text>
-                            <text class="diag-sub" x="308" y="117">Amazon Linux + SG</text>
-
-                            <rect class="diag-box-ok" x="242" y="162" width="132" height="46" rx="6" />
-                            <text class="diag-label" x="308" y="182">User Data Bash</text>
-                            <text class="diag-sub" x="308" y="196">Apache Bootstrapping</text>
-
-                            <line class="diag-line" x1="90" y1="129" x2="120" y2="129" marker-end="url(#arr-p4)" />
-                            <path class="diag-line" d="M 208 129 L 224 129 L 224 106 L 238 106" marker-end="url(#arr-p4)" />
-                            <line class="diag-line-dashed" x1="308" y1="162" x2="308" y2="136" marker-end="url(#arr-p4-acc)" />
-                        </svg>
+                        <img class="arch-diagram-img" src="./assets/img/diagrams/aws-automated-web-server.png" alt="Diagrama de arquitectura VPC y EC2 con bootstrapping Bash en AWS" loading="lazy">
                         <div class="project-hover-panel">
                             <p class="project-description">
                                 Diseño de una arquitectura de red aislada (VPC, subredes, Internet Gateway y tablas de ruteo) con aprovisionamiento automático (bootstrapping) de un servidor web Apache sobre Amazon Linux mediante scripts Bash.
@@ -608,43 +436,7 @@
                 <!-- Proyecto 5: Bot de Automatización Logística -->
                 <article class="project-card" data-category="ops">
                     <div class="project-image">
-                        <svg class="arch-diagram" viewBox="0 0 420 260" role="img" aria-label="Diagrama de flujo Bot de Automatización Logística">
-                            <defs>
-                                <marker id="arr-p5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                    <path class="diag-arrow" d="M 0 1 L 10 5 L 0 9 z" />
-                                </marker>
-                                <marker id="arr-p5-acc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                    <path class="diag-arrow-accent" d="M 0 1 L 10 5 L 0 9 z" />
-                                </marker>
-                            </defs>
-                            <rect class="diag-zone" x="12" y="14" width="396" height="84" rx="7" />
-                            <text class="diag-zone-label" x="22" y="29">Telegram Cloud · Operación en Terreno</text>
-
-                            <rect class="diag-box" x="24" y="40" width="144" height="46" rx="5" />
-                            <text class="diag-label" x="96" y="60">Operador Puerto</text>
-                            <text class="diag-sub" x="96" y="74">Código ISO + Fotos</text>
-
-                            <rect class="diag-box-ok" x="236" y="40" width="160" height="46" rx="5" />
-                            <text class="diag-label" x="316" y="60">Canal Telegram</text>
-                            <text class="diag-sub" x="316" y="74">Respaldo Nube + Debounce</text>
-
-                            <rect class="diag-zone" x="12" y="116" width="396" height="130" rx="7" />
-                            <text class="diag-zone-label" x="22" y="131">Servidor Local · Python Runtime</text>
-
-                            <rect class="diag-box-accent" x="24" y="148" width="174" height="68" rx="5" />
-                            <text class="diag-label" x="111" y="172">Bot Ingesta Python</text>
-                            <text class="diag-sub" x="111" y="187">Regex ^[A-Z]{4}\d{7}$</text>
-                            <text class="diag-sub" x="111" y="201">threading.Lock + Timer</text>
-
-                            <rect class="diag-box-ok" x="226" y="148" width="170" height="68" rx="5" />
-                            <text class="diag-label" x="311" y="172">Respaldo Local</text>
-                            <text class="diag-sub" x="311" y="187">Año / Mes / Contenedor</text>
-                            <text class="diag-sub" x="311" y="201">-90% Tiempo de Registro</text>
-
-                            <line class="diag-line" x1="96" y1="86" x2="96" y2="144" marker-end="url(#arr-p5)" />
-                            <line class="diag-line" x1="198" y1="182" x2="222" y2="182" marker-end="url(#arr-p5)" />
-                            <path class="diag-line-dashed" d="M 164 148 L 164 108 L 316 108 L 316 90" marker-end="url(#arr-p5-acc)" />
-                        </svg>
+                        <img class="arch-diagram-img" src="./assets/img/diagrams/respaldo-puerto-bot.png" alt="Diagrama de flujo Bot de Automatización Logística" loading="lazy">
                         <div class="project-hover-panel">
                             <p class="project-description">
                                 Herramienta operativa que redujo en un 90% el tiempo de registro documental y fotográfico de contenedores. Implementa un flujo automatizado de ingesta que asegura la trazabilidad de la información en entornos portuarios de alta exigencia.
