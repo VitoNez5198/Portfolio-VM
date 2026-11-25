@@ -344,7 +344,7 @@
                         <img class="arch-diagram-img" src="./assets/img/diagrams/aws-finops-auditor.png" alt="Diagrama de arquitectura AWS FinOps Auditor" loading="lazy">
                         <div class="project-hover-panel">
                             <p class="project-description">
-                                Microservicio serverless para gobierno de nube y control de costos en AWS. Se ejecuta diariamente mediante EventBridge, detecta instancias EC2 sin etiquetas obligatorias, consulta el gasto acumulado del mes y envía alertas estructuradas vía webhook. Infraestructura desplegada con Terraform y GitHub Actions.
+                                Microservicio serverless para gobierno de nube y control de costos en AWS. Se ejecuta diariamente mediante EventBridge, audita instancias EC2 sin etiquetas obligatorias, volúmenes EBS huérfanos, Elastic IPs sin asociar y el gasto acumulado en Cost Explorer, enviando alertas vía webhook cifrado en SSM Parameter Store. Desplegado con Terraform (Remote State en S3) y GitHub Actions con IAM OIDC.
                             </p>
                             <div class="project-links">
                                 <a href="https://github.com/VitoNez5198/aws-finops-auditor" target="_blank" rel="noopener" class="btn-link">
